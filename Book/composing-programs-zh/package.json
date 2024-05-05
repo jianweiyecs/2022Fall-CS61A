@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "format": "prettier --cache --write ."
+  },
+  "devDependencies": {
+    "@mancuoj/prettier-config": "latest",
+    "markdown-it-mathjax3": "latest",
+    "prettier": "latest",
+    "vitepress": "latest",
+    "vitepress-plugin-comment-with-giscus": "latest",
+    "vue": "latest"
+  },
+  "prettier": "@mancuoj/prettier-config"
+}
