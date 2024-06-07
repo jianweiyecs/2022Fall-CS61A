@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://cs61a.org/proj/scheme/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.inset-0{inset:0}.bottom-20{bottom:5rem}.bottom-36{bottom:9rem}.right-16{right:4rem}.right-3{right:.75rem}.z-\[99999\]{z-index:99999}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.w-0{width:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:1s linear infinite spin}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-0{border-width:0}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.bg-\[\#2c3440\]{--tw-bg-opacity:1;background-color:rgb(44 52 64/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-gray-300{--tw-ring-opacity:1;--tw-ring-color:rgb(209 213 219/var(--tw-ring-opacity))}.ring-opacity-5{--tw-ring-opacity:.05}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-100{transition-duration:.1s}.duration-300{transition-duration:.3s}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-gray-400::placeholder{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity))}.focus\:ring-indigo-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229/var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}@media (width>=640px){.sm\:flex{display:flex}.sm\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-x-2{--tw-translate-x:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:items-start{align-items:flex-start}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1 - var(--tw-space-x-reverse)))}.sm\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.sm\:rounded-lg{border-radius:.5rem}.sm\:p-6{padding:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:leading-6{line-height:1.5rem}}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div class="fixed bottom-20 right-16 text-sm hidden z-[99999]"><div class="bg-[#2c3440] w-80 shadow sm:rounded-lg"><div class="flex justify-end pt-3 pr-3"><form action="https://codepen.io/pen/define" method="POST" target="_blank"><input type="hidden" name="data" value="{}"><button type="submit" class="font-semibold text-slate-200">preview</button></form><a class="font-semibold text-slate-200 ml-2" href="https://copycss.xyz/" target="_blank">help</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></div><div class="px-6 pb-6"><div class="flex justify-center items-center space-x-1 absolute right-3 bottom-36"><button class="w-10 h-10 bg-indigo-600  text-white font-black rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">←</button><div class="flex flex-col space-y-2"><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↑</button><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↓</button></div><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">→</button></div><div class="mt-1"><label class="text-base font-semibold text-slate-200">Component Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="HTML" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-slate-300">HTML</label></div><div class="flex items-center"><input id="JSX" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="JSX" class="ml-3 block text-sm font-medium leading-6 text-slate-300">JSX</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">With Child</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Yes" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Yes" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Yes</label></div><div class="flex items-center"><input id="No" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="No" class="ml-3 block text-sm font-medium leading-6 text-slate-300">No</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">Style Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Tailwind" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Tailwind" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Tailwind</label></div><div class="flex items-center"><input id="Inline" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Inline" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Inline</label></div><div class="flex items-center"><input id="Class" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Class" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Class</label></div></div></fieldset></div><div class="mt-5 flex justify-center"><button type="button" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Copy HTML</button></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CS 61A: Structure and Interpretation of Computer Programs">
+    <meta name="keywords" content="CS 61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS">
+    <meta name="author" content="John DeNero">
+    
+    <meta name="viewport" content="width=device-width">
+
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/jquery.min.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/jquery.ba-throttle-debounce.min.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/bootstrap.min.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/hl.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/toggledarkmode.js.下载"></script>
+    <script>
+        // we aren't registering builtins since
+        //      (1) they don't render differently in the current CSS from other names
+        //      (2) it's a mess to list all of them. You can extract from the site but that takes effort
+        // if (1) ceases to be true, (2) might be worth the effort. For now, we're leaving as is
+        hljsRegister({
+            'keyword': "define if cond and or let begin lambda mu quote delay cons-stream set! quasiquote unquote unquote-splicing define-macro"
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/dark-mode.js.下载"></script>
+    <link rel="stylesheet" href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/css">
+    <link rel="stylesheet" href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/style.css">
+    <link rel="stylesheet" href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/mono-blue.css">
+    <link rel="icon" href="https://cs61a.org/assets/images/favicon.ico">
+
+    
+
+<link href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/project.css" rel="stylesheet" type="text/css">
+
+
+    <title>
+Project 4: Scheme Interpreter | CS 61A Spring 2024
+</title>
+  <style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style></head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container noselect">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cs61a.org/">
+            <img style="max-width:60px; margin-top: -20px;" class="logo" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/logo.png">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://cs61a.org/">Home</a></li>
+            <li><a href="https://cs61a.org/articles/about">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/52971/discussion/" target="_blank">Ed</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/proj/scheme/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Staff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://cs61a.org/staff">TAs &amp; Tutors</a></li>
+                <li><a href="https://cs61a.org/academic-interns">Academic Interns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/proj/scheme/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://sections.cs61a.org/">Section Selector</a></li>
+                <li><a href="https://oh.cs61a.org/">Office Hours Queue</a></li>
+                <li><a href="https://go.cs61a.org/extensions">Request an Extension</a></li>
+                <li><a href="https://go.cs61a.org/regrades">Request a Regrade</a></li>
+                <li><a href="https://cs61a.org/resources/">Past Exams &amp; Sites</a></li>
+                <li><a href="https://pythontutor.com/cp/composingprograms.html">Python Tutor</a></li>
+                <li><a href="https://code.cs61a.org/">Online Code Editor</a></li>
+                <li><a href="https://cs61a.org/articles/campus-res/">Department/Campus Resources</a></li>
+                <li><a href="https://cs61a.org/articles/advice/">Advice from Former Students</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cs61a.org/contact/">Contact</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="toggle-mode-cb">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="container">
+      
+<div class="row">
+  <div class="col-md-9">
+    <header>
+      <h1>
+        
+Project 4: Scheme Interpreter
+
+        
+        
+        <ul class="inline-block list-inline">
+          <li><a href="https://cs61a.org/proj/scheme/scheme.zip" class="label label-outline">scheme.zip</a></li>
+        </ul>
+        
+        
+      </h1>
+    </header>
+    
+<div class="haiku">
+  <blockquote><p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/money_tree.png" alt="Money Tree" width="" height=""></p>
+
+<cite>
+  Eval calls apply,<br>
+  which just calls eval again!<br>
+  When does it all end?
+</cite></blockquote>
+</div>
+
+    
+
+<h2 id="introduction">Introduction</h2>
+
+
+<!-- blockquote hack -->
+
+<blockquote><p><strong>Important submission note</strong>: For full credit,</p>
+
+<ul>
+  <li>Submit with Part 1 complete by <strong>Monday, April 15</strong> (worth 1 pt).</li>
+  <li>Submit with Parts 2 &amp; 3 (including passing all tests provided in
+  <code>tests.scm</code>) complete by <strong>Thursday, April 18</strong> (worth 1 pt).</li>
+  <li>Submit with all phases complete by <strong>Tuesday, April 23</strong>.
+  Try to attempt the problems in order, as some later problems will depend
+  on earlier problems in their implementation and therefore also when
+  running <code>ok</code> tests.</li>
+</ul>
+
+<p>The entire project can be completed with a partner.</p>
+
+<p>You can get 1 EC point by submitting the entire project by
+<strong>Monday, April 22</strong>.</p></blockquote>
+
+<p>In this project, you will develop an interpreter for a subset of the Scheme
+language. As you proceed, think about the issues that arise in the design of a
+programming language; many quirks of languages are byproducts of implementation
+decisions in interpreters and compilers. The subset of the language used in this
+project is described in the <a href="https://www.composingprograms.com/pages/32-functional-programming.html">functional programming</a> section of Composing
+Programs, as well as this <a href="https://cs61a.org/articles/scheme-spec/">language specification</a> and
+<a href="https://cs61a.org/articles/scheme-builtins/">built-in procedure reference</a>.</p>
+
+<p>Watch the lecture on Interpreters for an overview of
+the project.</p>
+
+<p>In addition, there will be a completely optional open-ended art contest
+(released separately) that challenges you to produce recursive images in only a
+few lines of Scheme. As an example, the picture above abstractly depicts all the
+ways of making change for $0.50 using U.S. currency. All flowers appear at the
+end of a branch with length 50. Small angles in a branch indicate an additional
+coin, while large angles indicate a new currency denomination. In the contest,
+you too will have the chance to unleash your inner recursive artist.</p>
+
+<!-- For this project, we are releasing an alternative challenge version of the project, which
+provides much less guidance in the project specification as well as a minimal
+amount of starter code. It is appropriate for students with a substantial amount
+of coding experience who want a rather challenging project. It will be
+worth no more points than the standard version, but can be completed instead of
+the standard version for full credit. -->
+
+<!--
+-->
+
+
+<h2 id="download-starter-files">Download starter files</h2>
+
+
+<p>You can download all of the project code as a <a href="https://cs61a.org/proj/scheme/scheme.zip">zip archive</a>.</p>
+
+<p>Files you will edit:</p>
+
+<ul>
+  <li><code>scheme_eval_apply.py</code>: the recursive evaluator for Scheme expressions</li>
+  <li><code>scheme_forms.py</code>: evaluation for special forms</li>
+  <li><code>scheme_classes.py</code>: classes that describe Scheme expressions</li>
+  <li><code>questions.scm</code>: Scheme procedures for you to implement</li>
+</ul>
+
+<p>The rest of the files in the project:</p>
+
+<ul>
+  <li><code>scheme.py</code>: the interpreter REPL</li>
+  <li><code>pair.py</code>: defines the <code>Pair</code> class and the <code>nil</code> object</li>
+  <li><code>scheme_builtins.py</code>: built-in Scheme procedures</li>
+  <li><code>scheme_reader.py</code>: the reader for Scheme input
+  <!--  (this file is obfuscated because you will implement it in lab) --></li>
+  <li><code>scheme_tokens.py</code>: the tokenizer for Scheme input</li>
+  <li><code>scheme_utils.py</code>: functions for inspecting Scheme expressions</li>
+  <li><code>ucb.py</code>: utility functions for use in 61A projects</li>
+  <li><code>tests.scm</code>: a collection of test cases written in Scheme</li>
+  <li><code>ok</code>: the autograder</li>
+  <li><code>tests</code>: a directory of tests used by <code>ok</code></li>
+  <li><code>mytests.rst</code>: a file where you can add your own tests</li>
+</ul>
+
+
+
+
+<!-- This is a hack so this section shows up in the sidebar -->
+
+<h2 id="logistics">Logistics</h2>
+
+
+
+<!-- <p>Remember that you can earn an additional bonus point by submitting the
+  project at least 24 hours before the deadline.</p> -->
+
+
+
+<p>The project is worth 30 points.
+28 points are for correctness,
+1 point is for submitting Part 1 by the first checkpoint date,
+and 1 point is for submitting Parts 2 &amp; 3 by the second checkpoint date.</p>
+
+
+<p>You will turn in the following files:</p>
+
+<ul>
+  <li><code>scheme_eval_apply.py</code></li>
+  <li><code>scheme_forms.py</code></li>
+  <li><code>scheme_classes.py</code></li>
+  <li><code>questions.scm</code></li>
+</ul>
+
+<p>You do not need to modify or turn in any other files to complete the
+project. To submit the project, <b> submit the required files to the appropriate Gradescope assignment.</b></p>
+
+<p>For the functions that we ask you to complete, there may be some
+initial code that we provide. If you would rather not use that code,
+feel free to delete it and start from scratch. You may also add new
+function definitions as you see fit.</p>
+
+<p><b>However, please do not modify any other functions or edit any files not
+listed above</b>. Doing so may result in your code failing our autograder tests.
+Also, please do not change any function signatures (names, argument order, or
+number of arguments).</p>
+
+
+
+<p>Throughout this project, you should be testing the correctness of your code.
+It is good practice to test often, so that it is easy to isolate any problems.
+However, you should not be testing <i>too</i> often, to allow yourself time to
+think through problems.</p>
+
+<p>We have provided an <b>autograder</b> called <code>ok</code> to help you
+with testing your code and tracking your progress. The first time you run the
+autograder, you will be asked to <b>log in with your Ok account using your web
+browser</b>. Please do so. Each time you run <code>ok</code>, it will back up
+your work and progress on our servers.</p>
+
+<p>The primary purpose of <code>ok</code> is to test your implementations.</p>
+
+<!-- <p>First, some of the test cases are <i>locked</i>. To unlock tests, run the
+following command from your terminal:</p>
+
+<pre><code>python3 ok -u</code></pre>
+
+<p>This command will start an interactive prompt that looks like:</p>
+
+<pre>
+=====================================================================
+Assignment: Scheme Interpreter
+Ok, version ...
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unlocking tests
+
+At each "? ", type what you would expect the output to be.
+Type exit() to quit
+
+---------------------------------------------------------------------
+Question 0 &gt; Suite 1 &gt; Case 1
+(cases remaining: 1)
+
+&gt;&gt;&gt; Code here
+?
+</pre>
+
+<p>At the <code>?</code>, you can type what you expect the output to be. If you
+are correct, then this test case will be available the next time you run the
+autograder.</p>
+
+<p>The idea is to understand <i>conceptually</i> what your program should do
+first, before you start writing any code.</p>
+
+<p>Once you have unlocked some tests and written some code, you can check the
+correctness of your program using the tests that you have unlocked:</p>
+
+<pre>python3 ok</pre>
+
+<p>Most of the time, you will want to focus on a particular question. Use the
+<code>-q</code> option as directed in the problems below.</p>  -->
+
+<!-- <p>Second, there may be some test cases that are <i>hidden</i>. These test cases are
+<b>not</b> run by the command:</p> -->
+
+<!--<pre>python3 ok</pre>-->
+
+<!-- <p>They are only run when you submit:</p> -->
+
+<!-- <pre>python3 ok --submit</pre> -->
+
+<!-- <p> We keep test cases hidden to ensure that you write your code with the intention
+of solving the question at hand, not purely to pass the given tests. The hidden
+tests will be run when you submit your project. You will receive an email with part of
+the autograder results after submitting. However, the autograder has a 15 minute
+cooldown period. If you submit before 15 minutes have passed, the autograder will
+not run.</p> -->
+
+<!-- <p>We recommend that you submit <b>after you finish each
+problem</b>. Only your last submission will be graded. It is also useful for us
+to have more backups of your code in case you run into a submission issue. <b>If you forget to submit, your last backup will be automatically converted to a submission. </b></p>
+-->
+
+<!--<p>After you run this command, you will receive an email (to the address-->
+<!--that you used to sign up for Ok) that has the output from all <i>failed</i>-->
+<!--unlocked tests, including hidden tests, along with your score at the bottom. You-->
+<!--can continue submitting until you pass all the tests. However, you will receive-->
+<!--<b>at most one email every half hour</b>.</p>-->
+
+<!--<p>This buffer period is meant for you and your partner to try and understand-->
+<!--where your error comes from, and take some time to think through your code. We-->
+<!--encourage you to do this for all projects.</p>-->
+
+<!---
+<p>If you are trying to debug a test failure, you can launch an interactive session
+after the test is run with:</p>
+
+<pre><code>python3 ok &#x2d;q 05 &#x2d;i</code></pre>
+
+<p>This will run the tests and launch an interactive session if a test does not
+pass.</p>
+
+<pre><code>=====================================================================
+Assignment: Project 1: Hog
+Ok, version ....
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running tests
+
+&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;
+Question ... &gt; Suite ... &gt; Case ...
+
+&gt;&gt;&gt; the_test()
+"expected value"
+
+# Error: expected
+#     "expected value"
+# but got
+#     None
+
+# Interactive console. Type exit() to quit
+&gt;&gt;&gt;</code></pre>
+-->
+
+
+<!--- <p>The <code>tests</code> folder is used to store autograder tests, so
+<b>do not modify it</b>. You may lose all your unlocking progress if you
+do. If you need to get a fresh copy, you can download the
+<a href="scheme.zip">zip archive</a> and copy it over, but you
+will need to start unlocking from scratch.</p> -->
+
+<!---
+<p>If you do not want us to record a backup of your work or information about
+your progress, you can run
+
+<pre>python3 ok --local</pre>
+
+
+With this option, no information will be sent to our course
+servers.
+
+-->
+
+<p>If you want to test your code interactively, you can run
+
+</p><pre> python3 ok -q [question number] -i </pre>
+
+with the appropriate question number (e.g. <code>01</code>) inserted.
+This will run the tests for that question until the first one you failed,
+then give you a chance to test the functions you wrote interactively.<p></p>
+
+<p>You can also use the debugging print feature in OK by writing
+
+</p><pre> print("DEBUG:", x) </pre>
+
+which will produce an output in your terminal without causing OK tests to fail
+with extra output.
+
+<h2 id="interpreter-details">Interpreter details</h2>
+
+
+
+<h3 id="scheme-features">Scheme features</h3>
+
+
+<p><strong>Read-Eval-Print.</strong> The interpreter reads Scheme expressions, evaluates them,
+and displays the results.</p>
+
+<pre><code class="scheme hljs">scm&gt; <span class="hljs-number">2</span>
+<span class="hljs-number">2</span>
+scm&gt; (<span class="hljs-name">+</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>)
+<span class="hljs-number">5</span>
+scm&gt; ((<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (x) (<span class="hljs-name">*</span> x x)) <span class="hljs-number">5</span>)
+<span class="hljs-number">25</span></code></pre>
+
+
+
+<p>The starter code for your Scheme interpreter can successfully
+evaluate the first expression above, since it consists of a single number. The
+second (a call to a built-in procedure) and the third (a computation of 5
+squared) will not work just yet.</p>
+
+<p><strong>Load.</strong> You can load a file by passing in a symbol for the file name.
+For example, to load <code>tests.scm</code>, evaluate the following call expression.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">load</span> <span class="hljs-symbol">'tests</span>)</code></pre>
+
+
+
+<p><strong>Symbols.</strong> In the dialect of Scheme we use in CS 61A, a symbol (or
+<em>identifier</em>) is a sequence of letters (a-z and A-Z), digits, and characters in
+<code>!$%&amp;*/:&lt;=&gt;?@^_~-+.</code> that do not form a valid integer or floating-point numeral.</p>
+
+<p>Our version of Scheme is case-insensitive: two identifiers are considered
+identical if they differ only in the capitalization of letters.
+They are internally represented and printed in lower case:</p>
+
+<pre><code class="scheme hljs">scm&gt; <span class="hljs-symbol">'Hello</span>
+hello</code></pre>
+
+
+
+<p><strong>Turtle Graphics.</strong> In addition to standard Scheme procedures, we include
+procedure calls to the Python <code>turtle</code> package. This will come in handy
+for the contest.</p>
+
+<p>If you're curious, you can read the <a href="http://docs.python.org/py3k/library/turtle.html">turtle module
+documentation</a> online.</p>
+
+
+<h3 id="running-the-interpreter">Running the interpreter</h3>
+
+
+<p>To start an interactive Scheme interpreter session, type:</p>
+
+<pre><code class="hljs">python3 scheme.py</code></pre>
+
+<p>To exit the Scheme interpreter, press <code>Ctrl-d</code> on Mac/Linux (or <code>Ctrl-z Enter</code> on Windows) or evaluate the <code>exit</code> procedure
+(after completing problems 3 and 4):</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">exit</span>)</code></pre>
+
+
+
+<p>You can use your Scheme interpreter to evaluate the expressions in an input file
+by passing the file name as a command-line argument to <code>scheme.py</code>:</p>
+
+<pre><code class="hljs">python3 scheme.py tests.scm</code></pre>
+
+<p>The <code>tests.scm</code> file contains a long list of sample Scheme expressions and
+their expected values. Many of these examples are from Chapters 1 and 2 of
+<a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">Structure and Interpretation of Computer Programs</a>, the textbook from
+which Composing Programs is adapted.</p>
+
+<br>
+
+        <button id="toggle-1" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Getting Started Videos<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-1">
+
+<h2 id="getting-started-videos" class="no-toc">Getting Started Videos</h2>
+
+
+<p>These videos may provide some helpful direction for tackling the coding
+problems on this assignment.</p>
+
+<blockquote><p>To see these videos, you should be logged into your berkeley.edu email.</p></blockquote>
+
+
+            <iframe width="560" height="315" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/videoseries.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/playlist?list=PLx38hZJ5RLZez4iVyVRr52Eknxs4RF27w"> YouTube link </a></p>
+</div>
+
+
+<h2 id="part-1-the-evaluator">Part 1: The Evaluator</h2>
+
+
+<p>In Part 1, you will develop the following features of the interpreter:</p>
+
+<ul>
+  <li>Symbol evaluation</li>
+  <li>Calling built-in procedures</li>
+  <li>Definitions</li>
+</ul>
+
+<p>In the starter implementation given to you, the interpreter can only evaluate
+self-evaluating expressions: numbers, booleans, and <code>nil</code>.</p>
+
+<p>First, read the relevant code.  In the "Eval/Apply" section of
+<code>scheme_eval_apply.py</code>:</p>
+
+<ul>
+  <li><code>scheme_eval</code> evaluates a Scheme expression in the given environment. This
+  function is nearly complete but is missing the logic for call expressions.</li>
+  <li>When evaluating a special form, <code>scheme_eval</code> redirects evaluation to an
+  appropriate <code>do_?_form</code> function found in <code>scheme_forms.py</code></li>
+  <li><code>scheme_apply</code> applies a procedure to some arguments.</li>
+</ul>
+
+<p>In the "Environments" and "Procedures" sections of <code>scheme_classes.py</code>:</p>
+
+<ul>
+  <li>The <code>Frame</code> class implements an environment frame.</li>
+  <li>The <code>LambdaProcedure</code> class (in the "Procedures" section) represents
+  user-defined procedures.</li>
+</ul>
+
+<p>These are all of the essential components of the interpreter. <code>scheme_forms.py</code> defines special forms,
+<code>scheme_builtins.py</code> defines the various functions built into the standard library,  and <code>scheme.py</code> defines the user interface to the interpreter.</p>
+
+<blockquote><p><strong>IMPORTANT NOTE:</strong> As all non-atomic Scheme expressions (i.e. call expressions and special forms) are Scheme lists (and therefore linked lists), we represent all non-atomic Scheme expressions using the <code>Pair</code> class, which behaves like a linked list. For example, the expression <code>(+ 1 2)</code> will be represented in our interpreter as <code>Pair('+', Pair(1, Pair(2, nil)))</code>.
+<strong>This class is defined in <code>pair.py</code>.</strong> Please take a look at this class before starting the project!</p></blockquote>
+
+<p>Use Ok to test your understanding:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q eval_apply -u</code><button id="copy-code-python3ok-qeval_apply-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qeval_apply-u").onclick = () => copyCode('python3 ok -q eval_apply -u', "copy-code-python3ok-qeval_apply-u");
+        </script>
+        <br>
+
+
+<h3 id="problem-1-1-pt">Problem 1 (1 pt)</h3>
+
+
+<p>Implement the <code>define</code> and <code>lookup</code> methods of the <code>Frame</code> class in <code>scheme_classes.py</code>.
+Each <code>Frame</code> object has the following instance attributes:</p>
+
+<ul>
+  <li><code>bindings</code> is a dictionary representing the bindings in the frame. Each item
+  associates a Scheme symbol (represented as a Python string) to a Scheme
+  value.</li>
+  <li><code>parent</code> is the parent <code>Frame</code> instance. The parent of the Global Frame is
+  <code>None</code>.</li>
+</ul>
+
+<p>In <code>scheme_classes.py</code>:</p>
+
+<ol>
+  <li><code>define</code> takes a symbol (represented by a Python string) and a value. It
+  binds the symbol to the value in the <code>Frame</code> instance.</li>
+  <li><p><code>lookup</code> takes a symbol and returns the value bound to that symbol in the
+  first frame of the environment in which the symbol is bound. The
+  <em>environment</em> for a <code>Frame</code> instance consists of that frame, its parent
+  frame, and all its ancestor frames, including the Global Frame. When looking
+  up a symbol:</p>
+
+  <ul>
+    <li>If the symbol is bound in the current frame, return its value.</li>
+    <li>If the symbol is not bound in the current frame and the frame has a parent
+    frame, look up the symbol in the parent frame.</li>
+    <li>If the symbol is not found in the current frame and there is no parent frame,
+    raise a <code>SchemeError</code>.</li>
+  </ul></li>
+</ol>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 01 -u
+python3 ok -q 01</code><button id="copy-code-python3ok-q01-upython3ok-q01" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q01-upython3ok-q01").onclick = () => copyCode('python3 ok -q 01 -u\npython3 ok -q 01', "copy-code-python3ok-q01-upython3ok-q01");
+        </script>
+        <br>
+
+<p>After you complete this problem, you can start your Scheme interpreter
+(with <code>python3 scheme.py</code>). You should be able to look up built-in
+procedure names:</p>
+
+<pre><code class="scheme hljs">scm&gt; +
+#[<span class="hljs-name">+</span>]
+scm&gt; odd?
+#[<span class="hljs-name">odd?</span>]</code></pre>
+
+
+
+<p>However, your Scheme interpreter will still not be able to call these
+procedures until you complete the next problem.</p>
+
+<p>Remember, at this point, you can only exit the interpreter by pressing <code>Ctrl-d</code> on Max/Linux (or <code>Ctrl-z Enter</code> on Windows).</p>
+
+
+<h3 id="problem-2-2-pt">Problem 2 (2 pt)</h3>
+
+
+<p>To be able to call built-in procedures, such as <code>+</code>, you need to complete the
+<code>BuiltinProcedure</code> case within the <code>scheme_apply</code> function in
+<code>scheme_eval_apply.py</code>. Built-in procedures are applied by calling a
+corresponding Python function that implements the procedure.</p>
+
+<blockquote><p>To see a list of all Scheme built-in procedures used in the project, look in
+the <code>scheme_builtins.py</code> file. Any function decorated with <code>@builtin</code>
+will be added to the globally-defined <code>BUILTINS</code> list.</p></blockquote>
+
+<p>A <code>BuiltinProcedure</code> has two instance attributes:</p>
+
+<ul>
+  <li><code>py_func</code>: the <em>Python</em> function that implements the built-in Scheme procedure.</li>
+  <li><code>need_env</code>: a Boolean flag that indicates whether or not this built-in
+  procedure will need the current environment to be passed in as the last
+  argument. The environment is required, for instance, to implement the built-in
+  <code>eval</code> procedure.</li>
+</ul>
+
+<p><code>scheme_apply</code> takes the <code>procedure</code> object, a list of argument values, and
+the current environment. <code>args</code> is a Scheme list represented as a
+<code>Pair</code> object or <code>nil</code>.</p>
+
+<blockquote><p>Your implementation should do the following:</p>
+
+<ul>
+  <li>Convert the Scheme list to a Python list of arguments. <em>Hint:</em> <code>args</code> is a
+  <code>Pair</code>, which has a <code>.first</code> and <code>.rest</code> attribute.</li>
+  <li>If <code>procedure.need_env</code> is <code>True</code>, then add the current environment <code>env</code>
+  as the last argument to this Python list.</li>
+  <li>Return the result of calling <code>procedure.py_func</code> on all of those arguments. Use <code>*args</code> notation: <code>f(1, 2, 3)</code> is equivalent to <code>f(*[1, 2, 3]</code>). Do this part within the <code>try</code> statement provided, after the line that says <code>try:</code>.</li>
+</ul></blockquote>
+
+<p>We have already implemented the following behavior for you:</p>
+
+<ul>
+  <li>If calling the function results in a <code>TypeError</code> exception being raised, then
+  the wrong number of arguments were passed. The <code>try</code> statement
+  handles this exception and raises a <code>SchemeError</code> with the message
+  <code>'incorrect number of arguments'</code>.</li>
+</ul>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 02 -u
+python3 ok -q 02</code><button id="copy-code-python3ok-q02-upython3ok-q02" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q02-upython3ok-q02").onclick = () => copyCode('python3 ok -q 02 -u\npython3 ok -q 02', "copy-code-python3ok-q02-upython3ok-q02");
+        </script>
+        <br>
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+Remember to alternate between driver and navigator roles.
+The driver controls the keyboard;
+the navigator watches, asks questions, and suggests ideas.</p>
+
+
+<h3 id="problem-3-2-pt">Problem 3 (2 pt)</h3>
+
+
+<p>The <code>scheme_eval</code> function (in <code>scheme_eval_apply.py</code>) evaluates a Scheme
+expression in an environment. The provided code
+already looks up symbols in the current environment, returns self-evaluating
+expressions (such as numbers), and evaluates special forms.</p>
+
+<p>Implement the missing part of <code>scheme_eval</code>, which evaluates a call expression.
+To evaluate a call expression:</p>
+
+<ol>
+  <li>Evaluate the operator (which should evaluate to a <code>Procedure</code> instance).</li>
+  <li>Evaluate all of the operands and collect the results (the argument values) in a Scheme list.</li>
+  <li>Return the result of calling <code>scheme_apply</code> on this <code>Procedure</code> and these argument values.</li>
+</ol>
+
+<p>You'll have to recursively call <code>scheme_eval</code> in the first two steps. Here are
+some other functions/methods you should use:</p>
+
+<ul>
+  <li>The <code>map</code> method of <code>Pair</code> returns a new Scheme list constructed by applying a
+  <em>one-argument function</em> to every item in a Scheme list.</li>
+  <li>The <code>scheme_apply</code> function applies a Scheme procedure to arguments
+  represented as a Scheme list (a <code>Pair</code> instance or <code>nil</code>).</li>
+</ul>
+
+<blockquote><p>Important: do not mutate the passed-in <code>expr</code>. That would change a program as
+it's being evaluated, creating strange and incorrect effects.</p></blockquote>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 03 -u
+python3 ok -q 03</code><button id="copy-code-python3ok-q03-upython3ok-q03" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q03-upython3ok-q03").onclick = () => copyCode('python3 ok -q 03 -u\npython3 ok -q 03', "copy-code-python3ok-q03-upython3ok-q03");
+        </script>
+        <br>
+
+<blockquote><p>Some of these tests call a primitive (built-in) procedure called
+<code>print-then-return</code>. This procedure doesn't exist in Scheme, but was added to
+this project just to test this question. <code>print-then-return</code> takes two
+arguments. It prints out its first argument and returns the second. You can
+find this function at the bottom of <code>scheme_builtins.py</code></p></blockquote>
+
+<p>Your interpreter should now be able to evaluate built-in procedure calls, giving
+you the functionality of the Calculator language and more. Run <code>python3
+scheme.py</code>, and you can now add and multiply!</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">+</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>)
+<span class="hljs-number">3</span>
+scm&gt; (<span class="hljs-name">*</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> (<span class="hljs-name">-</span> <span class="hljs-number">5</span> <span class="hljs-number">2</span>) <span class="hljs-number">1</span>)
+<span class="hljs-number">36</span>
+scm&gt; (<span class="hljs-name">odd?</span> <span class="hljs-number">31</span>)
+#t</code></pre>
+
+
+
+
+<h3 id="problem-4-2-pt">Problem 4 (2 pt)</h3>
+
+
+<p>The <code>define</code> special form (<a href="https://cs61a.org/articles/scheme-spec/#define">spec</a>) in Scheme can be used either to assign a symbol to the
+value of a given expression or to create a procedure and bind it to a symbol:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> a (<span class="hljs-name">+</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>))  <span class="hljs-comment">; Binds the symbol a to the value of (+ 2 3)</span>
+a
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">foo</span> x) x)  <span class="hljs-comment">; Creates a procedure and binds it to the symbol foo</span>
+foo</code></pre>
+
+
+
+<p>The type of the first operand tells us what is being defined:</p>
+
+<ul>
+  <li>If it is a symbol, e.g. <code>a</code>, then the expression is defining a symbol.</li>
+  <li>If it is a list, e.g. <code>(foo x)</code>, then the expression is creating a procedure.</li>
+</ul>
+
+<p>The <code>do_define_form</code> function in <code>scheme_forms.py</code> evaluates <code>(define ...)</code>
+expressions. There are two missing parts in this function. For this problem,
+implement <strong>just the first part</strong>, which evaluates the second operand to obtain
+a value and binds the first operand, a symbol, to that value. Then,
+<code>do_define_form</code> returns the symbol that was bound.</p>
+
+<blockquote><p><em>Hint:</em> The <code>define</code> method of a <code>Frame</code> instance creates a binding in that
+frame.</p></blockquote>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 04 -u
+python3 ok -q 04</code><button id="copy-code-python3ok-q04-upython3ok-q04" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q04-upython3ok-q04").onclick = () => copyCode('python3 ok -q 04 -u\npython3 ok -q 04', "copy-code-python3ok-q04-upython3ok-q04");
+        </script>
+        <br>
+
+<p>You should now be able to assign values to symbols and evaluate those symbols.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> x <span class="hljs-number">15</span>)
+x
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> y (<span class="hljs-name">*</span> <span class="hljs-number">2</span> x))
+y
+scm&gt; y
+<span class="hljs-number">30</span></code></pre>
+
+
+
+<p>The following <code>ok</code> test determines whether the operator of a call expression is
+evaluated multiple times. The operator should be evaluated only a <em>single</em> time
+before raising an error (because <code>x</code> is not bound to a procedure).</p>
+
+<pre><code class="scheme hljs">(<span class="hljs-name"><span class="hljs-keyword">define</span></span> x <span class="hljs-number">0</span>)
+<span class="hljs-comment">; expect x</span>
+((<span class="hljs-name"><span class="hljs-keyword">define</span></span> x (<span class="hljs-name">+</span> x <span class="hljs-number">1</span>)) <span class="hljs-number">2</span>)
+<span class="hljs-comment">; expect SchemeError</span>
+x
+<span class="hljs-comment">; expect 1</span></code></pre>
+
+
+
+<p>If the operator is evaluated twice, then <code>x</code> will be bound to 2 instead of 1 at
+the end, causing the test to fail. Therefore, if your code fails this test,
+you'll want to make sure you only evaluate the operator of a call expression
+once in <code>scheme_eval</code>.</p>
+
+
+<h3 id="problem-5-1-pt">Problem 5 (1 pt)</h3>
+
+
+<p>In Scheme, you can quote expressions in two ways: with the <code>quote</code> special form
+(<a href="https://cs61a.org/articles/scheme-spec/#quote">spec</a>) or with the symbol <code>'</code>.  The reader converts <code>'...</code> into
+<code>(quote ...)</code>, so that your interpreter only needs to evaluate the <code>(quote ...)</code>
+syntax. The <code>quote</code> special form returns its operand expression without
+evaluating it:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">quote</span></span> hello)
+hello
+scm&gt; '(cons <span class="hljs-number">1</span> <span class="hljs-number">2</span>)  <span class="hljs-comment">; Equivalent to (quote (cons 1 2))</span>
+(<span class="hljs-name">cons</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>)</code></pre>
+
+
+
+<p>Implement the <code>do_quote_form</code> function in <code>scheme_forms.py</code> so that it simply
+returns the unevaluated operand of the <code>(quote ...)</code> expression.</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 05 -u
+python3 ok -q 05</code><button id="copy-code-python3ok-q05-upython3ok-q05" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q05-upython3ok-q05").onclick = () => copyCode('python3 ok -q 05 -u\npython3 ok -q 05', "copy-code-python3ok-q05-upython3ok-q05");
+        </script>
+        <br>
+
+<p>After completing this function, you should be able to evaluate quoted
+expressions. Try out some of the following in your interpreter!</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">quote</span></span> a)
+a
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">quote</span></span> (<span class="hljs-name">1</span> <span class="hljs-number">2</span>))
+(<span class="hljs-name">1</span> <span class="hljs-number">2</span>)
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">quote</span></span> (<span class="hljs-name">1</span> (<span class="hljs-name">2</span> three (<span class="hljs-name">4</span> <span class="hljs-number">5</span>))))
+(<span class="hljs-name">1</span> (<span class="hljs-name">2</span> three (<span class="hljs-name">4</span> <span class="hljs-number">5</span>)))
+scm&gt; (<span class="hljs-name">car</span> (<span class="hljs-name"><span class="hljs-keyword">quote</span></span> (<span class="hljs-name">a</span> b)))
+a
+scm&gt; <span class="hljs-symbol">'hello</span>
+hello
+scm&gt; '(<span class="hljs-number">1</span> <span class="hljs-number">2</span>)
+(<span class="hljs-name">1</span> <span class="hljs-number">2</span>)
+scm&gt; '(<span class="hljs-number">1</span> (<span class="hljs-number">2</span> three (<span class="hljs-number">4</span> <span class="hljs-number">5</span>)))
+(<span class="hljs-name">1</span> (<span class="hljs-name">2</span> three (<span class="hljs-name">4</span> <span class="hljs-number">5</span>)))
+scm&gt; (<span class="hljs-name">car</span> '(a b))
+a
+scm&gt; (<span class="hljs-name">eval</span> (<span class="hljs-name">cons</span> <span class="hljs-symbol">'car</span> '('(<span class="hljs-number">1</span> <span class="hljs-number">2</span>))))
+<span class="hljs-number">1</span>
+scm&gt; (<span class="hljs-name">eval</span> (<span class="hljs-name"><span class="hljs-keyword">define</span></span> tau <span class="hljs-number">6.28</span>))
+<span class="hljs-number">6.28</span>
+scm&gt; (<span class="hljs-name">eval</span> <span class="hljs-symbol">'tau</span>)
+<span class="hljs-number">6.28</span>
+scm&gt; tau
+<span class="hljs-number">6.28</span></code></pre>
+
+
+
+<p><strong>Submit your Phase 1 checkpoint</strong></p>
+
+<p>Check to make sure that you completed all the problems in Phase 1:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Then, submit <code>scheme_eval_apply.py</code>, <code>scheme_forms.py</code>, <code>scheme_classes.py</code>, and <code>questions.scm</code> to the <strong>Scheme Checkpoint 1</strong> assignment on <strong>Gradescope</strong> before the first checkpoint deadline.</p>
+
+<p>When you run <code>ok</code> commands, you'll still see that some tests are locked
+because you haven't completed the whole project yet. You'll get full credit for
+the checkpoint if you complete all the problems up to this point.</p>
+
+
+<h2 id="part-2-procedures">Part 2: Procedures</h2>
+
+
+<p>In Part 2, you will add the ability to create and call user-defined procedures.
+You will add the following features to the interpreter:</p>
+
+<ul>
+  <li>Lambda procedures, using the <code>(lambda ...)</code> special form</li>
+  <li>Named procedures, using the <code>(define (...) ...)</code> special form</li>
+  <li>Dynamically scoped mu procedures, using the <code>(mu ...)</code> special form.</li>
+</ul>
+
+
+<h3 id="user-defined-procedures">User-Defined Procedures</h3>
+
+
+<p>User-defined lambda procedures are represented as instances of the <code>LambdaProcedure</code>
+class. A <code>LambdaProcedure</code> instance has three instance attributes:</p>
+
+<ul>
+  <li><code>formals</code> is a Scheme list of the formal parameters (symbols) that name the
+  arguments of the procedure.</li>
+  <li><code>body</code> is a Scheme list of expressions; the body of the procedure.</li>
+  <li><code>env</code> is the environment in which the procedure was <strong>defined</strong>.</li>
+</ul>
+
+
+<h3 id="problem-6-1-pt">Problem 6 (1 pt)</h3>
+
+
+<p>Change the <code>eval_all</code> function in <code>scheme_eval_apply.py</code> (which is called from
+<code>do_begin_form</code> in <code>scheme_forms.py</code>) to complete the implementation of the
+<code>begin</code> special form (<a href="https://cs61a.org/articles/scheme-spec/#begin">spec</a>).</p>
+
+<p>A <code>begin</code> expression is evaluated by evaluating all sub-expressions in order.
+The value of the <code>begin</code> expression is the value of the final sub-expression.</p>
+
+<p>To complete the implementation of <code>begin</code>, <code>eval_all</code> will take in <code>expressions</code>
+(a Scheme list of expressions) and <code>env</code> (a <code>Frame</code> representing the current
+environment), evaluate all the expressions in <code>expressions</code>, and return the
+value of the last expression in <code>expressions</code>.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">begin</span></span> (<span class="hljs-name">+</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>) (<span class="hljs-name">+</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span>))
+<span class="hljs-number">11</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> x (<span class="hljs-name"><span class="hljs-keyword">begin</span></span> (<span class="hljs-name">display</span> <span class="hljs-number">3</span>) (<span class="hljs-name">newline</span>) (<span class="hljs-name">+</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>)))
+<span class="hljs-number">3</span>
+x
+scm&gt; (<span class="hljs-name">+</span> x <span class="hljs-number">3</span>)
+<span class="hljs-number">8</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">begin</span></span> (<span class="hljs-name">print</span> <span class="hljs-number">3</span>) '(+ <span class="hljs-number">2</span> <span class="hljs-number">3</span>))
+<span class="hljs-number">3</span>
+(<span class="hljs-name">+</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>)</code></pre>
+
+
+
+<p>If <code>eval_all</code> is passed an empty list of expressions (<code>nil</code>), then it should
+return the Python value <code>None</code>, which represents the Scheme value <code>undefined</code>.</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 06 -u
+python3 ok -q 06</code><button id="copy-code-python3ok-q06-upython3ok-q06" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q06-upython3ok-q06").onclick = () => copyCode('python3 ok -q 06 -u\npython3 ok -q 06', "copy-code-python3ok-q06-upython3ok-q06");
+        </script>
+        <br>
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+This would be a good time to switch roles.
+Switching roles makes sure
+that you both benefit from the learning experience of being in each role.</p>
+
+
+<h3 id="problem-7-2-pt">Problem 7 (2 pt)</h3>
+
+
+<p>Implement the <code>do_lambda_form</code> function (<a href="https://cs61a.org/articles/scheme-spec/#lambda">spec</a>) in
+<code>scheme_forms.py</code>, which creates and returns a <code>LambdaProcedure</code> instance.
+While you cannot call a user-defined procedure yet, you can verify that you
+have created the procedure correctly by evaluating a lambda expression.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (x y) (<span class="hljs-name">+</span> x y))
+(<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (x y) (<span class="hljs-name">+</span> x y))</code></pre>
+
+
+
+<p>In Scheme, it is legal to place more than one expression in the body of a
+procedure. (There must be at least one expression.) The <code>body</code> attribute of a
+<code>LambdaProcedure</code> instance is therefore a Scheme list of body expressions. The
+<code>formals</code> attribute of a <code>LambdaProcedure</code> instance should be a properly nested
+<code>Pair</code> expression. Like a <code>begin</code> special form, evaluating the body of a
+procedure evaluates all body expressions in order. The return value of a
+procedure is the value of its last body expression.</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 07 -u
+python3 ok -q 07</code><button id="copy-code-python3ok-q07-upython3ok-q07" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q07-upython3ok-q07").onclick = () => copyCode('python3 ok -q 07 -u\npython3 ok -q 07', "copy-code-python3ok-q07-upython3ok-q07");
+        </script>
+        <br>
+
+
+<h3 id="problem-8-2-pt">Problem 8 (2 pt)</h3>
+
+
+<!-- 
+        <button id='toggle-2' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-2">
+
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/gLPMuGZK0Jc"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/gLPMuGZK0Jc'> YouTube link </a></p>
+
+</div> -->
+
+<p>Implement the <code>make_child_frame</code> method of the <code>Frame</code> class
+(in <code>scheme_classes.py</code>), which will be used to create new frames when calling
+user-defined procedures. This method takes in two arguments: <code>formals</code>, which is
+a Scheme list of symbols, and <code>vals</code>, which is a Scheme list of values. It
+should return a new child frame, binding the formal parameters to the values.</p>
+
+<p>To do this:</p>
+
+<ul>
+  <li>If the number of argument values does not match with the number of formal parameters, raise a <code>SchemeError</code>.</li>
+  <li>Create a new <code>Frame</code> instance, the parent of which is <code>self</code>.</li>
+  <li>Bind each formal parameter to its corresponding argument value in the newly
+  created frame. The first symbol in <code>formals</code> should be bound to the first
+  value in <code>vals</code>, and so on.</li>
+  <li>Return the new frame.</li>
+</ul>
+
+<blockquote><p><em>Hint:</em> The <code>define</code> method of a <code>Frame</code> instance creates a binding in that
+frame.</p></blockquote>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08 -u
+python3 ok -q 08</code><button id="copy-code-python3ok-q08-upython3ok-q08" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08-upython3ok-q08").onclick = () => copyCode('python3 ok -q 08 -u\npython3 ok -q 08', "copy-code-python3ok-q08-upython3ok-q08");
+        </script>
+        <br>
+
+
+<h3 id="problem-9-2-pt">Problem 9 (2 pt)</h3>
+
+<!-- 
+        <button id='toggle-3' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-3">
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/QD0-Lw-8VDg"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/QD0-Lw-8VDg'> YouTube link </a></p>
+
+</div> -->
+
+<p>Implement the <code>LambdaProcedure</code> case in the <code>scheme_apply</code> function
+in <code>scheme_eval_apply.py</code>.</p>
+
+<p>You should first create a new <code>Frame</code> instance using the <code>make_child_frame</code>
+method of the appropriate parent frame, binding formal parameters to argument
+values. Then, evaluate each of the expressions of the body of the procedure
+using <code>eval_all</code> within this new frame.</p>
+
+<p><strong>Important:</strong> Your new frame should be a child of the frame in which the lambda is defined.
+Note that the <code>env</code> provided as an argument to <code>scheme_apply</code> is instead the
+frame in which the procedure is called.
+See <a href="https://cs61a.org/proj/scheme/#user-defined-procedures">User-Defined Procedures</a> to remind yourself
+of the attributes of <code>LambdaProcedure</code>.</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 09 -u
+python3 ok -q 09</code><button id="copy-code-python3ok-q09-upython3ok-q09" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q09-upython3ok-q09").onclick = () => copyCode('python3 ok -q 09 -u\npython3 ok -q 09', "copy-code-python3ok-q09-upython3ok-q09");
+        </script>
+        <br>
+
+
+<h3 id="problem-10-1-pt">Problem 10 (1 pt)</h3>
+
+<!-- 
+        <button id='toggle-4' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-4">
+
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/zkXY8kliOeQ"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/zkXY8kliOeQ'> YouTube link </a></p>
+
+</div> -->
+
+<p>Currently, your Scheme interpreter is able to bind symbols to user-defined
+procedures in the following manner:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> f (<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (x) (<span class="hljs-name">*</span> x <span class="hljs-number">2</span>)))
+f</code></pre>
+
+
+
+<p>However, we'd like to be able to use the shorthand form of defining named
+procedures:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">f</span> x) (<span class="hljs-name">*</span> x <span class="hljs-number">2</span>))
+f</code></pre>
+
+
+
+<p>Modify the <code>do_define_form</code> function in <code>scheme_forms.py</code> so that it correctly handles
+<code>define (...) ...)</code> expressions (<a href="https://cs61a.org/articles/scheme-spec/#define">spec</a>).</p>
+
+<p>Make sure that it can handle multi-expression bodies. For example,</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">g</span> y) (<span class="hljs-name">print</span> y) (<span class="hljs-name">+</span> y <span class="hljs-number">1</span>))
+g
+scm&gt; (<span class="hljs-name">g</span> <span class="hljs-number">3</span>)
+<span class="hljs-number">3</span>
+<span class="hljs-number">4</span></code></pre>
+
+
+
+<p>There are (at least) two ways to solve this problem. One is to construct an expression <code>(define _ (lambda ...))</code> and call <code>do_define_form</code> on it (omitting the <code>define</code>).  The second is to implement it directly:</p>
+
+<ul>
+  <li>Using the given variables <code>signature</code> and <code>expressions</code>, find the defined
+  function's name (symbol), formals, and body.</li>
+  <li>Create a <code>LambdaProcedure</code> instance using the formals and body. (You could call <code>do_lambda_form</code> to do this.)</li>
+  <li>Bind the symbol to this new <code>LambdaProcedure</code> instance.</li>
+  <li>Return the symbol that was bound.</li>
+</ul>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 10 -u
+python3 ok -q 10</code><button id="copy-code-python3ok-q10-upython3ok-q10" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q10-upython3ok-q10").onclick = () => copyCode('python3 ok -q 10 -u\npython3 ok -q 10', "copy-code-python3ok-q10-upython3ok-q10");
+        </script>
+        <br>
+
+
+<h3 id="problem-11-1-pt">Problem 11 (1 pt)</h3>
+
+<!-- 
+        <button id='toggle-5' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-5">
+
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/Ku-sXx-6Cys"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/Ku-sXx-6Cys'> YouTube link </a></p>
+
+</div> -->
+
+<p>All of the Scheme procedures we've seen so far use <em>lexical scoping</em>: the parent
+of the new call frame is the environment in which the procedure was <strong>defined</strong>.
+Another type of scoping, which is not standard in Scheme but appears in other
+variants of Lisp, is called <em>dynamic scoping</em>: the parent of the new call frame
+is the environment in which the call expression was <strong>evaluated</strong>. With dynamic
+scoping, calling the same procedure with the same arguments from different parts
+of your code can create different behavior (due to different parent frames).</p>
+
+<p>The <code>mu</code> special form (<a href="https://cs61a.org/articles/scheme-spec/#mu">spec</a>; invented for this project) evaluates
+to a dynamically scoped procedure.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> f (<span class="hljs-name"><span class="hljs-keyword">mu</span></span> () (<span class="hljs-name">*</span> a b)))
+f
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> g (<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> () (<span class="hljs-name"><span class="hljs-keyword">define</span></span> a <span class="hljs-number">4</span>) (<span class="hljs-name"><span class="hljs-keyword">define</span></span> b <span class="hljs-number">5</span>) (<span class="hljs-name">f</span>)))
+g
+scm&gt; (<span class="hljs-name">g</span>)
+<span class="hljs-number">20</span></code></pre>
+
+
+
+<p>Above, the procedure <code>f</code> does not have <code>a</code> or <code>b</code> as arguments; however, because
+<code>f</code> gets called <strong>within</strong> the procedure <code>g</code>, it has access to the <code>a</code> and <code>b</code>
+defined in <code>g</code>'s frame.</p>
+
+<p>Your job:</p>
+
+<ul>
+  <li>Implement <code>do_mu_form</code> in <code>scheme_forms.py</code> to evaluate the <code>mu</code> special form.
+  A <code>mu</code> expression  evaluates to a <code>MuProcedure</code>. The <code>MuProcedure</code> class
+  (defined in <code>scheme_classes.py</code>) has been provided for you.</li>
+  <li>In addition to implementing <code>do_mu_form</code>, complete the <code>MuProcedure</code> case
+  within the <code>scheme_apply</code> function (in <code>scheme_eval_apply.py</code>) so that when a
+  mu procedure is called, its body is evaluated in the correct environment. When
+  a <code>MuProcedure</code> is called, the parent of the new call frame is the environment
+  in which that call expression was <strong>evaluated</strong>. As a result, a <code>MuProcedure</code>
+  does not need to store an environment as an instance attribute.</li>
+</ul>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 11 -u
+python3 ok -q 11</code><button id="copy-code-python3ok-q11-upython3ok-q11" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q11-upython3ok-q11").onclick = () => copyCode('python3 ok -q 11 -u\npython3 ok -q 11', "copy-code-python3ok-q11-upython3ok-q11");
+        </script>
+        <br>
+
+<p>At this point in the project, your Scheme interpreter should support the
+following features:</p>
+
+<ul>
+  <li>Creating procedures using <code>lambda</code> and <code>mu</code> expressions,</li>
+  <li>Defining named procedures using <code>define</code> expressions, and</li>
+  <li>Calling user-defined procedures.</li>
+</ul>
+
+
+<h2 id="part-3-special-forms">Part 3: Special Forms</h2>
+
+
+<p>This section will be completed in <code>scheme_forms.py</code>.</p>
+
+<p>Logical special forms include <code>if</code>, <code>and</code>, <code>or</code>, and <code>cond</code>. These expressions
+are special because not all of their sub-expressions may be evaluated.</p>
+
+<p>In Scheme, only <code>#f</code> is a false value. All other values
+(including <code>0</code> and <code>nil</code>) are true values. You can test whether a value is a
+true or false value using the provided Python functions <code>is_scheme_true</code> and
+<code>is_scheme_false</code>, defined in <code>scheme_utils.py</code>.</p>
+
+<blockquote><p>Scheme traditionally uses <code>#f</code> to indicate the false Boolean value. In our
+interpreter, that is equivalent to <code>false</code> or <code>False</code>. Similarly, <code>true</code>,
+<code>True</code>, and <code>#t</code> are all equivalent. However, <strong>when unlocking tests</strong>, use
+<code>#t</code> and <code>#f</code>.</p></blockquote>
+
+<p>To get you started, we've provided an implementation of the <code>if</code> special form in
+the <code>do_if_form</code> function. Make sure you understand that implementation before
+starting the following questions.</p>
+
+<!-- Check out the video below for guidance on how to get started for problems 12, 13, and 14. -->
+<!-- 
+        <button id='toggle-6' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-6">
+
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/3NzdKpMxSUs"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/3NzdKpMxSUs'> YouTube link </a></p>
+
+</div> -->
+
+
+<h3 id="problem-12-2-pt">Problem 12 (2 pt)</h3>
+
+
+<p>Implement <code>do_and_form</code> and <code>do_or_form</code> so that <code>and</code> and <code>or</code> expressions
+(<a href="https://cs61a.org/articles/scheme-spec/#and">spec</a>) are evaluated correctly.</p>
+
+<p>The logical forms <code>and</code> and <code>or</code> are <em>short-circuiting</em>. For <code>and</code>, your
+interpreter should evaluate each sub-expression from left to right, and if any
+of these is a false value, return that value. Otherwise,
+return the value of the last sub-expression. If there are no
+sub-expressions in an <code>and</code> expression, it evaluates to <code>#t</code>.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">and</span></span>)
+#t
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">and</span></span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span>)  <span class="hljs-comment">; all operands are true values</span>
+<span class="hljs-number">6</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">and</span></span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> (<span class="hljs-name">+</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>))
+<span class="hljs-number">6</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">and</span></span> <span class="hljs-literal">#t</span> <span class="hljs-literal">#f</span> <span class="hljs-number">42</span> (<span class="hljs-name">/</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>))  <span class="hljs-comment">; short-circuiting behavior of and</span>
+#f</code></pre>
+
+
+
+<blockquote><p>Internal to the interpreter, represent Scheme's <code>#t</code> as Python's <code>True</code>
+and Scheme's <code>#f</code> as Python's <code>False</code>.</p></blockquote>
+
+<p>For <code>or</code>, evaluate each sub-expression from left to right. If any
+sub-expression evaluates to a true value, return that value. Otherwise, return
+the value of the last sub-expression.
+If there are no sub-expressions in an <code>or</code> expression,
+it evaluates to <code>#f</code>.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">or</span></span>)
+#f
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">or</span></span> <span class="hljs-number">5</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>)  <span class="hljs-comment">; 5 is a true value</span>
+<span class="hljs-number">5</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">or</span></span> <span class="hljs-literal">#f</span> (<span class="hljs-name">-</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>) <span class="hljs-number">1</span>)  <span class="hljs-comment">; 0 is a true value in Scheme</span>
+<span class="hljs-number">0</span>
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">or</span></span> <span class="hljs-number">4</span> <span class="hljs-literal">#t</span> (<span class="hljs-name">/</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>))  <span class="hljs-comment">; short-circuiting behavior of or</span>
+<span class="hljs-number">4</span></code></pre>
+
+
+
+<p><strong>Important:</strong> Use the provided Python functions <code>is_scheme_true</code> and
+<code>is_scheme_false</code> from <code>scheme_utils.py</code> to test boolean values.</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 12 -u
+python3 ok -q 12</code><button id="copy-code-python3ok-q12-upython3ok-q12" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q12-upython3ok-q12").onclick = () => copyCode('python3 ok -q 12 -u\npython3 ok -q 12', "copy-code-python3ok-q12-upython3ok-q12");
+        </script>
+        <br>
+
+
+<h3 id="problem-13-2-pt">Problem 13 (2 pt)</h3>
+
+
+<p>Fill in the missing parts of <code>do_cond_form</code> so that it correctly implements
+<code>cond</code> (<a href="https://cs61a.org/articles/scheme-spec/#cond">spec</a>), returning the value of the first result
+sub-expression corresponding to a true predicate, or the value of the result
+sub-expression corresponding to <code>else</code>.</p>
+
+<p>Some special cases:</p>
+
+<ul>
+  <li>When the true predicate does not have a corresponding result sub-expression,
+  return the predicate value.</li>
+  <li>When a result sub-expression of a <code>cond</code> case has multiple expressions,
+  evaluate them all and return the value of the last expression. (<em>Hint</em>: Use
+  <code>eval_all</code>.)</li>
+</ul>
+
+<p>Your implementation should match the following examples and the additional tests
+in <code>tests.scm</code>.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> ((<span class="hljs-name">=</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span>) <span class="hljs-symbol">'nope</span>)
+           ((<span class="hljs-name">=</span> <span class="hljs-number">4</span> <span class="hljs-number">4</span>) <span class="hljs-symbol">'hi</span>)
+           (<span class="hljs-name">else</span> <span class="hljs-symbol">'wait</span>))
+hi
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> ((<span class="hljs-name">=</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span>) <span class="hljs-symbol">'wat</span>)
+           ((<span class="hljs-name">=</span> <span class="hljs-number">4</span> <span class="hljs-number">4</span>))
+           (<span class="hljs-name">else</span> <span class="hljs-symbol">'hm</span>))
+#t
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> ((<span class="hljs-name">=</span> <span class="hljs-number">4</span> <span class="hljs-number">4</span>) <span class="hljs-symbol">'here</span> (<span class="hljs-name">+</span> <span class="hljs-number">40</span> <span class="hljs-number">2</span>))
+           (<span class="hljs-name">else</span> <span class="hljs-symbol">'wat</span> <span class="hljs-number">0</span>))
+<span class="hljs-number">42</span></code></pre>
+
+
+
+<p>The value of a <code>cond</code> is <code>undefined</code> if there are no true predicates and no
+<code>else</code>. In such a case, <code>do_cond_form</code> should return <code>None</code>. If there is only an
+<code>else</code>, return the value of its result sub-expression. If it doesn't have one,
+return <code>#t</code>.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> (<span class="hljs-name">False</span> <span class="hljs-number">1</span>) (<span class="hljs-name">False</span> <span class="hljs-number">2</span>))
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> (<span class="hljs-name">else</span>))
+#t</code></pre>
+
+
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 13 -u
+python3 ok -q 13</code><button id="copy-code-python3ok-q13-upython3ok-q13" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q13-upython3ok-q13").onclick = () => copyCode('python3 ok -q 13 -u\npython3 ok -q 13', "copy-code-python3ok-q13-upython3ok-q13");
+        </script>
+        <br>
+
+
+<h3 id="problem-14-2-pt">Problem 14 (2 pt)</h3>
+
+
+<p>The <code>let</code> special form (<a href="https://cs61a.org/articles/scheme-spec/#let">spec</a>) binds symbols to values locally,
+giving them their initial values. For example:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> x <span class="hljs-number">5</span>)
+x
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">define</span></span> y <span class="hljs-symbol">'bye</span>)
+y
+scm&gt; (<span class="hljs-name"><span class="hljs-keyword">let</span></span> ((<span class="hljs-name">x</span> <span class="hljs-number">42</span>)
+           (<span class="hljs-name">y</span> (<span class="hljs-name">*</span> x <span class="hljs-number">10</span>)))  <span class="hljs-comment">; this x refers to the global value of x, not 42</span>
+       (<span class="hljs-name">list</span> x y))
+(<span class="hljs-name">42</span> <span class="hljs-number">50</span>)
+scm&gt; (<span class="hljs-name">list</span> x y)
+(<span class="hljs-name">5</span> bye)</code></pre>
+
+
+
+<p>Implement <code>make_let_frame</code> in <code>scheme_forms.py</code>, which returns a child
+frame of <code>env</code> that binds the symbol in each element of <code>bindings</code> to the
+value of its corresponding expression. The <code>bindings</code> Scheme list contains
+pairs that each contain a symbol and a corresponding expression.</p>
+
+<p>You may find the following functions and methods useful:</p>
+
+<ul>
+  <li><code>validate_form</code>: this function can be used to validate the structure of each
+  binding. It takes in a Scheme list <code>expr</code> of expressions and a <code>min</code> and <code>max</code>
+  length. If <code>expr</code> is not a list with length between <code>min</code> and <code>max</code> inclusive,
+  it raises an error. If no <code>max</code> is passed in, the default is infinity.</li>
+  <li><code>validate_formals</code>: this function validates that its argument is a
+  Scheme list of symbols for which each symbol is distinct.</li>
+</ul>
+
+<blockquote><p><strong>Hint:</strong> When building new linked lists iteratively, it may be easier to build it from right to left.</p></blockquote>
+
+<p>Remember to refer to the <a href="https://cs61a.org/articles/scheme-spec/#let">spec</a> if you don't understand any of the test cases!</p>
+
+<p>Use Ok to unlock and test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 14 -u
+python3 ok -q 14</code><button id="copy-code-python3ok-q14-upython3ok-q14" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q14-upython3ok-q14").onclick = () => copyCode('python3 ok -q 14 -u\npython3 ok -q 14', "copy-code-python3ok-q14-upython3ok-q14");
+        </script>
+        <br>
+
+
+<h3 id="additional-scheme-tests-1-pt">Additional Scheme Tests (1 pt)</h3>
+
+
+<p>Your final task in Part III of this project is to make sure that your scheme
+interpreter passes the additional suite of tests we have provided.</p>
+
+<p>To run these tests (worth 1 point), run the command:</p>
+
+<pre><code class="hljs">python3 ok -q tests.scm</code></pre>
+
+
+
+<p>If you have passed all of the required cases,
+you should see 1/1 points
+received for <code>tests.scm</code> when you run <code>python ok --score</code>.
+If you are failing tests due to output from
+<code>print</code> statements you've added in your code for debugging,
+make sure to remove those as well for the tests to pass.</p>
+
+<p><strong>Submit your Phase 2 &amp; 3 checkpoint</strong></p>
+
+<p>Check to make sure that you completed all the problems in Phase 1:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Then, submit <code>scheme_eval_apply.py</code>, <code>scheme_forms.py</code>, <code>scheme_classes.py</code>, and <code>questions.scm</code> to the <strong>Scheme Checkpoint 2</strong> assignment on <strong>Gradescope</strong> before the second checkpoint deadline.</p>
+
+<p>When you run <code>ok</code> commands, you'll still see that some tests are locked
+because you haven't completed the whole project yet. You'll get full credit for
+the checkpoint if you complete all the problems up to this point.</p>
+
+<p>Congratulations! Your Scheme interpreter implementation is now complete!</p>
+
+
+<h2 id="part-4-write-some-scheme">Part 4: Write Some Scheme</h2>
+
+
+<!-- Check out this video for some hints and guidance on questions 15 through 17: -->
+<!-- 
+        <button id='toggle-7' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-7">
+
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/VgQAQc9Dfh8"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/VgQAQc9Dfh8'> YouTube link </a></p>
+
+</div> -->
+
+<p>Not only is your Scheme interpreter itself a tree-recursive program, but it is
+flexible enough to evaluate <em>other</em> recursive programs. Implement the
+following procedures in the <code>questions.scm</code> file.</p>
+
+<p>See the <a href="https://cs61a.org/articles/scheme-builtins/">built-in procedure reference</a> for
+descriptions of the behavior of all built-in Scheme procedures.</p>
+
+<p>As you use your interpreter, you may discover additional bugs in your
+interpreter implementation. Therefore, you may find it useful to test your code
+for these questions in the staff interpreter or the <a href="https://code.cs61a.org/scheme">web editor</a> and then try
+it in your own interpreter once you are confident your Scheme code is working.
+You can also use the web editor to visualize the scheme code you've written and
+help you debug.</p>
+
+
+<h3 id="scheme-editor">Scheme Editor</h3>
+
+
+<p>As you're writing your code, you can debug using the local Scheme Editor.
+To run this editor, run <code>python3 editor</code>. This should open a window in your
+browser; if it does not, please navigate to <a href="localhost:31415">localhost:31415</a>
+and you should see it.</p>
+
+<p>Make sure to run <code>python3 ok</code> in a separate tab or window so that the editor
+keeps running.</p>
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+Remember to alternate between driver and navigator roles.
+The driver controls the keyboard;
+the navigator watches, asks questions, and suggests ideas.</p>
+
+
+<h3 id="problem-15-2-pt">Problem 15 (2 pt)</h3>
+
+
+<p>Implement the <code>enumerate</code> procedure, which takes in a list of values and returns
+a list of two-element lists, where the first element is the index of the value,
+and the second element is the value itself.</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">enumerate</span> '(<span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span>))
+((<span class="hljs-name">0</span> <span class="hljs-number">3</span>) (<span class="hljs-name">1</span> <span class="hljs-number">4</span>) (<span class="hljs-name">2</span> <span class="hljs-number">5</span>) (<span class="hljs-name">3</span> <span class="hljs-number">6</span>))
+scm&gt; (<span class="hljs-name">enumerate</span> '())
+()</code></pre>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 15</code><button id="copy-code-python3ok-q15" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q15").onclick = () => copyCode('python3 ok -q 15', "copy-code-python3ok-q15");
+        </script>
+        <br>
+
+
+<h3 id="problem-16-2-pt">Problem 16 (2 pt)</h3>
+
+
+<p>Implement the <code>merge</code> procedure, which takes in a comparator function <code>ordered?</code>
+and two lists that are sorted according to the comparator and combines the two
+lists into a single sorted list. A comparator defines an ordering by comparing
+two values and returning a true value if and only if the two values are ordered.</p>
+
+<pre><code class="hljs python">scm&gt; (merge &lt; <span class="hljs-string">'(1 4 6) '</span>(<span class="hljs-number">2</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span>))
+(<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">8</span>)
+scm&gt; (merge &gt; <span class="hljs-string">'(6 4 1) '</span>(<span class="hljs-number">8</span> <span class="hljs-number">5</span> <span class="hljs-number">2</span>))
+(<span class="hljs-number">8</span> <span class="hljs-number">6</span> <span class="hljs-number">5</span> <span class="hljs-number">4</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>)
+scm&gt; (merge &lt; <span class="hljs-string">'(1) '</span>(<span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span>))
+(<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span>)</code></pre>
+
+<p>In case of a tie, you can choose to break the tie in any way you wish.</p>
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 16</code><button id="copy-code-python3ok-q16" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q16").onclick = () => copyCode('python3 ok -q 16', "copy-code-python3ok-q16");
+        </script>
+        <br>
+
+
+<h2 id="optional-problems">Optional Problems</h2>
+
+
+<!-- > Check out the video below for some hints on how to get started: -->
+
+<!-- 
+            <iframe width="560" height="315" src="https://youtube.com/embed/iC5_rtPpzmQ"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/iC5_rtPpzmQ'> YouTube link </a></p> -->
+
+
+<h3 id="optional-problem-1-0-pt">Optional Problem 1 (0 pt)</h3>
+
+
+<p>In this problem, you will implement tail-call optimization, an essential feature of the
+Scheme language. Watch this <a href="https://www.youtube.com/watch?v=zOxxB-gdO9U&amp;list=PL6BsET-8jgYVSrrJ9XNFsYQButTbRFlJo">playlist</a> to learn about tail calls.</p>
+
+<p>We will implement tail-call optimization in Scheme by using a technique called "trampolining"
+to tail-call optimize our <code>scheme_eval</code> function <em>in Python</em>.</p>
+
+
+        <button id="toggle-8" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Why optimizing scheme_eval optimizes Scheme<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-8">
+The heart of our interpreter is <code>scheme_eval</code>, which is a tree recursive function. Therefore, when we
+make an initial call to <code>scheme_eval</code>, a very large of recursive calls to <code>scheme_eval</code> are subsequently made.
+This is the case even with the simple <code>foo</code> procedure below: evaluating <code>(foo 4)</code> in the Scheme interpreter results
+in <code>scheme_eval</code> being called 52 times.
+
+<pre><code class="hljs scheme">(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">foo</span> n)
+    (<span class="hljs-name"><span class="hljs-keyword">if</span></span> (<span class="hljs-name">=</span> n <span class="hljs-number">0</span>)
+        <span class="hljs-number">0</span>
+        (<span class="hljs-name">foo</span> (<span class="hljs-name">-</span> n <span class="hljs-number">1</span>))))</code></pre>
+
+<p>If we only focus on calls to <code>scheme_eval</code> where the provided <code>expr</code> is a
+call to <code>foo</code>, we see an interesting pattern:</p>
+
+<p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/scheme_eval_recursion.png" alt="Diagram" width="" height=""></p>
+
+<p>The structure of recursive calls made by <code>scheme_eval</code> closely mirrors the structure of recursive calls made by <code>foo</code>:</p>
+
+<ul>
+  <li>The call to <code>scheme_eval</code> that calculates <code>(foo 4)</code> eventually makes a recursive call to <code>scheme_eval</code> that
+  calculates <code>(foo 3)</code>. The call to <code>scheme_eval</code> that calculates <code>(foo 3)</code> eventually makes a recursive call
+  to <code>scheme_eval</code> that calculates <code>(foo 2)</code>, and so on.</li>
+  <li>In Scheme, the very last thing that happens during the call to <code>(foo 4)</code> is that a recursive call is made to
+  determine <code>(foo 3)</code>. Similarly, in Python, the very last thing that happens during the call to <code>scheme_eval</code> that
+  calculates <code>(foo 4)</code> is that a recursive call is made to <code>scheme_eval</code> to determine <code>(foo 3)</code>.
+  <em>In other words, these <code>scheme_eval</code> calls are tail calls!</em></li>
+  <li>In Python, a large number of <code>scheme_eval</code> frames are opened and kept. Each of these <code>scheme_eval</code> frames holds a
+  reference to a <code>foo</code> frame (represented by an instance of the <code>Frame</code> class). The reason our current implementation of the
+  interpreter is keeping these unnecessary <code>foo</code> frames around is because it's keeping these <code>scheme_eval</code> frames around
+  as well.</li>
+</ul>
+
+<p>Because some of the <code>scheme_eval</code> calls are tail calls, we don't need to keep all of those frames that are being
+created in Python. That means that we can tail-call optimize <code>scheme_eval</code>. And because the Scheme frames are
+stored on the <code>scheme_eval</code> call frames, tail-call optimizing <code>scheme_eval</code> in Python will tail-call optimize the entire
+interpreter in Scheme.</p>
+
+<p>As it turns out, tail-call optimizing <code>scheme_eval</code> has other effects in addition to tail-call optimizing Scheme.
+For example, expressions like <code>(or #f (or #f (or #f f )))</code> also become much more efficient to run.
+</p></div><p></p>
+
+<br>
+
+
+        <button id="toggle-9" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Tail Calls<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-9">
+Here is a simple recursive procedure, <code>foo</code>, that doesn't do very much.
+
+<pre><code class="hljs scheme">(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">foo</span> n)
+    (<span class="hljs-name"><span class="hljs-keyword">if</span></span> (<span class="hljs-name">=</span> n <span class="hljs-number">0</span>)
+        <span class="hljs-number">0</span>
+        (<span class="hljs-name">foo</span> (<span class="hljs-name">-</span> n <span class="hljs-number">1</span>))))</code></pre>
+
+<p>In your non-tail-call optimized version of Scheme, here's what happens when call we <code>foo(4)</code>:</p>
+
+<p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/tco.gif" alt="Foo" width="" height=""></p>
+
+<p>In order to calculate <code>(foo 4)</code>, we need to call <code>(foo 3)</code>. In order to calculate <code>(foo 3)</code>,
+we need to call <code>(foo 2)</code>. In order to calculate <code>(foo 2)</code>, we need to call <code>(foo 1)</code>. In order
+to calculate <code>(foo 1)</code>, we need to call <code>(foo 0)</code>, which returns <code>0</code>. While all of these recursive
+calls are happening, each call <em>waits</em> on the result of the next recursive call, and its
+frame remains open during that time. This is manageable for small inputs, but for <code>(foo 1000000)</code>,
+over 1 million frames will be simultaneously open at some point! That could crash your computer.</p>
+
+<p>In most circumstances, this practice of keeping these frames active during subsequent calls is important.
+For example, in the below code, <code>f</code> calls <code>g</code>; the frame of <code>f</code> needs to remain active while the call to <code>g</code>
+is ongoing so that we can eventually return to <code>f</code> and complete the code.</p>
+
+<pre><code class="hljs scheme">(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">f</span> x)
+    (<span class="hljs-name"><span class="hljs-keyword">define</span></span> y (<span class="hljs-name">g</span> x))
+    (<span class="hljs-name">*</span> x y))
+
+(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">g</span> x)
+   (<span class="hljs-name">*</span> <span class="hljs-number">6</span> x))
+
+(<span class="hljs-name">f</span> <span class="hljs-number">7</span>)</code></pre>
+
+<p>However, some procedures, such as <code>foo</code>, make their procedure calls only at the <em>very end</em>.
+Because the very last thing <code>(foo 4)</code> does is make a call to <code>(foo 3)</code>, there will be nothing left to do
+in the <code>(foo 4)</code> call after <code>(foo 3)</code> returns. Therefore, we do not need to actually keep around the <code>(foo 4)</code>
+frame once we have made the recursive call to <code>(foo 3)</code>. Our interpreter is currently saving these frames,
+even though they are redundant. If we could get rid of these frames when we are done with them,
+we would solve the issue of large inputs to <code>foo</code> crashing and dramatically improve the efficiency
+of our program.</p>
+
+<p>In this situation, where a call is the last thing a procedure evaluates before it returns, that call is said to
+be in a <strong>tail context</strong>. Full implementations of Scheme all implement <strong>tail-call optimization</strong>, which involves
+discarding unnecessary frames so that <strong>tail calls</strong> run more efficiently.
+</p></div><p></p>
+
+<br>
+
+
+        <button id="toggle-10" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Trampolining<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-10">
+Trampolining is a method of implementing tail call optimization in a language that does not normally
+support it (e.g. Python) by storing function calls that are in a tail context as unevaluated calls (Thunks),
+then evaluating and unwrapping them only as needed (Trampolining).
+
+<p>The basic unit of this method is the Thunk, which represents an unevaluated operation. The simplest way to
+achieve this effect is by wrapping the operation in a zero-argument function, saving it for later evaluation:</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>my_thunk1 = <span class="hljs-keyword">lambda</span>: sqrt(<span class="hljs-number">16384</span>) + <span class="hljs-number">22</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>my_thunk2 = <span class="hljs-keyword">lambda</span>: some_costly_operation(<span class="hljs-number">1000</span>)</code></pre>
+
+<p>These can be "unwrapped" by calling the function, which finally evaluates their interior.</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>my_thunk1()
+<span class="hljs-number">150.0</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>my_thunk2()
+<span class="hljs-comment"># result of evaluating some_costly_operation(1000)</span></code></pre>
+
+<p>These thunks can be nested as well, requiring multiple calls:</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>my_nested_thunk = <span class="hljs-keyword">lambda</span>: <span class="hljs-keyword">lambda</span>: <span class="hljs-keyword">lambda</span>: <span class="hljs-number">4</span> * (<span class="hljs-number">2</span> + <span class="hljs-number">3</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>thunk2 = my_nested_thunk()
+<span class="hljs-meta">&gt;&gt;&gt; </span>thunk3 = thunk2()
+<span class="hljs-meta">&gt;&gt;&gt; </span>result = thunk3()
+<span class="hljs-meta">&gt;&gt;&gt; </span>result
+<span class="hljs-number">20</span></code></pre>
+
+<p>This "unwrapping" of a nested thunk is the process we call trampolining, and it can be done automatically,
+calling the thunk until it finally returns a value.</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trampoline</span><span class="hljs-params">(value)</span>:</span>
+    <span class="hljs-keyword">while</span> callable(value): <span class="hljs-comment"># While value is still a thunk</span>
+        value = value()
+    <span class="hljs-keyword">return</span> value</code></pre>
+
+<p>Why is this useful? Consider our tail-call-optimized factorial:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tail_factorial</span><span class="hljs-params">(n, so_far=<span class="hljs-number">1</span>)</span>:</span>
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> so_far
+    <span class="hljs-keyword">return</span> tail_factorial(n - <span class="hljs-number">1</span>, so_far * n)</code></pre>
+
+<p>Since Python does not optimize tail calls, a frame is opened at each recursive call and only closed at the
+very end, causing this to be as bad as the original implementation! Visualizing this as a call stack:</p>
+
+<p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/non_thunked_calls.png" alt="Non-Thunk Calls" width="" height=""></p>
+
+<p>You can see that by the time we get to the base case, every single <code>tail_factorial</code> frame is still open!
+To fix this, we can apply thunking! Thunking only keeps one <code>thunk_factorial</code> frame open by having each call
+evaluate exactly one step of the factorial, then return an unevaluated thunk instead of a nested call.
+The implementation looks like this:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">thunk_factorial</span><span class="hljs-params">(n, so_far=<span class="hljs-number">1</span>)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">thunk</span><span class="hljs-params">()</span>:</span>
+        <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> so_far
+        <span class="hljs-keyword">return</span> thunk_factorial(n - <span class="hljs-number">1</span>, so_far * n)
+    <span class="hljs-keyword">return</span> thunk
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">factorial</span><span class="hljs-params">(n)</span>:</span>
+    value = thunk_factorial(n)
+    <span class="hljs-keyword">while</span> callable(value): <span class="hljs-comment"># While value is still a thunk</span>
+        value = value()
+    <span class="hljs-keyword">return</span> value</code></pre>
+
+<p>To explain the benefit, consider the new diagram of the function calls,
+and compare to the original tail recursive version:</p>
+
+<p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/thunked_calls.png" alt="Thunk Calls" width="" height=""></p>
+
+<p>While the thunked version may initially seem more complicated, notice that there are always at most
+one <code>thunk_factorial</code> and <code>thunk</code> calls active at a time. This is true no matter how large <code>n</code> gets!
+At each step, calling the current <code>thunk</code> calculates exactly one step of the factorial, then returns
+a new <code>thunk</code> for the next step so that the process can continue in the next loop.</p>
+
+<p>You can also take a closer look by observing this step-by-step diagram that walks through
+evaluating the first part of <code>factorial(3)</code>:</p>
+
+<p><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/thunk_detailed.gif" alt="Detailed Animated Thunk" width="" height=""></p>
+
+<p>You can see that returning an unevaluated thunk from <code>thunk_factorial</code> instead of calling itself
+recursively allows the open frames that have finished evaluating to close, keeping only the necessary
+frames open at any given time.</p>
+
+<p>For our Scheme interpreter, an <code>Unevaluated</code> instance is a thunk of <code>scheme_eval</code>, which we want to optimize.
+We repeatedly evaluate this thunk by calling <code>scheme_eval</code> on the stored arguments, until we get a value
+(which we return).</p>
+
+<br>
+
+</div>
+
+<br><br>
+
+<p>Complete the function <code>optimize_tail_calls</code> in <code>scheme_eval_apply.py</code>. It returns an
+alternative to <code>scheme_eval</code> that is tail-call optimized in Python. That is it will
+allow an unbounded number of active tail calls to <code>scheme_eval</code> in constant
+space. It has a third argument <code>tail</code> that indicates whether the call to <code>scheme_eval</code> is
+a tail call or not.</p>
+
+<p>The <code>Unevaluated</code> class represents an expression that needs to be
+evaluated in an environment. When <code>optimized_eval</code> receives a non-atomic
+expression in a tail context, it returns an <code>Unevaluated</code> instance. Otherwise,
+it should repeatedly call <code>unoptimized_scheme_eval</code> on the current expr and env
+until the result is a value, rather than an <code>Unevaluated</code>.</p>
+
+<p>Additionally, all tail calls to <code>scheme_eval</code> throughout your interpreter should be
+evaluated by calling <code>scheme_eval</code> with <code>True</code> as the third argument (now called <code>tail</code>).
+Your goal is to determine which calls to <code>scheme_eval</code> are tail calls and change <code>tail</code>
+as needed. <strong>A successful implementation will require changes
+to several other functions, including some functions that we provided for you.</strong></p>
+
+<blockquote><p>A call to <code>scheme_eval</code> is a tail call if it is the last thing to be done in a function
+before it returns.</p>
+
+<p>In lecture, you learned rules about how to find tail contexts <em>in Scheme</em>. Since we're
+trying to tail-call optimize our Python function <code>scheme_eval</code>, these rules are not exactly
+applicable to Python.</p></blockquote>
+
+<p>Once you finish, uncomment the following line in <code>scheme_eval_apply.py</code> to use your
+implementation:</p>
+
+<pre><code class="hljs">scheme_eval = optimize_tail_calls(scheme_eval)</code></pre>
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q optional1</code><button id="copy-code-python3ok-qoptional1" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qoptional1").onclick = () => copyCode('python3 ok -q optional1', "copy-code-python3ok-qoptional1");
+        </script>
+        <br>
+
+
+<h3 id="optional-problem-2-0-pt">Optional Problem 2 (0 pt)</h3>
+
+
+<p>In Scheme, source code is data. Every non-atomic expression is written as a Scheme list, so we can write procedures that manipulate other programs just as we write procedures that manipulate lists.</p>
+
+<p>Rewriting programs can be useful: we can write an interpreter that only handles a small core of the language, and then write a procedure that converts other special forms into the core language before a program is passed to the interpreter.</p>
+
+<p>For example, the <code>let</code> special form is equivalent to a call expression that begins with a <code>lambda</code> expression. Both create a new frame extending the current environment and evaluate a body within that new environment.</p>
+
+<pre><code class="scheme hljs">(<span class="hljs-name"><span class="hljs-keyword">let</span></span> ((<span class="hljs-name">a</span> <span class="hljs-number">1</span>) (<span class="hljs-name">b</span> <span class="hljs-number">2</span>)) (<span class="hljs-name">+</span> a b))
+<span class="hljs-comment">;; Is equivalent to:</span>
+((<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (a b) (<span class="hljs-name">+</span> a b)) <span class="hljs-number">1</span> <span class="hljs-number">2</span>)</code></pre>
+
+
+
+<p>These expressions can be represented by the following diagrams:</p>
+
+
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+          
+  <tbody><tr>
+    <th>Let</th>
+    <th>Lambda</th>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/let.png" alt="let" width="" height=""></td>
+    <td><img class="img-responsive center-block" src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/lambda.png" alt="lambda" width="" height=""></td>
+  </tr>
+
+          </tbody></table>
+        </div>
+        
+
+
+
+<p>Use this rule to implement a procedure called <code>let-to-lambda</code> in <code>questions.scm</code> that rewrites all <code>let</code> special forms into <code>lambda</code> expressions. If we quote a <code>let</code> expression and pass it into this procedure, an equivalent <code>lambda</code> expression should be returned:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">let-to-lambda</span> '(let ((a <span class="hljs-number">1</span>) (b <span class="hljs-number">2</span>)) (+ a b)))
+((<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (a b) (<span class="hljs-name">+</span> a b)) <span class="hljs-number">1</span> <span class="hljs-number">2</span>)
+scm&gt; (<span class="hljs-name">let-to-lambda</span> '(let ((a <span class="hljs-number">1</span>)) (let ((b a)) b)))
+((<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (a) ((<span class="hljs-name"><span class="hljs-keyword">lambda</span></span> (b) b) a)) <span class="hljs-number">1</span>)
+scm&gt; (<span class="hljs-name">let-to-lambda</span> <span class="hljs-number">1</span>)
+<span class="hljs-number">1</span>
+scm&gt; (<span class="hljs-name">let-to-lambda</span> <span class="hljs-symbol">'a</span>)
+a</code></pre>
+
+
+
+<p>In order to handle all programs, <code>let-to-lambda</code> must be aware of Scheme syntax. Since Scheme expressions are recursively nested, <code>let-to-lambda</code> must also be recursive. In fact, the structure of <code>let-to-lambda</code> is somewhat similar to that of <code>scheme_eval</code>—but in Scheme! As a reminder, atoms include numbers, booleans, <code>nil</code>, and symbols. You do not need to consider code that contains quasiquotation for this problem.</p>
+
+<pre><code class="scheme hljs">(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">let-to-lambda</span> expr)
+  (<span class="hljs-name"><span class="hljs-keyword">cond</span></span> ((<span class="hljs-name">atom?</span>   expr) &lt;rewrite atoms&gt;)
+        ((<span class="hljs-name">quoted?</span> expr) &lt;rewrite quoted expressions&gt;)
+        ((<span class="hljs-name">lambda?</span> <span class="hljs-name">expr</span>) &lt;rewrite lambda expressions&gt;)
+        ((<span class="hljs-name">define?</span> expr) &lt;rewrite define expressions&gt;)
+        ((<span class="hljs-name">let?</span>    expr) &lt;rewrite let expressions&gt;)
+        (<span class="hljs-name">else</span>           &lt;rewrite other expressions&gt;)))</code></pre>
+
+
+
+<p><em>Hint 1</em>: Consider how you can use <code>map</code> to convert <code>let</code> forms in every element of a list to the equivalent <code>lambda</code> form? Consider using <code>zip</code>:</p>
+
+<pre><code class="scheme hljs">scm&gt; (<span class="hljs-name">zip</span> '((<span class="hljs-number">1</span> <span class="hljs-number">2</span>) (<span class="hljs-number">3</span> <span class="hljs-number">4</span>) (<span class="hljs-number">5</span> <span class="hljs-number">6</span>)))
+((<span class="hljs-name">1</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span>) (<span class="hljs-name">2</span> <span class="hljs-number">4</span> <span class="hljs-number">6</span>))
+scm&gt; (<span class="hljs-name">zip</span> '((<span class="hljs-number">1</span> <span class="hljs-number">2</span>)))
+((<span class="hljs-name">1</span>) (<span class="hljs-name">2</span>))
+scm&gt; (<span class="hljs-name">zip</span> '())
+(() ())</code></pre>
+
+
+
+<p><em>Hint 2</em>: In this problem, it may be helpful to build a Scheme list that evaluates to a special form (for instance, a <code>lambda</code> expression). As a related example, the following code builds a scheme list that evaluates to the expression <code>(define (f x) (+ x 1))</code>:</p>
+
+<pre><code class="scheme hljs">(<span class="hljs-name"><span class="hljs-keyword">let</span></span> ((<span class="hljs-name">name-and-params</span> '(f x))
+      (<span class="hljs-name">body</span> '(+ x <span class="hljs-number">1</span>)))
+  (<span class="hljs-name">cons</span> <span class="hljs-symbol">'define</span>
+        (<span class="hljs-name">cons</span> name-and-params (<span class="hljs-name">cons</span> body nil))))</code></pre>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q optional2</code><button id="copy-code-python3ok-qoptional2" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qoptional2").onclick = () => copyCode('python3 ok -q optional2', "copy-code-python3ok-qoptional2");
+        </script>
+        <br>
+
+<blockquote><p>We used let while defining <code>let-to-lambda</code>. What if we want to run <code>let-to-lambda</code> on an interpreter that does not recognize <code>let</code>? We can pass <code>let-to-lambda</code> to itself to rewrite itself into an <em>equivalent program without</em> <code>let</code>:</p>
+
+<pre><code class="scheme hljs"><span class="hljs-comment">;; The let-to-lambda procedure</span>
+(<span class="hljs-name"><span class="hljs-keyword">define</span></span> (<span class="hljs-name">let-to-lambda</span> expr)
+ ...)
+
+<span class="hljs-comment">;; A list representing the let-to-lambda procedure</span>
+(<span class="hljs-name"><span class="hljs-keyword">define</span></span> let-to-lambda-code
+ '(define (let-to-lambda expr)
+    ...))
+
+<span class="hljs-comment">;; A let-to-lambda procedure that does not use 'let'!</span>
+(<span class="hljs-name"><span class="hljs-keyword">define</span></span> let-to-lambda-without-let
+ (<span class="hljs-name">let-to-lambda</span> let-to-lambda-code))</code></pre></blockquote>
+
+
+<h2 id="conclusion">Conclusion</h2>
+
+
+<p><strong>Congratulations!</strong> You have just implemented an interpreter for an entire
+language! If you enjoyed this project and want to extend it further, you may be
+interested in looking at more advanced features, like <a href="http://schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-7.html#%_sec_4.2.2">let* and letrec</a>,
+<a href="http://schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-7.html#%_sec_4.2.6">unquote splicing</a>, <a href="https://en.wikipedia.org/wiki/Stack_trace">error tracing</a>, and <a href="https://en.wikipedia.org/wiki/Call-with-current-continuation">continuations</a>.</p>
+
+
+<h2 id="project-submission">Project submission</h2>
+
+
+<p>Run <code>ok</code> on all problems to make sure all tests are unlocked and pass:</p>
+
+<pre><code class="hljs">python3 ok</code></pre>
+
+<p>You can also check your score on each part of the project:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Once you are satisfied, submit <code>scheme_eval_apply.py</code>, <code>scheme_forms.py</code>, <code>scheme_classes.py</code>, and <code>questions.scm</code> to the <strong>Scheme</strong> assignment on <strong>Gradescope</strong> before the second checkpoint deadline.</p>
+
+<p>You can add a partner to your Gradescope submission by clicking on <strong>+ Add Group Member</strong> under your name on the right hand side of your submission. Only one partner needs to submit to Gradescope.</p>
+
+<script>
+/*
+This code is duplicated in lab-check-in.html. Doesn't work if we move it to a separate
+file because of JQuery document ready concurrency issues.
+*/
+$(function() {
+    $('.alwaystoggle').css('display', 'inline-block');
+    $('.alwaystoggle').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+});
+</script>
+
+<script>
+$("#cats_typing").hover(
+  function() {
+    $("#cats_typing").attr("src", "images/cats_typing.gif");
+  },
+  function() {
+    $("#cats_typing").attr("src", "images/cats_typing_still.gif");
+  }
+);
+</script>
+
+
+
+  </div>
+
+  <div class="col-md-3 sticky">
+    <nav class="hidden-print hidden-sm hidden-xs sidebar">
+      <ul class="nav nav-stacked noselect">
+  <li><a href="https://cs61a.org/proj/scheme/#introduction">Introduction</a></li>
+  <li><a href="https://cs61a.org/proj/scheme/#download-starter-files">Download starter files</a></li>
+  <li><a href="https://cs61a.org/proj/scheme/#logistics">Logistics</a></li>
+  <li><a href="https://cs61a.org/proj/scheme/#interpreter-details">Interpreter details</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#scheme-features">Scheme features</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#running-the-interpreter">Running the interpreter</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#getting-started-videos">Getting Started Videos</a></li>
+  <li><a href="https://cs61a.org/proj/scheme/#part-1-the-evaluator">Part 1: The Evaluator</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#problem-1-1-pt">Problem 1 (1 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-2-2-pt">Problem 2 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-3-2-pt">Problem 3 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-4-2-pt">Problem 4 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-5-1-pt">Problem 5 (1 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#part-2-procedures">Part 2: Procedures</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#user-defined-procedures">User-Defined Procedures</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-6-1-pt">Problem 6 (1 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-7-2-pt">Problem 7 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-8-2-pt">Problem 8 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-9-2-pt">Problem 9 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-10-1-pt">Problem 10 (1 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-11-1-pt">Problem 11 (1 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#part-3-special-forms">Part 3: Special Forms</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#problem-12-2-pt">Problem 12 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-13-2-pt">Problem 13 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-14-2-pt">Problem 14 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#additional-scheme-tests-1-pt">Additional Scheme Tests (1 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#part-4-write-some-scheme">Part 4: Write Some Scheme</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#scheme-editor">Scheme Editor</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-15-2-pt">Problem 15 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#problem-16-2-pt">Problem 16 (2 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#optional-problems">Optional Problems</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/scheme/#optional-problem-1-0-pt">Optional Problem 1 (0 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/scheme/#optional-problem-2-0-pt">Optional Problem 2 (0 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/scheme/#conclusion">Conclusion</a></li>
+  <li><a href="https://cs61a.org/proj/scheme/#project-submission">Project submission</a></li>
+</ul>
+    </nav>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="container">
+      <div class="row text-center">
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/">CS 61A</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/weekly">Weekly Schedule</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li><a href="https://cs61a.org/staff">Staff</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/resources">Resources</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/studying">Studying Guide</a></li>
+            <li><a href="https://cs61a.org/articles/debugging">Debugging Guide</a></li>
+            <li><a href="https://cs61a.org/articles/composition">Composition Guide</a></li>
+            <li><a href="https://cs61a.org/articles/pair-programming">Pair Programming</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/articles/about">Policies</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/about#assignments">Assignments</a></li>
+            <li><a href="https://cs61a.org/articles/about#exams">Exams</a></li>
+            <li><a href="https://cs61a.org/articles/about#grading">Grading</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/loader.min.js.下载"></script>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/editor.main.min.css">
+  <script>
+      require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
+      window.MonacoEnvironment = { getWorkerUrl: () => URL.createObjectURL(new Blob([`
+      self.MonacoEnvironment = {
+          baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], { type: 'text/javascript' }))
+  };
+  </script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/jsplumb.min.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/network_storage.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/storable.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/editor.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/copy-button.js.下载"></script>
+    <script src="./Project 4_ Scheme Interpreter _ CS 61A Spring 2024_files/env-diagram.js.下载"></script>
+    
+<!-- <script src="/assets/js/sketchy.js"></script> -->
+<script>
+  $('.sidebar ul').addClass('nav nav-stacked noselect');
+  $('body').scrollspy({
+    target: '.sidebar',
+    offset: 40
+  });
+
+  function goToId(id) {
+    var target = $(id);
+    target.parent().show();
+    $('html,body').animate({
+      scrollTop: target.offset().top,
+    }, 100);
+    $("body").scrollspy('refresh');
+  }
+
+  if (location.hash) {
+    setTimeout(function() {
+      if (location.hash) {
+        goToId(location.hash);
+      }
+    }, 1);
+  }
+
+  $("a").click(function(event) {
+    var urlBeforeHashRegEx = new RegExp("^"+window.location.href.split("#")[0]);
+    if (/^#/.test(this.hash) && urlBeforeHashRegEx.test(this.href)) {
+      event.preventDefault();
+      goToId(this.hash);
+      document.location.hash = this.hash;
+    }
+  });
+</script>
+
+  
+<i id="__PIKPAK_EXTENSION__" style="display: none;">1.6.3</i><div id="dom-inspector-1717742027144" class="dom-inspector dom-inspector-theme-default" style="z-index: 9999"><div class="content"></div><div class="padding padding-top"></div><div class="padding padding-right"></div><div class="padding padding-bottom"></div><div class="padding padding-left"></div><div class="border border-top"></div><div class="border border-right"></div><div class="border border-bottom"></div><div class="border border-left"></div><div class="margin margin-top"></div><div class="margin margin-right"></div><div class="margin margin-bottom"></div><div class="margin margin-left"></div><div class="tips"><div class="tag"></div><div class="id"></div><div class="class"></div><div class="line">&nbsp;|&nbsp;</div><div class="size"></div><div class="triangle"></div></div></div></body></html>

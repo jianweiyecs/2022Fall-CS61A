@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://cs61a.org/lab/lab02/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.inset-0{inset:0}.bottom-20{bottom:5rem}.bottom-36{bottom:9rem}.right-16{right:4rem}.right-3{right:.75rem}.z-\[99999\]{z-index:99999}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.w-0{width:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:1s linear infinite spin}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-0{border-width:0}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.bg-\[\#2c3440\]{--tw-bg-opacity:1;background-color:rgb(44 52 64/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-gray-300{--tw-ring-opacity:1;--tw-ring-color:rgb(209 213 219/var(--tw-ring-opacity))}.ring-opacity-5{--tw-ring-opacity:.05}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-100{transition-duration:.1s}.duration-300{transition-duration:.3s}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-gray-400::placeholder{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity))}.focus\:ring-indigo-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229/var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}@media (width>=640px){.sm\:flex{display:flex}.sm\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-x-2{--tw-translate-x:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:items-start{align-items:flex-start}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1 - var(--tw-space-x-reverse)))}.sm\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.sm\:rounded-lg{border-radius:.5rem}.sm\:p-6{padding:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:leading-6{line-height:1.5rem}}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div class="fixed bottom-20 right-16 text-sm hidden z-[99999]"><div class="bg-[#2c3440] w-80 shadow sm:rounded-lg"><div class="flex justify-end pt-3 pr-3"><form action="https://codepen.io/pen/define" method="POST" target="_blank"><input type="hidden" name="data" value="{}"><button type="submit" class="font-semibold text-slate-200">preview</button></form><a class="font-semibold text-slate-200 ml-2" href="https://copycss.xyz/" target="_blank">help</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></div><div class="px-6 pb-6"><div class="flex justify-center items-center space-x-1 absolute right-3 bottom-36"><button class="w-10 h-10 bg-indigo-600  text-white font-black rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">←</button><div class="flex flex-col space-y-2"><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↑</button><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↓</button></div><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">→</button></div><div class="mt-1"><label class="text-base font-semibold text-slate-200">Component Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="HTML" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-slate-300">HTML</label></div><div class="flex items-center"><input id="JSX" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="JSX" class="ml-3 block text-sm font-medium leading-6 text-slate-300">JSX</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">With Child</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Yes" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Yes" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Yes</label></div><div class="flex items-center"><input id="No" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="No" class="ml-3 block text-sm font-medium leading-6 text-slate-300">No</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">Style Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Tailwind" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Tailwind" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Tailwind</label></div><div class="flex items-center"><input id="Inline" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Inline" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Inline</label></div><div class="flex items-center"><input id="Class" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Class" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Class</label></div></div></fieldset></div><div class="mt-5 flex justify-center"><button type="button" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Copy HTML</button></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CS 61A: Structure and Interpretation of Computer Programs">
+    <meta name="keywords" content="CS 61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS">
+    <meta name="author" content="John DeNero">
+    
+    <meta name="viewport" content="width=device-width">
+
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/jquery.min.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/jquery.ba-throttle-debounce.min.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/bootstrap.min.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/hl.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/toggledarkmode.js.下载"></script>
+    <script>
+        // we aren't registering builtins since
+        //      (1) they don't render differently in the current CSS from other names
+        //      (2) it's a mess to list all of them. You can extract from the site but that takes effort
+        // if (1) ceases to be true, (2) might be worth the effort. For now, we're leaving as is
+        hljsRegister({
+            'keyword': "define if cond and or let begin lambda mu quote delay cons-stream set! quasiquote unquote unquote-splicing define-macro"
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/dark-mode.js.下载"></script>
+    <link rel="stylesheet" href="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/css">
+    <link rel="stylesheet" href="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/style.css">
+    <link rel="stylesheet" href="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/mono-blue.css">
+    <link rel="icon" href="https://cs61a.org/assets/images/favicon.ico">
+
+    
+
+    <title>
+Lab 2: Higher-Order Functions, Lambda Expressions | CS 61A Spring 2024
+</title>
+  <style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style></head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container noselect">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cs61a.org/">
+            <img style="max-width:60px; margin-top: -20px;" class="logo" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/logo.png">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://cs61a.org/">Home</a></li>
+            <li><a href="https://cs61a.org/articles/about">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/52971/discussion/" target="_blank">Ed</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/lab/lab02/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Staff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://cs61a.org/staff">TAs &amp; Tutors</a></li>
+                <li><a href="https://cs61a.org/academic-interns">Academic Interns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/lab/lab02/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://sections.cs61a.org/">Section Selector</a></li>
+                <li><a href="https://oh.cs61a.org/">Office Hours Queue</a></li>
+                <li><a href="https://go.cs61a.org/extensions">Request an Extension</a></li>
+                <li><a href="https://go.cs61a.org/regrades">Request a Regrade</a></li>
+                <li><a href="https://cs61a.org/resources/">Past Exams &amp; Sites</a></li>
+                <li><a href="https://pythontutor.com/cp/composingprograms.html">Python Tutor</a></li>
+                <li><a href="https://code.cs61a.org/">Online Code Editor</a></li>
+                <li><a href="https://cs61a.org/articles/campus-res/">Department/Campus Resources</a></li>
+                <li><a href="https://cs61a.org/articles/advice/">Advice from Former Students</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cs61a.org/contact/">Contact</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="toggle-mode-cb">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="container">
+      
+<div class="row">
+  <div class="col-md-9">
+    <header>
+      <h1>
+        
+Lab 2: Higher-Order Functions, Lambda Expressions
+
+        
+        
+        <ul class="inline-block list-inline">
+          <li><a href="https://cs61a.org/lab/lab02/lab02.zip" class="label label-outline">lab02.zip</a></li>
+        </ul>
+        
+        
+      </h1>
+    </header>
+    
+
+<p><i>Due by 11:59pm on Wednesday, January 31.</i></p>
+
+
+
+
+
+
+<h2 id="starter-files">Starter Files</h2>
+
+<p>Download <a href="https://cs61a.org/lab/lab02/lab02.zip">lab02.zip</a>.
+Inside the archive, you will find starter files for the questions in this lab,
+  along with a copy of the <a href="https://cs61a.org/lab/lab02/ok">Ok</a> autograder.</p>
+
+
+
+
+
+
+
+
+    
+<h1 id="topics">Topics</h1>
+
+
+<p>Consult this section if you need a refresher on the material for this lab. It's
+okay to skip directly to <a href="https://cs61a.org/lab/lab02/#required-questions">the questions</a> and refer back
+here should you get stuck.</p>
+
+
+        <button id="toggle-1" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Short Circuiting<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-1">
+
+
+<h2 id="short-circuiting" class="no-toc">Short Circuiting</h2>
+
+
+<p>What do you think will happen if we type the following into Python?</p>
+
+<pre><code class="hljs">1 / 0</code></pre>
+
+<p>Try it out in Python! You should see a <code>ZeroDivisionError</code>. But what about this expression?</p>
+
+<pre><code class="hljs python"><span class="hljs-literal">True</span> <span class="hljs-keyword">or</span> <span class="hljs-number">1</span> / <span class="hljs-number">0</span></code></pre>
+
+<p>It evaluates to <code>True</code> because Python's <code>and</code> and <code>or</code> operators <em>short-circuit</em>. That is, they don't necessarily evaluate every operand.</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tbody><tr>
+      <th>Operator</th>
+      <th>Checks if:</th>
+      <th>Evaluates from left to right up to:</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>AND</td>
+      <td>All values are true</td>
+      <td>The first false value</td>
+      <td><code>False and 1 / 0</code> evaluates to <code>False</code></td>
+    </tr>
+    <tr>
+      <td>OR</td>
+      <td>At least one value is true</td>
+      <td>The first true value</td>
+      <td><code>True or 1 / 0</code> evaluates to <code>True</code></td>
+    </tr>
+  </tbody></table>
+</div>
+
+<p>Short-circuiting happens when the operator reaches an operand that allows them to make a conclusion about the expression. For example, <code>and</code> will short-circuit as soon as it reaches the first false value because it then knows that not all the values are true.</p>
+
+<p>If <code>and</code> and <code>or</code> do not <em>short-circuit</em>, they just return the last
+value; another way to remember this is that <code>and</code> and <code>or</code> always return the last
+thing they evaluate, whether they short circuit or not. Keep in mind that <code>and</code> and <code>or</code>
+don't always return booleans when using values other than <code>True</code> and <code>False</code>.</p>
+
+</div>
+
+
+        <button id="toggle-2" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Higher-Order Functions<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-2">
+
+
+<h2 id="higher-order-functions" class="no-toc">Higher-Order Functions</h2>
+
+
+<p>Variables are names bound to values, which can be primitives like <code>3</code> or
+<code>'Hello World'</code>, but they can also be functions. And since functions can take
+arguments of any value, other functions can be passed in as arguments. This is
+the basis for higher-order functions.</p>
+
+<p>A higher order function is a function that manipulates other functions by
+taking in functions as arguments, returning a function, or both. We will
+introduce the basics of higher order functions in this lab and will be
+exploring many applications of higher order functions in our next lab.</p>
+
+
+<h3 id="functions-as-arguments" class="no-toc">Functions as arguments</h3>
+
+
+<p>In Python, function objects are values that can be passed around. We know that one
+way to create functions is by using a <code>def</code> statement:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span>:</span>
+    <span class="hljs-keyword">return</span> x * x</code></pre>
+
+<p>The above statement created a function object with the intrinsic name <code>square</code> as
+well as binded it to the name <code>square</code> in the current environment. Now let's try
+passing it as an argument.</p>
+
+<p>First, let's write a function that takes in another function as an argument:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scale</span><span class="hljs-params">(f, x, k)</span>:</span>
+    <span class="hljs-string">""" Returns the result of f(x) scaled by k. """</span>
+    <span class="hljs-keyword">return</span> k * f(x)</code></pre>
+
+<p>We can now call <code>scale</code> on <code>square</code> and some other arguments:</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>scale(square, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>) <span class="hljs-comment"># Double square(3)</span>
+<span class="hljs-number">18</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>scale(square, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>) <span class="hljs-comment"># 5 times 2 squared</span>
+<span class="hljs-number">20</span></code></pre>
+
+<p>Note that in the body of the call to <code>scale</code>, the function object with the intrinsic
+name <code>square</code> is bound to the parameter <code>f</code>. Then, we call <code>square</code> in the body of
+<code>scale</code> by calling <code>f(x)</code>.</p>
+
+<p>As we saw in the above section on <code>lambda</code> expressions, we can also pass
+<code>lambda</code> expressions into call expressions!</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>scale(<span class="hljs-keyword">lambda</span> x: x + <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>)
+<span class="hljs-number">30</span></code></pre>
+
+<p>In the frame for this call expression, the name <code>f</code> is bound to the function
+created by the <code>lambda</code> expression <code>lambda x: x + 10</code>.</p>
+
+
+<h3 id="functions-that-return-functions" class="no-toc">Functions that return functions</h3>
+
+
+<p>Because functions are values, they are valid as return values! Here's an example:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply_by</span><span class="hljs-params">(m)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply</span><span class="hljs-params">(n)</span>:</span>
+        <span class="hljs-keyword">return</span> n * m
+    <span class="hljs-keyword">return</span> multiply</code></pre>
+
+<p>In this particular case, we defined the function <code>multiply</code> within the body of <code>multiply_by</code>
+and then returned it. Let's see it in action:</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>multiply_by(<span class="hljs-number">3</span>)
+&lt;function multiply_by.&lt;locals&gt;.multiply at ...&gt;
+<span class="hljs-meta">&gt;&gt;&gt; </span>multiply(<span class="hljs-number">4</span>)
+Traceback (most recent call last):
+File <span class="hljs-string">"&lt;stdin&gt;"</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+NameError: name <span class="hljs-string">'multiply'</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined</code></pre>
+
+<p>A call to <code>multiply_by</code> returns a function, as expected. However, calling
+<code>multiply</code> errors, even though that's the name we gave the inner function. This
+is because the name <code>multiply</code> only exists within the frame where we evaluate
+the body of <code>multiply_by</code>.</p>
+
+<p>So how do we actually use the inner function? Here are two ways:</p>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>times_three = multiply_by(<span class="hljs-number">3</span>) <span class="hljs-comment"># Assign the result of the call expression to a name</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>times_three(<span class="hljs-number">5</span>) <span class="hljs-comment"># Call the inner function with its new name</span>
+<span class="hljs-number">15</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>multiply_by(<span class="hljs-number">3</span>)(<span class="hljs-number">10</span>) <span class="hljs-comment"># Chain together two call expressions</span>
+<span class="hljs-number">30</span></code></pre>
+
+<p>The point is, because <code>multiply_by</code> returns a function, you can use its return
+value just like you would use any other function.</p>
+
+<!--
+Here's what <code>multiply_by</code> would look like if we wrote it with a lambda expression:
+
+<pre><code>def multiply_by(m):
+    return lambda n: n * m</code></pre>
+
+As you can see, lambda expressions make writing higher order functions much cleaner.
+-->
+
+</div>
+<br>
+
+
+        <button id="toggle-3" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Lambda Expressions<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-3">
+
+
+<h2 id="lambda-expressions" class="no-toc">Lambda Expressions</h2>
+
+
+<p>Lambda expressions are expressions that evaluate to functions by specifying two
+things: the parameters and a return expression.</p>
+
+<pre><code class="hljs python"><span class="hljs-keyword">lambda</span> &lt;parameters&gt;: &lt;<span class="hljs-keyword">return</span> expression&gt;</code></pre>
+
+<p>While both <code>lambda</code> expressions and <code>def</code> statements create function objects,
+there are some notable differences. <code>lambda</code> expressions work like other
+expressions; much like a mathematical expression just evaluates to a number and
+does not alter the current environment, a <code>lambda</code> expression
+evaluates to a function without changing the current environment. Let's take a
+closer look.</p>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+      <tbody><tr>
+          <th></th>
+          <th>lambda</th>
+          <th>def</th>
+      </tr>
+      <tr>
+          <td>Type</td>
+          <td><i>Expression</i> that evaluates to a value</td>
+          <td><i>Statement</i> that alters the environment</td>
+      </tr>
+      <tr>
+          <td>Result of execution</td>
+          <td>Creates an anonymous lambda function with no intrinsic name.</td>
+          <td>Creates a function with an intrinsic name and binds it to that
+          name in the current environment.</td>
+      </tr>
+      <tr>
+          <td>Effect on the environment</td>
+          <td>Evaluating a <code>lambda</code> expression does <i>not</i> create or
+          modify any variables.</td>
+          <td>Executing a <code>def</code> statement both creates a new function
+          object <i>and</i> binds it to a name in the current environment.</td>
+      </tr>
+      <tr>
+          <td>Usage</td>
+          <td>A <code>lambda</code> expression can be used anywhere that
+          expects an expression, such as in an assignment statement or as the
+          operator or operand to a call expression.</td>
+          <td>After executing a <code>def</code> statement, the created
+          function is bound to a name. You should use this name to refer to the
+          function anywhere that expects an expression.</td>
+      </tr>
+      <tr>
+          <td>Example</td>
+          <td>
+<pre><code class="hljs python"><span class="hljs-comment"># A lambda expression by itself does not alter</span>
+<span class="hljs-comment"># the environment</span>
+<span class="hljs-keyword">lambda</span> x: x * x
+
+<span class="hljs-comment"># We can assign lambda functions to a name</span>
+<span class="hljs-comment"># with an assignment statement</span>
+square = <span class="hljs-keyword">lambda</span> x: x * x
+square(<span class="hljs-number">3</span>)
+
+<span class="hljs-comment"># Lambda expressions can be used as an operator</span>
+<span class="hljs-comment"># or operand</span>
+negate = <span class="hljs-keyword">lambda</span> f, x: -f(x)
+negate(<span class="hljs-keyword">lambda</span> x: x * x, <span class="hljs-number">3</span>)</code></pre></td>
+          <td><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span>:</span>
+    <span class="hljs-keyword">return</span> x * x
+
+<span class="hljs-comment"># A function created by a def statement</span>
+<span class="hljs-comment"># can be referred to by its intrinsic name</span>
+square(<span class="hljs-number">3</span>)</code></pre></td>
+      </tr>
+  </tbody></table>
+</div>
+
+
+            <iframe width="560" height="315" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/vCeNq_P3akI.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/vCeNq_P3akI?list=PLx38hZJ5RLZcUPWZ1-3HYsRPgZ8OCrvqz"> YouTube link </a></p>
+
+</div>
+
+
+        <button id="toggle-4" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Environment Diagrams<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-4">
+
+
+<h2 id="environment-diagrams" class="no-toc">Environment Diagrams</h2>
+
+
+<p>Environment diagrams are one of the best learning tools for understanding
+<code>lambda</code> expressions and higher order functions because you're able to keep
+track of all the different names, function objects, and arguments to functions.
+We highly recommend drawing environment diagrams or using <a href="https://tutor.cs61a.org/">Python
+tutor</a> if you get stuck doing the WWPD problems below.
+For examples of what environment diagrams should look like, try running some
+code in Python tutor. Here are the rules:</p>
+
+
+<h3 id="assignment-statements" class="no-toc">Assignment Statements</h3>
+
+
+<ol>
+  <li>Evaluate the expression on the right hand side of the <code>=</code> sign.</li>
+  <li>If the name found on the left hand side of the <code>=</code> doesn't already exist in
+  the current frame, write it in. If it does, erase the current binding. Bind the
+  <em>value</em> obtained in step 1 to this name.</li>
+</ol>
+
+<p>If there is more than one name/expression in the statement, evaluate all the
+expressions first from left to right before making any bindings.</p>
+
+<iframe width="800" height="270" frameborder="0" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/iframe-embed.html">
+</iframe>
+
+
+<h3 id="def-statements" class="no-toc">def Statements</h3>
+
+
+<ol>
+  <li>Draw the function object with its intrinsic name, formal parameters, and
+  parent frame. A function's parent frame is the frame in which the function was
+  defined.</li>
+  <li>If the intrinsic name of the function doesn't already exist in the current
+  frame, write it in. If it does, erase the current binding. Bind the newly
+  created function object to this name.</li>
+</ol>
+
+<iframe width="800" height="360" frameborder="0" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/iframe-embed(1).html">
+</iframe>
+
+
+<h3 id="call-expressions" class="no-toc">Call expressions</h3>
+
+
+<blockquote><p>Note: you do not have to go through this process for a built-in Python function like <code>max</code> or <code>print</code>.</p></blockquote>
+
+<ol>
+  <li>Evaluate the operator, whose value should be a function.</li>
+  <li>Evaluate the operands left to right.</li>
+  <li>Open a new frame. Label it with the sequential frame number, the intrinsic
+  name of the function, and its parent.</li>
+  <li>Bind the formal parameters of the function to the arguments whose values you
+  found in step 2.</li>
+  <li>Execute the body of the function in the new environment.</li>
+</ol>
+
+<iframe width="800" height="330" frameborder="0" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/iframe-embed(2).html">
+</iframe>
+
+
+<h3 id="lambdas" class="no-toc">Lambdas</h3>
+
+
+<blockquote><p><em>Note:</em> As we saw in the <code>lambda</code> expression section above, <code>lambda</code>
+functions have no intrinsic name. When drawing <code>lambda</code> functions in
+environment diagrams, they are labeled with the name <code>lambda</code> or with the
+lowercase Greek letter λ.  This can get confusing when there are
+multiple lambda functions in an environment diagram, so you can distinguish
+them by numbering them or by writing the line number on which they were defined.</p></blockquote>
+
+<ol>
+  <li>Draw the lambda function object and label it with λ, its formal
+  parameters, and its parent frame. A function's parent frame is the frame in
+  which the function was defined.</li>
+</ol>
+
+<p>This is the only step. We are including this section to emphasize the fact that
+the difference between <code>lambda</code> expressions and <code>def</code> statements is that
+<code>lambda</code> expressions <em>do not</em> create any new bindings in the environment.</p>
+
+<iframe width="800" height="330" frameborder="0" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/iframe-embed(3).html"> </iframe>
+
+
+            <iframe width="560" height="315" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/IPec2A7j2bY.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/IPec2A7j2bY?list=PLx38hZJ5RLZcUPWZ1-3HYsRPgZ8OCrvqz"> YouTube link </a></p>
+
+</div>
+
+
+<h1 id="required-questions">Required Questions</h1>
+
+
+<br>
+
+        <button id="toggle-5" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Getting Started Videos<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-5">
+
+
+<h2 id="getting-started-videos" class="no-toc">Getting Started Videos</h2>
+
+
+<p>These videos may provide some helpful direction for tackling the coding
+problems on this assignment.</p>
+
+<blockquote><p>To see these videos, you should be logged into your berkeley.edu email.</p></blockquote>
+
+
+            <iframe width="560" height="315" src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/videoseries.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/playlist?list=PLx38hZJ5RLZeufgodzb9XzDT_9Sr-L4sJ"> YouTube link </a></p>
+</div>
+
+
+<h2 id="what-would-python-display">What Would Python Display?</h2>
+
+
+<blockquote><p><strong>Important:</strong>
+For all WWPD questions, type <code>Function</code> if you believe the answer is
+<code>&lt;function...&gt;</code>, <code>Error</code> if it errors, and <code>Nothing</code> if nothing is displayed.</p></blockquote>
+
+
+<h3 id="q1-wwpd-the-truth-will-prevail">Q1: WWPD: The Truth Will Prevail</h3>
+
+
+<blockquote><p>Use Ok to test your knowledge with the following "What Would Python Display?" questions:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q short-circuit -u</code><button id="copy-code-python3ok-qshort-circuit-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qshort-circuit-u").onclick = () => copyCode('python3 ok -q short-circuit -u', "copy-code-python3ok-qshort-circuit-u");
+        </script>
+        <br></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-literal">True</span> <span class="hljs-keyword">and</span> <span class="hljs-number">13</span>
+<div class="alt prompt-1">______</div><div class="solution prompt-1">13</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-literal">False</span> <span class="hljs-keyword">or</span> <span class="hljs-number">0</span>
+<div class="alt prompt-1">______</div><div class="solution prompt-1">0</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">not</span> <span class="hljs-number">10</span>
+<div class="alt prompt-1">______</div><div class="solution prompt-1">False</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>
+<div class="alt prompt-1">______</div><div class="solution prompt-1">True</div></code></pre>
+        <button id="prompt-1" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-literal">True</span> <span class="hljs-keyword">and</span> <span class="hljs-number">1</span> / <span class="hljs-number">0</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2">Error (ZeroDivisionError)</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-literal">True</span> <span class="hljs-keyword">or</span> <span class="hljs-number">1</span> / <span class="hljs-number">0</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2">True</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">-1</span> <span class="hljs-keyword">and</span> <span class="hljs-number">1</span> &gt; <span class="hljs-number">0</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2">True</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">-1</span> <span class="hljs-keyword">or</span> <span class="hljs-number">5</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2"><span class="hljs-number">-1</span></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-number">1</span> + <span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> <span class="hljs-number">1</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2">1</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-number">3</span>) <span class="hljs-keyword">or</span> <span class="hljs-string">""</span>
+<div class="alt prompt-2">______</div><div class="solution prompt-2">3
+<span class="hljs-string">''</span></div></code></pre>
+        <button id="prompt-2" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">(x)</span>:</span>
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">if</span> x == <span class="hljs-number">0</span>:
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"zero"</span>
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">elif</span> x &gt; <span class="hljs-number">0</span>:
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"positive"</span>
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">else</span>:
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">0</span> <span class="hljs-keyword">or</span> f(<span class="hljs-number">1</span>)
+<div class="alt prompt-3">______</div><div class="solution prompt-3"><span class="hljs-string">'positive'</span></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>f(<span class="hljs-number">0</span>) <span class="hljs-keyword">or</span> f(<span class="hljs-number">-1</span>)
+<div class="alt prompt-3">______</div><div class="solution prompt-3"><span class="hljs-string">'zero'</span></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>f(<span class="hljs-number">0</span>) <span class="hljs-keyword">and</span> f(<span class="hljs-number">-1</span>)
+<div class="alt prompt-3">______</div><div class="solution prompt-3"><span class="hljs-string">''</span></div></code></pre>
+        <button id="prompt-3" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+
+<h3 id="q2-wwpd-higher-order-functions">Q2: WWPD: Higher-Order Functions</h3>
+
+
+<blockquote><p>Use Ok to test your knowledge with the following "What Would Python Display?" questions:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q hof-wwpd -u</code><button id="copy-code-python3ok-qhof-wwpd-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qhof-wwpd-u").onclick = () => copyCode('python3 ok -q hof-wwpd -u', "copy-code-python3ok-qhof-wwpd-u");
+        </script>
+        <br>
+<!--
+<pre><code>&gt;&gt;&gt; def even(f):
+...     def odd(x):
+...         if x &lt; 0:
+...             return f(&#x2d;x)
+...         return f(x)
+...     return odd
+&gt;&gt;&gt; steven = lambda x: x
+&gt;&gt;&gt; stewart = even(steven)
+&gt;&gt;&gt; stewart
+<div class="alt prompt-4">______</div><div class="solution prompt-4">&#x3c;&#x66;&#x75;&#x6e;&#x63;&#x74;&#x69;&#x6f;&#x6e;&#x20;&#x2e;&#x2e;&#x2e;&#x3e;</div>
+&gt;&gt;&gt; stewart(61)
+<div class="alt prompt-4">______</div><div class="solution prompt-4">&#x36;&#x31;</div>
+&gt;&gt;&gt; stewart(&#x2d;4)
+<div class="alt prompt-4">______</div><div class="solution prompt-4">&#x34;</div></code></pre>
+        <button id='prompt-4' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+--></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cake</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-meta">... </span>   print(<span class="hljs-string">'beets'</span>)
+<span class="hljs-meta">... </span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pie</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-meta">... </span>       print(<span class="hljs-string">'sweets'</span>)
+<span class="hljs-meta">... </span>       <span class="hljs-keyword">return</span> <span class="hljs-string">'cake'</span>
+<span class="hljs-meta">... </span>   <span class="hljs-keyword">return</span> pie
+<span class="hljs-meta">&gt;&gt;&gt; </span>chocolate = cake()
+<div class="alt prompt-5">______</div><div class="solution prompt-5">beets</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>chocolate
+<div class="alt prompt-5">______</div><div class="solution prompt-5">Function</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>chocolate()
+<div class="alt prompt-5">______</div><div class="solution prompt-5">sweets
+<span class="hljs-string">'cake'</span></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>more_chocolate, more_cake = chocolate(), cake
+<div class="alt prompt-5">______</div><div class="solution prompt-5">sweets</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>more_chocolate
+<div class="alt prompt-5">______</div><div class="solution prompt-5"><span class="hljs-string">'cake'</span></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">snake</span><span class="hljs-params">(x, y)</span>:</span>
+<span class="hljs-meta">... </span>   <span class="hljs-keyword">if</span> cake == more_cake:
+<span class="hljs-meta">... </span>       <span class="hljs-keyword">return</span> chocolate
+<span class="hljs-meta">... </span>   <span class="hljs-keyword">else</span>:
+<span class="hljs-meta">... </span>       <span class="hljs-keyword">return</span> x + y
+<span class="hljs-meta">&gt;&gt;&gt; </span>snake(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)
+<div class="alt prompt-5">______</div><div class="solution prompt-5">Function</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>snake(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)()
+<div class="alt prompt-5">______</div><div class="solution prompt-5">30</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>cake = <span class="hljs-string">'cake'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>snake(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)
+<div class="alt prompt-5">______</div><div class="solution prompt-5">30</div></code></pre>
+        <button id="prompt-5" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+
+<h3 id="q3-wwpd-lambda">Q3: WWPD: Lambda</h3>
+
+
+<blockquote><p>Use Ok to test your knowledge with the following "What Would Python Display?" questions:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q lambda -u</code><button id="copy-code-python3ok-qlambda-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qlambda-u").onclick = () => copyCode('python3 ok -q lambda -u', "copy-code-python3ok-qlambda-u");
+        </script>
+        <br>
+<br>
+As a reminder, the following two lines of code will not display any output in the
+interactive Python interpreter when executed:
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>x = <span class="hljs-literal">None</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>x
+&gt;&gt;&gt;</code></pre></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">lambda</span> x: x  <span class="hljs-comment"># A lambda expression with one parameter x</span>
+<div class="alt prompt-6">______</div><div class="solution prompt-6">&lt;function &lt;<span class="hljs-keyword">lambda</span>&gt; at ...&gt;</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-keyword">lambda</span> x: x  <span class="hljs-comment"># Assigning the lambda function to the name a</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a(<span class="hljs-number">5</span>)
+<div class="alt prompt-6">______</div><div class="solution prompt-6">5</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-keyword">lambda</span>: <span class="hljs-number">3</span>)()  <span class="hljs-comment"># Using a lambda expression as an operator in a call exp.</span>
+<div class="alt prompt-6">______</div><div class="solution prompt-6">3</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = <span class="hljs-keyword">lambda</span> x, y: <span class="hljs-keyword">lambda</span>: x + y  <span class="hljs-comment"># Lambdas can return other lambdas!</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>c = b(<span class="hljs-number">8</span>, <span class="hljs-number">4</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>c
+<div class="alt prompt-6">______</div><div class="solution prompt-6">&lt;function &lt;<span class="hljs-keyword">lambda</span>&gt; at ...</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>c()
+<div class="alt prompt-6">______</div><div class="solution prompt-6">12</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>d = <span class="hljs-keyword">lambda</span> f: f(<span class="hljs-number">4</span>)  <span class="hljs-comment"># They can have functions as arguments as well.</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span>:</span>
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">return</span> x * x
+<span class="hljs-meta">&gt;&gt;&gt; </span>d(square)
+<div class="alt prompt-6">______</div><div class="solution prompt-6">16</div></code></pre>
+        <button id="prompt-6" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<!--
+<pre><code>&gt;&gt;&gt; z = 3
+&gt;&gt;&gt; e = lambda x: lambda y: lambda: x + y + z
+&gt;&gt;&gt; e(0)(1)()
+<div class="alt prompt-7">______</div><div class="solution prompt-7">&#x34;</div>
+&gt;&gt;&gt; f = lambda z: x + z
+&gt;&gt;&gt; f(3)
+<div class="alt prompt-7">______</div><div class="solution prompt-7">&#x4e;&#x61;&#x6d;&#x65;&#x45;&#x72;&#x72;&#x6f;&#x72;&#x3a;&#x20;&#x6e;&#x61;&#x6d;&#x65;&#x20;&#x27;&#x78;&#x27;&#x20;&#x69;&#x73;&#x20;&#x6e;&#x6f;&#x74;&#x20;&#x64;&#x65;&#x66;&#x69;&#x6e;&#x65;&#x64;</div></code></pre>
+        <button id='prompt-7' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+-->
+
+<!--
+<pre><code>&gt;&gt;&gt; x, y, z = 1, 2, 3
+&gt;&gt;&gt; a = lambda b: x + y + z
+&gt;&gt;&gt; x += y
+&gt;&gt;&gt; y &#x2d;= z
+&gt;&gt;&gt; a(&#x27;lambdas are fun!&#x27;)
+<div class="alt prompt-8">______</div><div class="solution prompt-8">&#x35;</div></code></pre>
+        <button id='prompt-8' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code>&gt;&gt;&gt; x = None # remember to review the rules of WWPD given above!
+&gt;&gt;&gt; x
+<div class="alt prompt-9">______</div><div class="solution prompt-9">&#x23;&#x20;&#x78;&#x20;&#x65;&#x76;&#x61;&#x6c;&#x75;&#x61;&#x74;&#x65;&#x73;&#x20;&#x74;&#x6f;&#x20;&#x4e;&#x6f;&#x6e;&#x65;&#x2c;&#x20;&#x73;&#x6f;&#x20;&#x6e;&#x6f;&#x74;&#x68;&#x69;&#x6e;&#x67;&#x20;&#x67;&#x65;&#x74;&#x73;&#x20;&#x64;&#x69;&#x73;&#x70;&#x6c;&#x61;&#x79;&#x65;&#x64;</div></code></pre>
+        <button id='prompt-9' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+-->
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>higher_order_lambda = <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x: f(x)
+<span class="hljs-meta">&gt;&gt;&gt; </span>g = <span class="hljs-keyword">lambda</span> x: x * x
+<span class="hljs-meta">&gt;&gt;&gt; </span>higher_order_lambda(<span class="hljs-number">2</span>)(g)  <span class="hljs-comment"># Which argument belongs to which function call?</span>
+<div class="alt prompt-10">______</div><div class="solution prompt-10">Error</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>higher_order_lambda(g)(<span class="hljs-number">2</span>)
+<div class="alt prompt-10">______</div><div class="solution prompt-10">4</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>call_thrice = <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x: f(f(f(x)))
+<span class="hljs-meta">&gt;&gt;&gt; </span>call_thrice(<span class="hljs-keyword">lambda</span> y: y + <span class="hljs-number">1</span>)(<span class="hljs-number">0</span>)
+<div class="alt prompt-10">______</div><div class="solution prompt-10">3</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print_lambda = <span class="hljs-keyword">lambda</span> z: print(z)  <span class="hljs-comment"># When is the return expression of a lambda expression executed?</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print_lambda
+<div class="alt prompt-10">______</div><div class="solution prompt-10">Function</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>one_thousand = print_lambda(<span class="hljs-number">1000</span>)
+<div class="alt prompt-10">______</div><div class="solution prompt-10">1000</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>one_thousand <span class="hljs-comment"># What did the call to print_lambda return?</span>
+<div class="alt prompt-10">______</div><div class="solution prompt-10"><span class="hljs-comment"># print_lambda returned None, so nothing gets displayed</span></div></code></pre>
+        <button id="prompt-10" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<!--
+<pre><code>&gt;&gt;&gt; bar = lambda y: lambda x: pow(x, y)
+&gt;&gt;&gt; bar()(15)
+<div class="alt prompt-11">______</div><div class="solution prompt-11">&#x54;&#x79;&#x70;&#x65;&#x45;&#x72;&#x72;&#x6f;&#x72;&#x3a;&#x20;&#x3c;&#x6c;&#x61;&#x6d;&#x62;&#x64;&#x61;&#x3e;&#x28;&#x29;&#x20;&#x6d;&#x69;&#x73;&#x73;&#x69;&#x6e;&#x67;&#x20;&#x31;&#x20;&#x72;&#x65;&#x71;&#x75;&#x69;&#x72;&#x65;&#x64;&#x20;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x69;&#x6f;&#x6e;&#x61;&#x6c;&#x20;&#x61;&#x72;&#x67;&#x75;&#x6d;&#x65;&#x6e;&#x74;&#x3a;&#x20;&#x27;&#x79;&#x27;</div>
+&gt;&gt;&gt; foo = lambda: 32
+&gt;&gt;&gt; foobar = lambda x, y: x // y
+&gt;&gt;&gt; a = lambda x: foobar(foo(), bar(4)(x))
+&gt;&gt;&gt; a(2)
+<div class="alt prompt-11">______</div><div class="solution prompt-11">&#x32;</div>
+&gt;&gt;&gt; b = lambda x, y: print(&#x27;summer&#x27;)
+<div class="alt prompt-11">______</div><div class="solution prompt-11">&#x23;&#x20;&#x4e;&#x6f;&#x74;&#x68;&#x69;&#x6e;&#x67;&#x20;&#x67;&#x65;&#x74;&#x73;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x65;&#x64;&#x20;&#x62;&#x79;&#x20;&#x74;&#x68;&#x65;&#x20;&#x69;&#x6e;&#x74;&#x65;&#x72;&#x70;&#x72;&#x65;&#x74;&#x65;&#x72;</div>
+&gt;&gt;&gt; c = b(4, &#x27;dog&#x27;)
+<div class="alt prompt-11">______</div><div class="solution prompt-11">&#x73;&#x75;&#x6d;&#x6d;&#x65;&#x72;</div>
+&gt;&gt;&gt; print(c)
+<div class="alt prompt-11">______</div><div class="solution prompt-11">&#x4e;&#x6f;&#x6e;&#x65;</div></code></pre>
+        <button id='prompt-11' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code>&gt;&gt;&gt; a = lambda b: b * 2
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x23;&#x20;&#x4e;&#x6f;&#x74;&#x68;&#x69;&#x6e;&#x67;&#x20;&#x67;&#x65;&#x74;&#x73;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x65;&#x64;&#x20;&#x62;&#x79;&#x20;&#x74;&#x68;&#x65;&#x20;&#x69;&#x6e;&#x74;&#x65;&#x72;&#x70;&#x72;&#x65;&#x74;&#x65;&#x72;</div>
+&gt;&gt;&gt; a
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x46;&#x75;&#x6e;&#x63;&#x74;&#x69;&#x6f;&#x6e;</div>
+&gt;&gt;&gt; a(a(a()))
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x54;&#x79;&#x70;&#x65;&#x45;&#x72;&#x72;&#x6f;&#x72;&#x3a;&#x20;&#x3c;&#x6c;&#x61;&#x6d;&#x62;&#x64;&#x61;&#x3e;&#x28;&#x29;&#x20;&#x6d;&#x69;&#x73;&#x73;&#x69;&#x6e;&#x67;&#x20;&#x31;&#x20;&#x72;&#x65;&#x71;&#x75;&#x69;&#x72;&#x65;&#x64;&#x20;&#x70;&#x6f;&#x73;&#x69;&#x74;&#x69;&#x6f;&#x6e;&#x61;&#x6c;&#x20;&#x61;&#x72;&#x67;&#x75;&#x6d;&#x65;&#x6e;&#x74;&#x3a;&#x20;&#x27;&#x62;&#x27;</div>
+&gt;&gt;&gt; a(a(a(2)))
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x31;&#x36;</div>
+&gt;&gt;&gt; def d():
+...     print(None)
+...     print(&#x27;whoo&#x27;)
+&gt;&gt;&gt; b = d()
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x4e;&#x6f;&#x6e;&#x65;&#xa;&#x77;&#x68;&#x6f;&#x6f;</div>
+&gt;&gt;&gt; b
+<div class="alt prompt-12">______</div><div class="solution prompt-12">&#x23;&#x20;&#x4e;&#x6f;&#x74;&#x68;&#x69;&#x6e;&#x67;&#x20;&#x67;&#x65;&#x74;&#x73;&#x20;&#x70;&#x72;&#x69;&#x6e;&#x74;&#x65;&#x64;&#x20;&#x62;&#x79;&#x20;&#x74;&#x68;&#x65;&#x20;&#x69;&#x6e;&#x74;&#x65;&#x72;&#x70;&#x72;&#x65;&#x74;&#x65;&#x72;</div></code></pre>
+        <button id='prompt-12' class='btn btn-outline btn-lg solutiontoggle prompt'>
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+-->
+
+
+<h2 id="coding-practice">Coding Practice</h2>
+
+
+
+<h3 id="q4-composite-identity-function">Q4: Composite Identity Function</h3>
+
+
+<p>Write a function that takes in two single-argument functions, <code>f</code> and <code>g</code>, and
+returns another <strong>function</strong> that has a single parameter <code>x</code>. The returned
+function should return <code>True</code> if <code>f(g(x))</code> is equal to <code>g(f(x))</code> and <code>False</code>
+otherwise. You can assume the output of <code>g(x)</code> is a valid input for <code>f</code> and vice
+versa.</p>
+
+<solution>
+
+<pre><code class="hljs sql">def composite_identity(f, g):
+    """
+    Return a function <span class="hljs-keyword">with</span> one parameter x that <span class="hljs-keyword">returns</span> <span class="hljs-literal">True</span> <span class="hljs-keyword">if</span> f(g(x)) <span class="hljs-keyword">is</span>
+    equal <span class="hljs-keyword">to</span> g(f(x)). You can assume the <span class="hljs-keyword">result</span> <span class="hljs-keyword">of</span> g(x) <span class="hljs-keyword">is</span> a valid <span class="hljs-keyword">input</span> <span class="hljs-keyword">for</span> f
+    <span class="hljs-keyword">and</span> vice versa.
+
+    &gt;&gt;&gt; add_one = lambda x: x + <span class="hljs-number">1</span>        <span class="hljs-comment"># adds one to x</span>
+    &gt;&gt;&gt; <span class="hljs-keyword">square</span> = lambda x: x**<span class="hljs-number">2</span>          <span class="hljs-comment"># squares x [returns x^2]</span>
+    &gt;&gt;&gt; b1 = composite_identity(<span class="hljs-keyword">square</span>, add_one)
+    &gt;&gt;&gt; b1(<span class="hljs-number">0</span>)                            <span class="hljs-comment"># (0 + 1) ** 2 == 0 ** 2 + 1</span>
+    <span class="hljs-literal">True</span>
+    &gt;&gt;&gt; b1(<span class="hljs-number">4</span>)                            <span class="hljs-comment"># (4 + 1) ** 2 != 4 ** 2 + 1</span>
+    <span class="hljs-literal">False</span>
+    <span class="hljs-string">"""
+    "</span>*** YOUR CODE HERE ***<span class="hljs-string">"
+</span></code></pre>
+
+</solution>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q composite_identity</code><button id="copy-code-python3ok-qcomposite_identity" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qcomposite_identity").onclick = () => copyCode('python3 ok -q composite_identity', "copy-code-python3ok-qcomposite_identity");
+        </script>
+        <br>
+
+
+<h3 id="q5-count-cond">Q5: Count Cond</h3>
+
+
+<p>Consider the following implementations of <code>count_fives</code> and <code>count_primes</code> which
+use the <code>sum_digits</code> and <code>is_prime</code> functions from earlier assignments:</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count_fives</span><span class="hljs-params">(n)</span>:</span>
+    <span class="hljs-string">"""Return the number of values i from 1 to n (including n)
+    where sum_digits(n * i) is 5.
+    &gt;&gt;&gt; count_fives(10)  # Among 10, 20, 30, ..., 100, only 50 (10 * 5) has digit sum 5
+    1
+    &gt;&gt;&gt; count_fives(50)  # 50 (50 * 1), 500 (50 * 10), 1400 (50 * 28), 2300 (50 * 46)
+    4
+    """</span>
+    i = <span class="hljs-number">1</span>
+    count = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> i &lt;= n:
+        <span class="hljs-keyword">if</span> sum_digits(n * i) == <span class="hljs-number">5</span>:
+            count += <span class="hljs-number">1</span>
+        i += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> count
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count_primes</span><span class="hljs-params">(n)</span>:</span>
+    <span class="hljs-string">"""Return the number of prime numbers up to and including n.
+    &gt;&gt;&gt; count_primes(6)   # 2, 3, 5
+    3
+    &gt;&gt;&gt; count_primes(13)  # 2, 3, 5, 7, 11, 13
+    6
+    """</span>
+    i = <span class="hljs-number">1</span>
+    count = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> i &lt;= n:
+        <span class="hljs-keyword">if</span> is_prime(i):
+            count += <span class="hljs-number">1</span>
+        i += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> count</code></pre>
+
+
+
+<p>The implementations look quite similar! Generalize this logic by writing a
+function <code>count_cond</code>, which takes in a two-argument predicate function
+<code>condition(n, i)</code>. <code>count_cond</code> returns a one-argument function that takes
+in <code>n</code>, which counts all the numbers from 1 to <code>n</code> that satisfy <code>condition</code>
+when called.</p>
+
+<blockquote><p><strong>Note:</strong>
+When we say <code>condition</code> is a predicate function,  we mean that it is
+a function that will return <code>True</code> or <code>False</code>.</p></blockquote>
+
+<solution>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_digits</span><span class="hljs-params">(y)</span>:</span>
+    <span class="hljs-string">"""Return the sum of the digits of non-negative integer y."""</span>
+    total = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> y &gt; <span class="hljs-number">0</span>:
+        total, y = total + y % <span class="hljs-number">10</span>, y // <span class="hljs-number">10</span>
+    <span class="hljs-keyword">return</span> total
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_prime</span><span class="hljs-params">(n)</span>:</span>
+    <span class="hljs-string">"""Return whether positive integer n is prime."""</span>
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+    k = <span class="hljs-number">2</span>
+    <span class="hljs-keyword">while</span> k &lt; n:
+        <span class="hljs-keyword">if</span> n % k == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+        k += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count_cond</span><span class="hljs-params">(condition)</span>:</span>
+    <span class="hljs-string">"""Returns a function with one parameter N that counts all the numbers from
+    1 to N that satisfy the two-argument predicate function Condition, where
+    the first argument for Condition is N and the second argument is the
+    number from 1 to N.
+
+    &gt;&gt;&gt; count_fives = count_cond(lambda n, i: sum_digits(n * i) == 5)
+    &gt;&gt;&gt; count_fives(10)   # 50 (10 * 5)
+    1
+    &gt;&gt;&gt; count_fives(50)   # 50 (50 * 1), 500 (50 * 10), 1400 (50 * 28), 2300 (50 * 46)
+    4
+
+    &gt;&gt;&gt; is_i_prime = lambda n, i: is_prime(i) # need to pass 2-argument function into count_cond
+    &gt;&gt;&gt; count_primes = count_cond(is_i_prime)
+    &gt;&gt;&gt; count_primes(2)    # 2
+    1
+    &gt;&gt;&gt; count_primes(3)    # 2, 3
+    2
+    &gt;&gt;&gt; count_primes(4)    # 2, 3
+    2
+    &gt;&gt;&gt; count_primes(5)    # 2, 3, 5
+    3
+    &gt;&gt;&gt; count_primes(20)   # 2, 3, 5, 7, 11, 13, 17, 19
+    8
+    """</span>
+    <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+</solution>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q count_cond</code><button id="copy-code-python3ok-qcount_cond" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qcount_cond").onclick = () => copyCode('python3 ok -q count_cond', "copy-code-python3ok-qcount_cond");
+        </script>
+        <br>
+
+
+<h2 id="check-your-score-locally">Check Your Score Locally</h2>
+
+<p>You can locally check your score on each question of this assignment by running</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p><strong>This does NOT submit the assignment!</strong> When you are satisfied with your score, submit the assignment to Gradescope to receive credit for it.</p>
+
+
+<h2 id="submit">Submit</h2>
+
+
+<p>Submit this assignment by uploading any files you've edited <strong>to the appropriate Gradescope assignment.</strong> <a href="https://cs61a.org/lab/lab00/#submit-with-gradescope">Lab 00</a> has detailed instructions.</p>
+
+<p>In addition, all students who are <strong>not</strong> in the mega lab must complete this <a href="https://go.cs61a.org/lab-att">attendance form</a>. Submit this form each week, whether you attend lab or missed it for a good reason. The attendance form is not required for mega section students.</p>
+
+
+<h1 id="environment-diagram-practice">Environment Diagram Practice</h1>
+
+
+<p><strong>There is no Gradescope submission for this component.</strong></p>
+
+<p>However, we still encourage you to do this problem on paper to develop
+familiarity with Environment Diagrams, which might appear in an alternate
+form on the exam. To check your work, you can try putting the code into PythonTutor.</p>
+
+
+<h3 id="q6-hof-diagram-practice">Q6: HOF Diagram Practice</h3>
+
+
+<p>Draw the environment diagram that results from executing the code below on paper
+or a whiteboard. Use <a href="https://tutor.cs61a.org/">tutor.cs61a.org</a> to check your work.</p>
+
+<env-diagram-static>
+
+<pre><code class="hljs python">n = <span class="hljs-number">7</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">(x)</span>:</span>
+    n = <span class="hljs-number">8</span>
+    <span class="hljs-keyword">return</span> x + <span class="hljs-number">1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">g</span><span class="hljs-params">(x)</span>:</span>
+    n = <span class="hljs-number">9</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">h</span><span class="hljs-params">()</span>:</span>
+        <span class="hljs-keyword">return</span> x + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> h
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">(f, x)</span>:</span>
+    <span class="hljs-keyword">return</span> f(x + n)
+
+f = f(g, n)
+g = (<span class="hljs-keyword">lambda</span> y: y())(f)</code></pre>
+
+</env-diagram-static>
+
+
+<h1 id="optional-questions">Optional Questions</h1>
+
+
+<blockquote><p>These questions are optional. If you don't complete them, you will
+still receive credit for lab. They are great practice, so do them
+anyway!</p></blockquote>
+
+
+<h3 id="q7-multiple">Q7: Multiple</h3>
+
+<p>Write a function that takes in two numbers and returns the smallest number that
+is a multiple of both.
+<solution></solution></p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiple</span><span class="hljs-params">(a, b)</span>:</span>
+    <span class="hljs-string">"""Return the smallest number n that is a multiple of both a and b.
+
+    &gt;&gt;&gt; multiple(3, 4)
+    12
+    &gt;&gt;&gt; multiple(14, 21)
+    42
+    """</span>
+    <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q multiple</code><button id="copy-code-python3ok-qmultiple" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qmultiple").onclick = () => copyCode('python3 ok -q multiple', "copy-code-python3ok-qmultiple");
+        </script>
+        <br>
+
+
+<h3 id="q8-i-heard-you-liked-functions">Q8: I Heard You Liked Functions...</h3>
+
+
+<p>Define a function <code>cycle</code> that takes in three functions <code>f1</code>, <code>f2</code>, and
+<code>f3</code>, as arguments. <code>cycle</code> will return another function <code>g</code> that should
+take in an integer argument <code>n</code> and return another function <code>h</code>. That
+final function <code>h</code> should take in an argument <code>x</code> and cycle through
+applying <code>f1</code>, <code>f2</code>, and <code>f3</code> to <code>x</code>, depending on what <code>n</code>
+was. Here's what the final function <code>h</code> should do to <code>x</code> for a few
+values of <code>n</code>:</p>
+
+<ul>
+  <li><code>n = 0</code>, return <code>x</code></li>
+  <li><code>n = 1</code>, apply <code>f1</code> to <code>x</code>, or return <code>f1(x)</code></li>
+  <li><code>n = 2</code>, apply <code>f1</code> to <code>x</code> and then <code>f2</code> to the result of that, or
+  return <code>f2(f1(x))</code></li>
+  <li><code>n = 3</code>, apply <code>f1</code> to <code>x</code>, <code>f2</code> to the result of applying <code>f1</code>,
+  and then <code>f3</code> to the result of applying <code>f2</code>, or <code>f3(f2(f1(x)))</code></li>
+  <li><code>n = 4</code>, start the cycle again applying <code>f1</code>, then <code>f2</code>, then <code>f3</code>,
+  then <code>f1</code> again, or <code>f1(f3(f2(f1(x))))</code></li>
+  <li>And so forth.</li>
+</ul>
+
+<p><em>Hint</em>: most of the work goes inside the most nested function.</p>
+
+<solution>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cycle</span><span class="hljs-params">(f1, f2, f3)</span>:</span>
+    <span class="hljs-string">"""Returns a function that is itself a higher-order function.
+
+    &gt;&gt;&gt; def add1(x):
+    ...     return x + 1
+    &gt;&gt;&gt; def times2(x):
+    ...     return x * 2
+    &gt;&gt;&gt; def add3(x):
+    ...     return x + 3
+    &gt;&gt;&gt; my_cycle = cycle(add1, times2, add3)
+    &gt;&gt;&gt; identity = my_cycle(0)
+    &gt;&gt;&gt; identity(5)
+    5
+    &gt;&gt;&gt; add_one_then_double = my_cycle(2)
+    &gt;&gt;&gt; add_one_then_double(1)
+    4
+    &gt;&gt;&gt; do_all_functions = my_cycle(3)
+    &gt;&gt;&gt; do_all_functions(2)
+    9
+    &gt;&gt;&gt; do_more_than_a_cycle = my_cycle(4)
+    &gt;&gt;&gt; do_more_than_a_cycle(2)
+    10
+    &gt;&gt;&gt; do_two_cycles = my_cycle(6)
+    &gt;&gt;&gt; do_two_cycles(1)
+    19
+    """</span>
+    <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+</solution>
+
+
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q cycle</code><button id="copy-code-python3ok-qcycle" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qcycle").onclick = () => copyCode('python3 ok -q cycle', "copy-code-python3ok-qcycle");
+        </script>
+        <br>
+<script>
+    $('.alwaystoggle').css('display', 'inline-block');
+    $('.alwaystoggle').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+</script>
+
+  </div>
+
+  <div class="col-md-3 sticky">
+    <nav class="hidden-print hidden-sm hidden-xs sidebar">
+      <ul class="nav nav-stacked noselect">
+  <li><a href="https://cs61a.org/lab/lab02/#topics">Topics</a></li>
+  <li><a href="https://cs61a.org/lab/lab02/#required-questions">Required Questions</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/lab/lab02/#what-would-python-display">What Would Python Display?</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/lab/lab02/#q1-wwpd-the-truth-will-prevail">Q1: WWPD: The Truth Will Prevail</a></li>
+      <li><a href="https://cs61a.org/lab/lab02/#q2-wwpd-higher-order-functions">Q2: WWPD: Higher-Order Functions</a></li>
+      <li><a href="https://cs61a.org/lab/lab02/#q3-wwpd-lambda">Q3: WWPD: Lambda</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/lab/lab02/#coding-practice">Coding Practice</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/lab/lab02/#q4-composite-identity-function">Q4: Composite Identity Function</a></li>
+      <li><a href="https://cs61a.org/lab/lab02/#q5-count-cond">Q5: Count Cond</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/lab/lab02/#check-your-score-locally">Check Your Score Locally</a></li>
+    <li><a href="https://cs61a.org/lab/lab02/#submit">Submit</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/lab/lab02/#environment-diagram-practice">Environment Diagram Practice</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/lab/lab02/#q6-hof-diagram-practice">Q6: HOF Diagram Practice</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/lab/lab02/#optional-questions">Optional Questions</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/lab/lab02/#q7-multiple">Q7: Multiple</a></li>
+    <li><a href="https://cs61a.org/lab/lab02/#q8-i-heard-you-liked-functions">Q8: I Heard You Liked Functions...</a></li>
+  </ul>
+</ul>
+    </nav>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="container">
+      <div class="row text-center">
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/">CS 61A</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/weekly">Weekly Schedule</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li><a href="https://cs61a.org/staff">Staff</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/resources">Resources</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/studying">Studying Guide</a></li>
+            <li><a href="https://cs61a.org/articles/debugging">Debugging Guide</a></li>
+            <li><a href="https://cs61a.org/articles/composition">Composition Guide</a></li>
+            <li><a href="https://cs61a.org/articles/pair-programming">Pair Programming</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/articles/about">Policies</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/about#assignments">Assignments</a></li>
+            <li><a href="https://cs61a.org/articles/about#exams">Exams</a></li>
+            <li><a href="https://cs61a.org/articles/about#grading">Grading</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/loader.min.js.下载"></script>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/editor.main.min.css">
+  <script>
+      require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
+      window.MonacoEnvironment = { getWorkerUrl: () => URL.createObjectURL(new Blob([`
+      self.MonacoEnvironment = {
+          baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], { type: 'text/javascript' }))
+  };
+  </script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/jsplumb.min.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/network_storage.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/storable.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/editor.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/copy-button.js.下载"></script>
+    <script src="./Lab 2_ Higher-Order Functions, Lambda Expressions _ CS 61A Spring 2024_files/env-diagram.js.下载"></script>
+    
+<!-- <script src="/assets/js/sketchy.js"></script> -->
+<script>
+  $('.sidebar ul').addClass('nav nav-stacked noselect');
+  $('body').scrollspy({
+    target: '.sidebar',
+    offset: 40
+  });
+
+  function goToId(id) {
+    var target = $(id);
+    target.parent().show();
+    $('html,body').animate({
+      scrollTop: target.offset().top,
+    }, 100);
+    $("body").scrollspy('refresh');
+  }
+
+  if (location.hash) {
+    setTimeout(function() {
+      if (location.hash) {
+        goToId(location.hash);
+      }
+    }, 1);
+  }
+
+  $("a").click(function(event) {
+    var urlBeforeHashRegEx = new RegExp("^"+window.location.href.split("#")[0]);
+    if (/^#/.test(this.hash) && urlBeforeHashRegEx.test(this.href)) {
+      event.preventDefault();
+      goToId(this.hash);
+      document.location.hash = this.hash;
+    }
+  });
+</script>
+
+  
+<i id="__PIKPAK_EXTENSION__" style="display: none;">1.6.3</i><div id="dom-inspector-1717741699837" class="dom-inspector dom-inspector-theme-default" style="z-index: 9999"><div class="content"></div><div class="padding padding-top"></div><div class="padding padding-right"></div><div class="padding padding-bottom"></div><div class="padding padding-left"></div><div class="border border-top"></div><div class="border border-right"></div><div class="border border-bottom"></div><div class="border border-left"></div><div class="margin margin-top"></div><div class="margin margin-right"></div><div class="margin margin-bottom"></div><div class="margin margin-left"></div><div class="tips"><div class="tag"></div><div class="id"></div><div class="class"></div><div class="line">&nbsp;|&nbsp;</div><div class="size"></div><div class="triangle"></div></div></div></body></html>

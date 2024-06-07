@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://cs61a.org/lab/lab07/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.inset-0{inset:0}.bottom-20{bottom:5rem}.bottom-36{bottom:9rem}.right-16{right:4rem}.right-3{right:.75rem}.z-\[99999\]{z-index:99999}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.w-0{width:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:1s linear infinite spin}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-0{border-width:0}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.bg-\[\#2c3440\]{--tw-bg-opacity:1;background-color:rgb(44 52 64/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-gray-300{--tw-ring-opacity:1;--tw-ring-color:rgb(209 213 219/var(--tw-ring-opacity))}.ring-opacity-5{--tw-ring-opacity:.05}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-100{transition-duration:.1s}.duration-300{transition-duration:.3s}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-gray-400::placeholder{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity))}.focus\:ring-indigo-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229/var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}@media (width>=640px){.sm\:flex{display:flex}.sm\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-x-2{--tw-translate-x:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:items-start{align-items:flex-start}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1 - var(--tw-space-x-reverse)))}.sm\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.sm\:rounded-lg{border-radius:.5rem}.sm\:p-6{padding:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:leading-6{line-height:1.5rem}}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div class="fixed bottom-20 right-16 text-sm hidden z-[99999]"><div class="bg-[#2c3440] w-80 shadow sm:rounded-lg"><div class="flex justify-end pt-3 pr-3"><form action="https://codepen.io/pen/define" method="POST" target="_blank"><input type="hidden" name="data" value="{}"><button type="submit" class="font-semibold text-slate-200">preview</button></form><a class="font-semibold text-slate-200 ml-2" href="https://copycss.xyz/" target="_blank">help</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></div><div class="px-6 pb-6"><div class="flex justify-center items-center space-x-1 absolute right-3 bottom-36"><button class="w-10 h-10 bg-indigo-600  text-white font-black rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">←</button><div class="flex flex-col space-y-2"><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↑</button><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↓</button></div><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">→</button></div><div class="mt-1"><label class="text-base font-semibold text-slate-200">Component Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="HTML" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-slate-300">HTML</label></div><div class="flex items-center"><input id="JSX" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="JSX" class="ml-3 block text-sm font-medium leading-6 text-slate-300">JSX</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">With Child</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Yes" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Yes" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Yes</label></div><div class="flex items-center"><input id="No" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="No" class="ml-3 block text-sm font-medium leading-6 text-slate-300">No</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">Style Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Tailwind" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Tailwind" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Tailwind</label></div><div class="flex items-center"><input id="Inline" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Inline" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Inline</label></div><div class="flex items-center"><input id="Class" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Class" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Class</label></div></div></fieldset></div><div class="mt-5 flex justify-center"><button type="button" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Copy HTML</button></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CS 61A: Structure and Interpretation of Computer Programs">
+    <meta name="keywords" content="CS 61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS">
+    <meta name="author" content="John DeNero">
+    
+    <meta name="viewport" content="width=device-width">
+
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/jquery.min.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/jquery.ba-throttle-debounce.min.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/bootstrap.min.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/hl.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/toggledarkmode.js.下载"></script>
+    <script>
+        // we aren't registering builtins since
+        //      (1) they don't render differently in the current CSS from other names
+        //      (2) it's a mess to list all of them. You can extract from the site but that takes effort
+        // if (1) ceases to be true, (2) might be worth the effort. For now, we're leaving as is
+        hljsRegister({
+            'keyword': "define if cond and or let begin lambda mu quote delay cons-stream set! quasiquote unquote unquote-splicing define-macro"
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/dark-mode.js.下载"></script>
+    <link rel="stylesheet" href="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/css">
+    <link rel="stylesheet" href="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/style.css">
+    <link rel="stylesheet" href="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/mono-blue.css">
+    <link rel="icon" href="https://cs61a.org/assets/images/favicon.ico">
+
+    
+
+    <title>
+Lab 7: Inheritance, Linked Lists | CS 61A Spring 2024
+</title>
+  <style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style></head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container noselect">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cs61a.org/">
+            <img style="max-width:60px; margin-top: -20px;" class="logo" src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/logo.png">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://cs61a.org/">Home</a></li>
+            <li><a href="https://cs61a.org/articles/about">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/52971/discussion/" target="_blank">Ed</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/lab/lab07/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Staff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://cs61a.org/staff">TAs &amp; Tutors</a></li>
+                <li><a href="https://cs61a.org/academic-interns">Academic Interns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/lab/lab07/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://sections.cs61a.org/">Section Selector</a></li>
+                <li><a href="https://oh.cs61a.org/">Office Hours Queue</a></li>
+                <li><a href="https://go.cs61a.org/extensions">Request an Extension</a></li>
+                <li><a href="https://go.cs61a.org/regrades">Request a Regrade</a></li>
+                <li><a href="https://cs61a.org/resources/">Past Exams &amp; Sites</a></li>
+                <li><a href="https://pythontutor.com/cp/composingprograms.html">Python Tutor</a></li>
+                <li><a href="https://code.cs61a.org/">Online Code Editor</a></li>
+                <li><a href="https://cs61a.org/articles/campus-res/">Department/Campus Resources</a></li>
+                <li><a href="https://cs61a.org/articles/advice/">Advice from Former Students</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cs61a.org/contact/">Contact</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="toggle-mode-cb">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="container">
+      
+<div class="row">
+  <div class="col-md-9">
+    <header>
+      <h1>
+        
+Lab 7: Inheritance, Linked Lists
+
+        
+        
+        <ul class="inline-block list-inline">
+          <li><a href="https://cs61a.org/lab/lab07/lab07.zip" class="label label-outline">lab07.zip</a></li>
+        </ul>
+        
+        
+      </h1>
+    </header>
+    
+
+<p><i>Due by 11:59pm on Wednesday, March 13.</i></p>
+
+
+
+
+
+
+<h2 id="starter-files">Starter Files</h2>
+
+<p>Download <a href="https://cs61a.org/lab/lab07/lab07.zip">lab07.zip</a>.
+Inside the archive, you will find starter files for the questions in this lab,
+  along with a copy of the <a href="https://cs61a.org/lab/lab07/ok">Ok</a> autograder.</p>
+
+
+
+
+
+
+
+
+    
+<h1 id="required-questions">Required Questions</h1>
+
+
+<br>
+
+        <button id="toggle-1" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Getting Started Videos<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-1">
+
+
+<h2 id="getting-started-videos" class="no-toc">Getting Started Videos</h2>
+
+
+<p>These videos may provide some helpful direction for tackling the coding
+problems on this assignment.</p>
+
+<blockquote><p>To see these videos, you should be logged into your berkeley.edu email.</p></blockquote>
+
+
+            <iframe width="560" height="315" src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/videoseries.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/playlist?list=PLx38hZJ5RLZf149ILKTCfQ11eVDRm8KS1"> YouTube link </a></p>
+</div>
+
+
+<h2 id="inheritance">Inheritance</h2>
+
+
+<p>Consult the drop-down if you need a refresher on Inheritance. It's
+okay to skip directly to the questions and refer back
+here should you get stuck.
+
+        <button id="toggle-2" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Inheritance<noscript> (enable JavaScript)</noscript>
+        </button>
+        </p><div class="solution toggle-2"><p></p>
+
+<!-- This is the short version of inheritance introduction.
+A longer version can be found in inheritance-introduction.md -->
+
+<p>To avoid redefining attributes and methods for similar classes, we can write a
+single <strong>base class</strong> from which more specialized classes <strong>inherit</strong>. For
+example, we can write a class called <code>Pet</code> and define <code>Dog</code> as a <strong>subclass</strong> of
+<code>Pet</code>:</p>
+
+<pre><code class="python hljs"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pet</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, owner)</span>:</span>
+        self.is_alive = <span class="hljs-literal">True</span>    <span class="hljs-comment"># It's alive!!!</span>
+        self.name = name
+        self.owner = owner
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">eat</span><span class="hljs-params">(self, thing)</span>:</span>
+        print(self.name + <span class="hljs-string">" ate a "</span> + str(thing) + <span class="hljs-string">"!"</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span><span class="hljs-params">(self)</span>:</span>
+        print(self.name)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span><span class="hljs-params">(Pet)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span><span class="hljs-params">(self)</span>:</span>
+        super().talk()
+        print(<span class="hljs-string">'This Dog says woof!'</span>)</code></pre>
+
+
+
+<p>Inheritance represents a hierarchical relationship between two or more
+classes where one class <strong>is a</strong> more specific version of the other:
+a dog <strong>is a</strong> pet
+(We use <strong>is a</strong> to describe this sort of relationship in OOP languages,
+and not to refer to the Python <code>is</code> operator).</p>
+
+<p>Since <code>Dog</code> inherits from <code>Pet</code>, the <code>Dog</code> class will also inherit the
+<code>Pet</code> class's methods, so we don't have to redefine <code>__init__</code> or <code>eat</code>.
+We do want each <code>Dog</code> to <code>talk</code> in a <code>Dog</code>-specific way,
+so we can <strong>override</strong> the <code>talk</code> method.</p>
+
+<p>We can use <code>super()</code> to refer to the superclass of <code>self</code>,
+and access any superclass methods as if we were an instance of the superclass.
+For example, <code>super().talk()</code> in the <code>Dog</code> class will call the <code>talk</code>
+method from the <code>Pet</code> class, but passing the <code>Dog</code> instance as the <code>self</code>.</p>
+
+</div>
+
+
+<h3 id="q1-wwpd-inheritance-abcs">Q1: WWPD: Inheritance ABCs</h3>
+
+
+<blockquote><p><strong>Important:</strong>
+For all WWPD questions, type <code>Function</code> if you believe the answer is
+<code>&lt;function...&gt;</code>, <code>Error</code> if it errors, and <code>Nothing</code> if nothing is displayed.</p>
+
+<p>Use Ok to test your knowledge with the following "What Would Python Display?" questions:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q inheritance-abc -u</code><button id="copy-code-python3ok-qinheritance-abc-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qinheritance-abc-u").onclick = () => copyCode('python3 ok -q inheritance-abc -u', "copy-code-python3ok-qinheritance-abc-u");
+        </script>
+        <br></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span>:</span>
+<span class="hljs-meta">... </span>  x, y = <span class="hljs-number">0</span>, <span class="hljs-number">0</span>
+<span class="hljs-meta">... </span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span><span class="hljs-params">(A)</span>:</span>
+<span class="hljs-meta">... </span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span><span class="hljs-params">(A)</span>:</span>
+<span class="hljs-meta">... </span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-meta">... </span>        <span class="hljs-keyword">return</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(A.x, B.x, C.x)
+<div class="alt prompt-1">______</div><div class="solution prompt-1">______</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>B.x = <span class="hljs-number">2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(A.x, B.x, C.x)
+<div class="alt prompt-1">______</div><div class="solution prompt-1">______</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>A.x += <span class="hljs-number">1</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(A.x, B.x, C.x)
+<div class="alt prompt-1">______</div><div class="solution prompt-1">______</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>obj = C()
+<span class="hljs-meta">&gt;&gt;&gt; </span>obj.y = <span class="hljs-number">1</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>C.y == obj.y
+<div class="alt prompt-1">______</div><div class="solution prompt-1">______</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>A.y = obj.y
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(A.y, B.y, C.y, obj.y)
+<div class="alt prompt-1">______</div><div class="solution prompt-1">______</div></code></pre>
+        <button id="prompt-1" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+
+<h2 id="class-practice">Class Practice</h2>
+
+
+<p>Let's say we'd like to model a bank account that can handle interactions
+such as depositing funds or gaining interest on current funds.
+In the following questions, we will be building off of the <code>Account</code> class.
+Here's our current definition of the class:</p>
+
+<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span>:</span>
+    <span class="hljs-string">"""An account has a balance and a holder.
+    &gt;&gt;&gt; a = Account('John')
+    &gt;&gt;&gt; a.deposit(10)
+    10
+    &gt;&gt;&gt; a.balance
+    10
+    &gt;&gt;&gt; a.interest
+    0.02
+    &gt;&gt;&gt; a.time_to_retire(10.25)  # 10 -&gt; 10.2 -&gt; 10.404
+    2
+    &gt;&gt;&gt; a.balance                # Calling time_to_retire method should not change the balance
+    10
+    &gt;&gt;&gt; a.time_to_retire(11)     # 10 -&gt; 10.2 -&gt; ... -&gt; 11.040808032
+    5
+    &gt;&gt;&gt; a.time_to_retire(100)
+    117
+    """</span>
+    max_withdrawal = <span class="hljs-number">10</span>
+    interest = <span class="hljs-number">0.02</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, account_holder)</span>:</span>
+        self.balance = <span class="hljs-number">0</span>
+        self.holder = account_holder
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deposit</span><span class="hljs-params">(self, amount)</span>:</span>
+        self.balance = self.balance + amount
+        <span class="hljs-keyword">return</span> self.balance
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">withdraw</span><span class="hljs-params">(self, amount)</span>:</span>
+        <span class="hljs-keyword">if</span> amount &gt; self.balance:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Insufficient funds"</span>
+        <span class="hljs-keyword">if</span> amount &gt; self.max_withdrawal:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">"Can't withdraw that amount"</span>
+        self.balance = self.balance - amount
+        <span class="hljs-keyword">return</span> self.balance</code></pre>
+
+
+<h3 id="q2-retirement">Q2: Retirement</h3>
+
+
+<p>Add a <code>time_to_retire</code> method to the <code>Account</code> class.
+This method takes in an <code>amount</code> and returns how many years the holder would
+need to wait in order for the current <code>balance</code> to grow to at least <code>amount</code>,
+assuming that the bank adds the interest (calculated as the current <code>balance</code> 
+multiplied by the <code>interest</code> rate) to the <code>balance</code> at the end of each year.</p>
+
+<solution>
+
+<pre><code class="hljs python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">time_to_retire</span><span class="hljs-params">(self, amount)</span>:</span>
+        <span class="hljs-string">"""Return the number of years until balance would grow to amount."""</span>
+        <span class="hljs-keyword">assert</span> self.balance &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> amount &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> self.interest &gt; <span class="hljs-number">0</span>
+        <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+</solution>
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q Account</code><button id="copy-code-python3ok-qAccount" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qAccount").onclick = () => copyCode('python3 ok -q Account', "copy-code-python3ok-qAccount");
+        </script>
+        <br>
+
+
+
+
+<h3 id="q3-freechecking">Q3: FreeChecking</h3>
+
+
+<p>Implement the <code>FreeChecking</code> class, which is like the <code>Account</code> class from
+lecture except that it charges a withdraw fee <code>withdraw_fee</code> after 
+withdrawing <code>free_withdrawals</code> number of times.
+If a withdrawal is unsuccessful, it still counts towards the number of free
+withdrawals remaining, but no fee for the withdrawal will be charged.</p>
+
+<solution>
+
+<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FreeChecking</span><span class="hljs-params">(Account)</span>:</span>
+    <span class="hljs-string">"""A bank account that charges for withdrawals, but the first two are free!
+    &gt;&gt;&gt; ch = FreeChecking('Jack')
+    &gt;&gt;&gt; ch.balance = 20
+    &gt;&gt;&gt; ch.withdraw(100)  # First one's free. Still counts as a free withdrawal even though it was unsuccessful
+    'Insufficient funds'
+    &gt;&gt;&gt; ch.withdraw(3)    # Second withdrawal is also free
+    17
+    &gt;&gt;&gt; ch.balance
+    17
+    &gt;&gt;&gt; ch.withdraw(3)    # Ok, two free withdrawals is enough, as free_withdrawals is only 2
+    13
+    &gt;&gt;&gt; ch.withdraw(3)
+    9
+    &gt;&gt;&gt; ch2 = FreeChecking('John')
+    &gt;&gt;&gt; ch2.balance = 10
+    &gt;&gt;&gt; ch2.withdraw(3) # No fee
+    7
+    &gt;&gt;&gt; ch.withdraw(3)  # ch still charges a fee
+    5
+    &gt;&gt;&gt; ch.withdraw(5)  # Not enough to cover fee + withdraw
+    'Insufficient funds'
+    """</span>
+    withdraw_fee = <span class="hljs-number">1</span>
+    free_withdrawals = <span class="hljs-number">2</span>
+
+    <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+</solution>
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q FreeChecking</code><button id="copy-code-python3ok-qFreeChecking" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qFreeChecking").onclick = () => copyCode('python3 ok -q FreeChecking', "copy-code-python3ok-qFreeChecking");
+        </script>
+        <br>
+
+
+
+
+<h2 id="linked-lists">Linked Lists</h2>
+
+
+<p>Consult the drop-down if you need a refresher on Linked Lists. It's
+okay to skip directly to the questions and refer back
+here should you get stuck.</p>
+
+
+        <button id="toggle-3" class="btn btn-outline btn-lg alwaystoggle toggle" style="display: inline-block;">
+        Linked Lists<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-3">
+
+<p>A linked list is a data structure for storing a sequence of values. It is more
+efficient than a regular built-in list for certain operations, such as inserting
+a value in the middle of a long list. Linked lists are not built in, and so we
+define a class called <code>Link</code> to represent them. 
+A linked list is either a <code>Link</code> instance or <code>Link.empty</code> 
+(which represents an empty linked list).</p>
+
+<p>A instance of <code>Link</code> has two instance attributes, <code>first</code> and <code>rest</code>.</p>
+
+<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Link</span>:</span>
+    <span class="hljs-string">"""A linked list.
+
+    &gt;&gt;&gt; s = Link(1)
+    &gt;&gt;&gt; s.first
+    1
+    &gt;&gt;&gt; s.rest is Link.empty
+    True
+    &gt;&gt;&gt; s = Link(2, Link(3, Link(4)))
+    &gt;&gt;&gt; s.first = 5
+    &gt;&gt;&gt; s.rest.first = 6
+    &gt;&gt;&gt; s.rest.rest = Link.empty
+    &gt;&gt;&gt; s                                    # Displays the contents of repr(s)
+    Link(5, Link(6))
+    &gt;&gt;&gt; s.rest = Link(7, Link(Link(8, Link(9))))
+    &gt;&gt;&gt; s
+    Link(5, Link(7, Link(Link(8, Link(9)))))
+    &gt;&gt;&gt; print(s)                             # Prints str(s)
+    &lt;5 7 &lt;8 9&gt;&gt;
+    """</span>
+    empty = ()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, first, rest=empty)</span>:</span>
+        <span class="hljs-keyword">assert</span> rest <span class="hljs-keyword">is</span> Link.empty <span class="hljs-keyword">or</span> isinstance(rest, Link)
+        self.first = first
+        self.rest = rest
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__repr__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> self.rest <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> Link.empty:
+            rest_repr = <span class="hljs-string">', '</span> + repr(self.rest)
+        <span class="hljs-keyword">else</span>:
+            rest_repr = <span class="hljs-string">''</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">'Link('</span> + repr(self.first) + rest_repr + <span class="hljs-string">')'</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        string = <span class="hljs-string">'&lt;'</span>
+        <span class="hljs-keyword">while</span> self.rest <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> Link.empty:
+            string += str(self.first) + <span class="hljs-string">' '</span>
+            self = self.rest
+        <span class="hljs-keyword">return</span> string + str(self.first) + <span class="hljs-string">'&gt;'</span></code></pre>
+
+<p>The <code>rest</code> attribute of a <code>Link</code> instance should always be a linked list: either
+another <code>Link</code> instance or <code>Link.empty</code>. It SHOULD NEVER be <code>None</code>.</p>
+
+<p>To check if a linked list is empty, compare it to <code>Link.empty</code>. Since there is only
+ever one empty list, we can use <code>is</code> to compare, but <code>==</code> would work too.</p>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_empty</span><span class="hljs-params">(s)</span>:</span>
+    <span class="hljs-string">"""Return whether linked list s is empty."""</span>
+    <span class="hljs-keyword">return</span> s <span class="hljs-keyword">is</span> Link.empty:</code></pre>
+
+</div>
+
+
+<h3 id="q4-wwpd-linked-lists">Q4: WWPD: Linked Lists</h3>
+
+
+<p>Read over the <code>Link</code> class. Make sure you understand the doctests.</p>
+
+<blockquote><p>Use Ok to test your knowledge with the following "What Would Python Display?"
+questions:</p>
+
+<pre><code class="hljs">python3 ok -q link -u</code></pre>
+
+<p>Enter <code>Function</code> if you believe the answer is <code>&lt;function ...&gt;</code>, <code>Error</code> if it
+errors, and <code>Nothing</code> if nothing is displayed.</p>
+
+<p>If you get stuck, try drawing out the box-and-pointer diagram for the linked
+list on a piece of paper or loading the <code>Link</code> class into the interpreter
+with <code>python3 -i lab08.py</code>.</p></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">1000</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.first
+<div class="alt prompt-2">______</div><div class="solution prompt-2">1000</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest <span class="hljs-keyword">is</span> Link.empty
+<div class="alt prompt-2">______</div><div class="solution prompt-2">True</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">1000</span>, <span class="hljs-number">2000</span>)
+<div class="alt prompt-2">______</div><div class="solution prompt-2">AssertionError</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">1000</span>, Link())
+<div class="alt prompt-2">______</div><div class="solution prompt-2">TypeError</div></code></pre>
+        <button id="prompt-2" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">1</span>, Link(<span class="hljs-number">2</span>, Link(<span class="hljs-number">3</span>)))
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">1</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">2</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest.rest.rest <span class="hljs-keyword">is</span> Link.empty
+<div class="alt prompt-3">______</div><div class="solution prompt-3">True</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.first = <span class="hljs-number">9001</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">9001</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest = link.rest.rest
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">3</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest = link
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest.rest <span class="hljs-keyword">is</span> Link.empty
+<div class="alt prompt-3">______</div><div class="solution prompt-3">False</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link.rest.rest.rest.rest.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">1</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">2</span>, Link(<span class="hljs-number">3</span>, Link(<span class="hljs-number">4</span>)))
+<span class="hljs-meta">&gt;&gt;&gt; </span>link2 = Link(<span class="hljs-number">1</span>, link)
+<span class="hljs-meta">&gt;&gt;&gt; </span>link2.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">1</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>link2.rest.first
+<div class="alt prompt-3">______</div><div class="solution prompt-3">2</div></code></pre>
+        <button id="prompt-3" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>link = Link(<span class="hljs-number">5</span>, Link(<span class="hljs-number">6</span>, Link(<span class="hljs-number">7</span>)))
+<span class="hljs-meta">&gt;&gt;&gt; </span>link                 <span class="hljs-comment"># Look at the __repr__ method of Link</span>
+<div class="alt prompt-4">______</div><div class="solution prompt-4">Link(<span class="hljs-number">5</span>, Link(<span class="hljs-number">6</span>, Link(<span class="hljs-number">7</span>)))</div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(link)          <span class="hljs-comment"># Look at the __str__ method of Link</span>
+<div class="alt prompt-4">______</div><div class="solution prompt-4">&lt;<span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span>&gt;</div></code></pre>
+        <button id="prompt-4" class="btn btn-outline btn-lg solutiontoggle prompt">
+        Toggle Solution<noscript> (enable JavaScript)</noscript>
+        </button>
+        
+
+
+<h3 id="q5-duplicate-link">Q5: Duplicate Link</h3>
+
+
+<p>Write a function <code>duplicate_link</code> that takes in a linked list <code>s</code> and a value <code>val</code>. 
+It mutates <code>s</code> so that each element equal to <code>val</code> is followed by an additional <code>val</code> (a duplicate copy). 
+It returns <code>None</code>.</p>
+
+<blockquote><p><strong>Note</strong>: In order to insert a link into a linked list, reassign the <code>rest</code> attribute of the <code>Link</code> instances that have <code>val</code> as their <code>first</code>. Try drawing out a doctest to visualize!</p></blockquote>
+
+<solution>
+
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">duplicate_link</span><span class="hljs-params">(s, val)</span>:</span>
+    <span class="hljs-string">"""Mutates s so that each element equal to val is followed by another val.
+
+    &gt;&gt;&gt; x = Link(5, Link(4, Link(5)))
+    &gt;&gt;&gt; duplicate_link(x, 5)
+    &gt;&gt;&gt; x
+    Link(5, Link(5, Link(4, Link(5, Link(5)))))
+    &gt;&gt;&gt; y = Link(2, Link(4, Link(6, Link(8))))
+    &gt;&gt;&gt; duplicate_link(y, 10)
+    &gt;&gt;&gt; y
+    Link(2, Link(4, Link(6, Link(8))))
+    &gt;&gt;&gt; z = Link(1, Link(2, (Link(2, Link(3)))))
+    &gt;&gt;&gt; duplicate_link(z, 2) # ensures that back to back links with val are both duplicated
+    &gt;&gt;&gt; z
+    Link(1, Link(2, Link(2, Link(2, Link(2, Link(3))))))
+    """</span>
+    <span class="hljs-string">"*** YOUR CODE HERE ***"</span>
+</code></pre>
+
+</solution>
+
+<p>Use Ok to test your code:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q duplicate_link</code><button id="copy-code-python3ok-qduplicate_link" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qduplicate_link").onclick = () => copyCode('python3 ok -q duplicate_link', "copy-code-python3ok-qduplicate_link");
+        </script>
+        <br>
+
+
+<h2 id="check-your-score-locally">Check Your Score Locally</h2>
+
+<p>You can locally check your score on each question of this assignment by running</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p><strong>This does NOT submit the assignment!</strong> When you are satisfied with your score, submit the assignment to Gradescope to receive credit for it.</p>
+
+
+<h2 id="submit">Submit</h2>
+
+
+<p>Submit this assignment by uploading any files you've edited <strong>to the appropriate Gradescope assignment.</strong> <a href="https://cs61a.org/lab/lab00/#submit-with-gradescope">Lab 00</a> has detailed instructions.</p>
+
+<p>In addition, all students who are <strong>not</strong> in the mega lab must complete this <a href="https://go.cs61a.org/lab-att">attendance form</a>. Submit this form each week, whether you attend lab or missed it for a good reason. The attendance form is not required for mega section students.</p>
+<script>
+    $('.alwaystoggle').css('display', 'inline-block');
+    $('.alwaystoggle').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+</script>
+
+  </div>
+
+  <div class="col-md-3 sticky">
+    <nav class="hidden-print hidden-sm hidden-xs sidebar">
+      <ul class="nav nav-stacked noselect">
+  <li><a href="https://cs61a.org/lab/lab07/#required-questions">Required Questions</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/lab/lab07/#inheritance">Inheritance</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/lab/lab07/#q1-wwpd-inheritance-abcs">Q1: WWPD: Inheritance ABCs</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/lab/lab07/#class-practice">Class Practice</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/lab/lab07/#q2-retirement">Q2: Retirement</a></li>
+      <li><a href="https://cs61a.org/lab/lab07/#q3-freechecking">Q3: FreeChecking</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/lab/lab07/#linked-lists">Linked Lists</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/lab/lab07/#q4-wwpd-linked-lists">Q4: WWPD: Linked Lists</a></li>
+      <li><a href="https://cs61a.org/lab/lab07/#q5-duplicate-link">Q5: Duplicate Link</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/lab/lab07/#check-your-score-locally">Check Your Score Locally</a></li>
+    <li><a href="https://cs61a.org/lab/lab07/#submit">Submit</a></li>
+  </ul>
+</ul>
+    </nav>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="container">
+      <div class="row text-center">
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/">CS 61A</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/weekly">Weekly Schedule</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li><a href="https://cs61a.org/staff">Staff</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/resources">Resources</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/studying">Studying Guide</a></li>
+            <li><a href="https://cs61a.org/articles/debugging">Debugging Guide</a></li>
+            <li><a href="https://cs61a.org/articles/composition">Composition Guide</a></li>
+            <li><a href="https://cs61a.org/articles/pair-programming">Pair Programming</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/articles/about">Policies</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/about#assignments">Assignments</a></li>
+            <li><a href="https://cs61a.org/articles/about#exams">Exams</a></li>
+            <li><a href="https://cs61a.org/articles/about#grading">Grading</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/loader.min.js.下载"></script>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/editor.main.min.css">
+  <script>
+      require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
+      window.MonacoEnvironment = { getWorkerUrl: () => URL.createObjectURL(new Blob([`
+      self.MonacoEnvironment = {
+          baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], { type: 'text/javascript' }))
+  };
+  </script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/jsplumb.min.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/network_storage.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/storable.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/editor.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/copy-button.js.下载"></script>
+    <script src="./Lab 7_ Inheritance, Linked Lists _ CS 61A Spring 2024_files/env-diagram.js.下载"></script>
+    
+<!-- <script src="/assets/js/sketchy.js"></script> -->
+<script>
+  $('.sidebar ul').addClass('nav nav-stacked noselect');
+  $('body').scrollspy({
+    target: '.sidebar',
+    offset: 40
+  });
+
+  function goToId(id) {
+    var target = $(id);
+    target.parent().show();
+    $('html,body').animate({
+      scrollTop: target.offset().top,
+    }, 100);
+    $("body").scrollspy('refresh');
+  }
+
+  if (location.hash) {
+    setTimeout(function() {
+      if (location.hash) {
+        goToId(location.hash);
+      }
+    }, 1);
+  }
+
+  $("a").click(function(event) {
+    var urlBeforeHashRegEx = new RegExp("^"+window.location.href.split("#")[0]);
+    if (/^#/.test(this.hash) && urlBeforeHashRegEx.test(this.href)) {
+      event.preventDefault();
+      goToId(this.hash);
+      document.location.hash = this.hash;
+    }
+  });
+</script>
+
+  
+<i id="__PIKPAK_EXTENSION__" style="display: none;">1.6.3</i><div id="dom-inspector-1717741768816" class="dom-inspector dom-inspector-theme-default" style="z-index: 9999"><div class="content"></div><div class="padding padding-top"></div><div class="padding padding-right"></div><div class="padding padding-bottom"></div><div class="padding padding-left"></div><div class="border border-top"></div><div class="border border-right"></div><div class="border border-bottom"></div><div class="border border-left"></div><div class="margin margin-top"></div><div class="margin margin-right"></div><div class="margin margin-bottom"></div><div class="margin margin-left"></div><div class="tips"><div class="tag"></div><div class="id"></div><div class="class"></div><div class="line">&nbsp;|&nbsp;</div><div class="size"></div><div class="triangle"></div></div></div></body></html>

@@ -1,0 +1,3212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)https://cs61a.org/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.inset-0{inset:0}.bottom-20{bottom:5rem}.bottom-36{bottom:9rem}.right-16{right:4rem}.right-3{right:.75rem}.z-\[99999\]{z-index:99999}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.w-0{width:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:1s linear infinite spin}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-0{border-width:0}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.bg-\[\#2c3440\]{--tw-bg-opacity:1;background-color:rgb(44 52 64/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-gray-300{--tw-ring-opacity:1;--tw-ring-color:rgb(209 213 219/var(--tw-ring-opacity))}.ring-opacity-5{--tw-ring-opacity:.05}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-100{transition-duration:.1s}.duration-300{transition-duration:.3s}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-gray-400::placeholder{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity))}.focus\:ring-indigo-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229/var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}@media (width>=640px){.sm\:flex{display:flex}.sm\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-x-2{--tw-translate-x:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:items-start{align-items:flex-start}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1 - var(--tw-space-x-reverse)))}.sm\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.sm\:rounded-lg{border-radius:.5rem}.sm\:p-6{padding:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:leading-6{line-height:1.5rem}}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div class="fixed bottom-20 right-16 text-sm hidden z-[99999]"><div class="bg-[#2c3440] w-80 shadow sm:rounded-lg"><div class="flex justify-end pt-3 pr-3"><form action="https://codepen.io/pen/define" method="POST" target="_blank"><input type="hidden" name="data" value="{}"><button type="submit" class="font-semibold text-slate-200">preview</button></form><a class="font-semibold text-slate-200 ml-2" href="https://copycss.xyz/" target="_blank">help</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></div><div class="px-6 pb-6"><div class="flex justify-center items-center space-x-1 absolute right-3 bottom-36"><button class="w-10 h-10 bg-indigo-600  text-white font-black rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">←</button><div class="flex flex-col space-y-2"><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↑</button><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↓</button></div><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">→</button></div><div class="mt-1"><label class="text-base font-semibold text-slate-200">Component Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="HTML" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-slate-300">HTML</label></div><div class="flex items-center"><input id="JSX" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="JSX" class="ml-3 block text-sm font-medium leading-6 text-slate-300">JSX</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">With Child</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Yes" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Yes" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Yes</label></div><div class="flex items-center"><input id="No" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="No" class="ml-3 block text-sm font-medium leading-6 text-slate-300">No</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">Style Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Tailwind" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Tailwind" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Tailwind</label></div><div class="flex items-center"><input id="Inline" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Inline" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Inline</label></div><div class="flex items-center"><input id="Class" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Class" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Class</label></div></div></fieldset></div><div class="mt-5 flex justify-center"><button type="button" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Copy HTML</button></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CS 61A: Structure and Interpretation of Computer Programs">
+    <meta name="keywords" content="CS 61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS">
+    <meta name="author" content="John DeNero">
+    
+    <meta name="viewport" content="width=device-width">
+
+    <script src="./CS 61A Spring 2024_files/jquery.min.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/jquery.ba-throttle-debounce.min.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/bootstrap.min.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/hl.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/toggledarkmode.js.下载"></script>
+    <script>
+        // we aren't registering builtins since
+        //      (1) they don't render differently in the current CSS from other names
+        //      (2) it's a mess to list all of them. You can extract from the site but that takes effort
+        // if (1) ceases to be true, (2) might be worth the effort. For now, we're leaving as is
+        hljsRegister({
+            'keyword': "define if cond and or let begin lambda mu quote delay cons-stream set! quasiquote unquote unquote-splicing define-macro"
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./CS 61A Spring 2024_files/dark-mode.js.下载"></script>
+    <link rel="stylesheet" href="./CS 61A Spring 2024_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./CS 61A Spring 2024_files/css">
+    <link rel="stylesheet" href="./CS 61A Spring 2024_files/style.css">
+    <link rel="stylesheet" href="./CS 61A Spring 2024_files/mono-blue.css">
+    <link rel="icon" href="https://cs61a.org/assets/images/favicon.ico">
+
+    
+
+    <title>CS 61A Spring 2024</title>
+  <style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style></head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container noselect">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cs61a.org/">
+            <img style="max-width:60px; margin-top: -20px;" class="logo" src="./CS 61A Spring 2024_files/logo.png">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://cs61a.org/">Home</a></li>
+            <li><a href="https://cs61a.org/articles/about">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/52971/discussion/" target="_blank">Ed</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Staff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://cs61a.org/staff">TAs &amp; Tutors</a></li>
+                <li><a href="https://cs61a.org/academic-interns">Academic Interns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://sections.cs61a.org/">Section Selector</a></li>
+                <li><a href="https://oh.cs61a.org/">Office Hours Queue</a></li>
+                <li><a href="https://go.cs61a.org/extensions">Request an Extension</a></li>
+                <li><a href="https://go.cs61a.org/regrades">Request a Regrade</a></li>
+                <li><a href="https://cs61a.org/resources/">Past Exams &amp; Sites</a></li>
+                <li><a href="https://pythontutor.com/cp/composingprograms.html">Python Tutor</a></li>
+                <li><a href="https://code.cs61a.org/">Online Code Editor</a></li>
+                <li><a href="https://cs61a.org/articles/campus-res/">Department/Campus Resources</a></li>
+                <li><a href="https://cs61a.org/articles/advice/">Advice from Former Students</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cs61a.org/contact/">Contact</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="toggle-mode-cb">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="container">
+      
+<header>
+  <h1>CS 61A: Structure and Interpretation of Computer Programs</h1>
+  <p>
+    Spring 2024,
+    
+      Instructor:
+    
+    John DeNero
+    
+  </p>
+</header>
+
+<section id="announcements">
+  
+    <div class="announcement" id="announcement-0" style="display: block;">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next disabled" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, April 26</h2>
+        <!-- <div><a href="#calendar_4_26">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 11 <strong>extended</strong>: due Sunday 5/5.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-1">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, April 24</h2>
+        <!-- <div><a href="#calendar_4_24">Jump to date</a></div> -->
+        <ul>
+  <li>Lecture Wednesday 4/24 will be the same as the videos (so you don't need to watch videos in advance).</li>
+  <li>Lecture Friday 4/26 has no videos (but will be recorded).</li>
+  <li>Entries to the <em>completely optional</em> Scheme Recursive Art Contest are due Wednesday 4/24.</li>
+  <li>Homework 9 &amp; Homework 10 are <strong>both</strong> due Thursday 4/25.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-2">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, April 19</h2>
+        <!-- <div><a href="#calendar_4_19">Jump to date</a></div> -->
+        <ul>
+  <li>Lectures on Monday 4/22 and Wednesday 4/24 will be the same as the videos (so you don't need to watch videos in advance).</li>
+  <li>The final exam will cover lecture content through Friday 4/19.</li>
+  <li><p>The Scheme Project is due Tuesday 4/23.</p>
+
+  <ul>
+    <li>Early submission bonus point for submitting by Monday 4/22.</li>
+  </ul></li>
+  <li>Entries to the <em>completely optional</em> Scheme Recursive Art Contest are due Wednesday 4/24.</li>
+  <li>Homework 9 <em>deadline extended</em> to Thursday 4/25.</li>
+  <li>Homework 10 is due Thursday 4/25.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-3">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, April 15</h2>
+        <!-- <div><a href="#calendar_4_15">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 9 <strong>deadline extended</strong> to Thursday 4/25.</li>
+  <li><p>The Scheme Project is due Tuesday 4/23.</p>
+
+  <ul>
+    <li>Checkpoint 1 due Monday 4/15.</li>
+    <li>Checkpoint 2 due Thursday 4/18.</li>
+    <li>Early submission bonus point for submitting by Monday 4/22.</li>
+  </ul></li>
+  <li>Entries to the <em>completely optional</em> Scheme Recursive Art Contest are due Wednesday 4/24.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-4">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, April 8</h2>
+        <!-- <div><a href="#calendar_4_08">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 8 is due Thursday 4/11.</li>
+  <li>Midterm 2 regrade requests are due Thursday 4/11.</li>
+  <li>Guest lecture Friday 4/12 by Professor Paul Hilfinger on Macros.</li>
+  <li><p>The Scheme Project is due Tuesday 4/23.</p>
+
+  <ul>
+    <li>Checkpoint 1 due Monday 4/15.</li>
+    <li>Checkpoint 2 due Thursday 4/18.</li>
+    <li>Early submission bonus point for submitting by Monday 4/22.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-5">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, April 5</h2>
+        <!-- <div><a href="#calendar_4_05">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 8 is due Thursday 4/11.</li>
+  <li>Sign up for small-group exam prep tutorials on <a href="https://tutorials.cs61a.org/">tutorials.cs61a.org</a>.</li>
+  <li>Midterm 2 regrade requests are due Thursday 4/11.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-6">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, April 1</h2>
+        <!-- <div><a href="#calendar_4_01">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 7 (short) is due Thursday 4/4!</li>
+  <li>Midterm 2 should be graded by Wednesday 4/3.</li>
+  <li>Coming next week: exam prep small-group tutoring</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-7">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Thursday, March 21</h2>
+        <!-- <div><a href="#calendar_3_21">Jump to date</a></div> -->
+        <ul>
+  <li><p>Midterm 2 is 8pm-10pm Thursday 3/21.</p>
+
+  <ul>
+    <li>Please read the <a href="https://edstem.org/us/courses/52971/discussion/4494251">Midterm 2 exam logistics post</a>.</li>
+    <li>Scores will not be returned until after Spring Break.</li>
+  </ul></li>
+  <li><p>Special schedule Friday 3/22.</p>
+
+  <ul>
+    <li>Optional <a href="https://edstem.org/us/courses/52971/discussion/4610945">panel on AI governance</a> 1-2 in Berkeley Law auditorium.</li>
+    <li>Optional guest lecture on Large Language Models (Pamela Fox) 2-3 in 1 Pimentel.</li>
+    <li>Optional guest lecture/Q&amp;A on the Ants GUI (Benji Xu &amp; Justin Park) 3-4 in 293 Cory.</li>
+  </ul></li>
+  <li>No discussion Wednesday 3/20 or Thursday 3/21.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-8">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, March 18</h2>
+        <!-- <div><a href="#calendar_3_18">Jump to date</a></div> -->
+        <ul>
+  <li><p>The <a href="https://cs61a.org/proj/ants">Ants Project</a> is due Tuesday 3/19.</p>
+
+  <ul>
+    <li>Early submission bonus point for finishing by Monday 3/18.</li>
+    <li>Office hours Monday 3/18 are 6-8pm</li>
+  </ul></li>
+  <li><p>Midterm 2 is 8pm-10pm Thursday 3/21.</p>
+
+  <ul>
+    <li>No lecture Wednesday 3/20.</li>
+    <li>No discussion Wednesday 3/20 or Thursday 3/21.</li>
+    <li>Scores will not be returned until after Spring Break.</li>
+  </ul></li>
+  <li><p>Special schedule Friday 3/22.</p>
+
+  <ul>
+    <li>Optional guest lecture on Large Language Models (Pamela Fox) 2-3 in 1 Pimentel.</li>
+    <li>Optional guest lecture/Q&amp;A on the Ants GUI (Benji Xu &amp; Justin Park) 3-4 in 293 Cory.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-9">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, March 13</h2>
+        <!-- <div><a href="#calendar_3_13">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 6 (very short) is due Thursday 3/14.</li>
+  <li><p>The <a href="https://cs61a.org/proj/ants">Ants Project</a> is due Tuesday 3/19.</p>
+
+  <ul>
+    <li>Early submission bonus point for finishing by Monday 3/18.</li>
+  </ul></li>
+  <li><p>Midterm 2 is 8pm-10pm Thursday 3/21.</p>
+
+  <ul>
+    <li>Alteration requests due Sunday 3/17.</li>
+    <li>No lecture Wednesday 3/20.</li>
+    <li>No discussion Wednesday 3/20 or Thursday 3/21.</li>
+    <li>Optional (great) guest lecture Friday 3/22.</li>
+    <li>Scores will not be returned until after Spring Break.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-10">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, March 8</h2>
+        <!-- <div><a href="#calendar_3_08">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 6 (very short) is due Thursday March 14.</li>
+  <li><p>The <a href="https://cs61a.org/proj/ants">Ants Project</a> is due Tuesday 3/19.</p>
+
+  <ul>
+    <li>Checkpoint 1 (3 questions) is due Thursday 3/7.</li>
+    <li>Checkpoint 2 (many questions) is due Tuesday 3/12.</li>
+    <li>Early submission bonus point for finishing by Monday 3/18.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-11">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, March 6</h2>
+        <!-- <div><a href="#calendar_3_06">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 5 is due Thursday March 7.</li>
+  <li><p>The <a href="https://cs61a.org/proj/ants">Ants Project</a> is due Tuesday 3/19.</p>
+
+  <ul>
+    <li>Checkpoint 1 (3 questions) is due Thursday 3/7.</li>
+    <li>Checkpoint 2 (many questions) is due Tuesday 3/12.</li>
+    <li>Early submission bonus point for finishing by Monday 3/18.</li>
+  </ul></li>
+  <li><p>Thursday afternoon office hours in Warren are only from 5pm-6pm!</p>
+
+  <ul>
+    <li>Only HW 5 &amp; Checkpoint 1 questions will be answered on Thursday afternoon.</li>
+    <li>Please come today (Wednesday) instead!</li>
+  </ul></li>
+  <li><p>Midterm 2 is 8pm-10pm Thursday 3/21.</p>
+
+  <ul>
+    <li>Fill out the <a href="http://go.cs61a.org/mt2-requests">alteration request form</a> by Sunday 3/17 for all exam-related requests.</li>
+  </ul></li>
+  <li><p>You can come to lab early and/or stay late on Tuesday (or come at an unassigned time) to finish lab.</p>
+
+  <ul>
+    <li>Your lab period is also a fine time to ask questions about homework or projects, but questions about lab will be prioritized.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-12">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, March 1</h2>
+        <!-- <div><a href="#calendar_3_01">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 5 is due Thursday March 7.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-13">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, February 28</h2>
+        <!-- <div><a href="#calendar_2_28">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 4 is due Thursday Feb 29.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-14">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, February 23</h2>
+        <!-- <div><a href="#calendar_2_23">Jump to date</a></div> -->
+        <ul>
+  <li><p>The <a href="https://cs61a.org/proj/cats">Cats project</a> is due Tuesday Feb 27.</p>
+
+  <ul>
+    <li>Early submission point for finishing by Monday Feb 26.</li>
+  </ul></li>
+  <li>Homework 4 is due Thursday Feb 29.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-15">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, February 16</h2>
+        <!-- <div><a href="#calendar_2_16">Jump to date</a></div> -->
+        <ul>
+  <li><p>The <a href="https://cs61a.org/proj/cats">Cats project</a> is due Tuesday Feb 27.</p>
+
+  <ul>
+    <li>Checkpoint (most of the project) is due Thursday Feb 22.</li>
+    <li>Early submission point for finishing by Monday Feb 26.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-16">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, February 14</h2>
+        <!-- <div><a href="#calendar_2_14">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 3 is due Thursday Feb 15.</li>
+  <li>Midterm 1 regrade requests are due Thursday Feb 15.</li>
+  <li><p>The <a href="https://cs61a.org/proj/cats">Cats project</a> is due Tuesday Feb 27.</p>
+
+  <ul>
+    <li>Checkpoint (most of the project) is due Thursday Feb 22.</li>
+    <li>Early submission point for finishing by Monday Feb 26.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-17">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, February 12</h2>
+        <!-- <div><a href="#calendar_2_12">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 3 due Thursday Feb 15.</li>
+  <li>Midterm 1 regrade requests are due Thursday Feb 15.</li>
+  <li>Monday 2/12 office hours moved to Soda 310, 6pm-8pm.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-18">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, February 9</h2>
+        <!-- <div><a href="#calendar_2_09">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 3 due Thursday Feb 15.</li>
+  <li>All students will receive participation credit for Discussion 3 (because of campus wi-fi).</li>
+  <li>Midterm 1 regrade requests are due Thursday Feb 15.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-19">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, February 7</h2>
+        <!-- <div><a href="#calendar_2_07">Jump to date</a></div> -->
+        <ul>
+  <li>The Hog project is due Wednesday Feb 7.</li>
+  <li>Midterm 1 regrade requests are due Thursday Feb 15.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-20">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, February 2</h2>
+        <!-- <div><a href="#calendar_2_02">Jump to date</a></div> -->
+        <ul>
+  <li><p>Midterm 1 is 8pm-10pm Monday Feb 5.</p>
+
+  <ul>
+    <li>The <a href="https://go.cs61a.org/mt1-requests">alteration request form</a> will stay open, but the deadline has passed, and we might not be able to accommodate late requests.</li>
+    <li>The <a href="https://cs61a.org/assets/pdfs/61a-mt1-study-guide.pdf">Midterm 1 Study Guide</a> will be provided.</li>
+    <li>You may bring a handwritten sheet of notes (front and back)</li>
+    <li>Seating assignments will be released by Sunday night.</li>
+    <li>No lecture on Monday Feb 5.</li>
+    <li>No lab on Tuesday Feb 6.</li>
+  </ul></li>
+  <li><p>The Hog project is due Wednesday Feb 7.</p>
+
+  <ul>
+    <li>Early submission bonus for finishing by Tuesday Feb 6.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-21">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, January 31</h2>
+        <!-- <div><a href="#calendar_1_31">Jump to date</a></div> -->
+        <ul>
+  <li>Homework 2 is due Thursday Feb 1.</li>
+  <li><p>Midterm 1 is 8pm-10pm Monday Feb 5.</p>
+
+  <ul>
+    <li>Fill out the <a href="https://go.cs61a.org/mt1-requests">alteration request form</a> for any exam-related requests.</li>
+    <li>The <a href="https://cs61a.org/assets/pdfs/61a-mt1-study-guide.pdf">Midterm 1 Study Guide</a> will be provided.</li>
+    <li>You may bring a handwritten sheet of notes (front and back)</li>
+    <li>Seating assignments will be released by Sunday night.</li>
+    <li>No pre-recorded videos for lecture on Friday Feb 2.</li>
+    <li>No lecture on Monday Feb 5.</li>
+    <li>No lab on Tuesday Feb 6.</li>
+  </ul></li>
+  <li><p>The Hog project is due Wednesday Feb 7.</p>
+
+  <ul>
+    <li>Early submission bonus for finishing by Tuesday Feb 6.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-22">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, January 29</h2>
+        <!-- <div><a href="#calendar_1_29">Jump to date</a></div> -->
+        <ul>
+  <li><p>The Hog project is due Wednesday Feb 7.</p>
+
+  <ul>
+    <li>Checkpoint due Tuesday Jan 30.</li>
+    <li>Early submission bonus for finishing by Tuesday Feb 6.</li>
+  </ul></li>
+  <li>Homework 2 is due Thursday Feb 1.</li>
+  <li>If you would like to be introduced as someone willing to help during lab, fill out <a href="https://forms.gle/aURvzcncPVJL2RA28">this form</a> before your lab period.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-23">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, January 26</h2>
+        <!-- <div><a href="#calendar_1_26">Jump to date</a></div> -->
+        <ul>
+  <li><p>The Hog project is due Wednesday Feb 7.</p>
+
+  <ul>
+    <li>Checkpoint due Tuesday Jan 30.</li>
+    <li>Early submission bonus for finishing by Tuesday Feb 6.</li>
+  </ul></li>
+  <li>Homework 2 is due Thursday Feb 1.</li>
+  <li>Save the date: Midterm 1 is 8pm-10pm Monday Feb 5!</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-24">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, January 24</h2>
+        <!-- <div><a href="#calendar_1_24">Jump to date</a></div> -->
+        <ul>
+  <li>Lab 0 and Lab 1 are due Wednesday Jan 24.</li>
+  <li>Homework 1 is due Thursday Jan 25.</li>
+  <li><p>The Hog project is due Wednesday Feb 7.</p>
+
+  <ul>
+    <li>Checkpoint due Tuesday Jan 30.</li>
+    <li>Early submission bonus for finishing by Tuesday Feb 6.</li>
+  </ul></li>
+  <li>The extension request form at <a href="https://go.cs61a.org/extensions">go.cs61a.org/extensions</a> is now available.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-25">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Monday, January 22</h2>
+        <!-- <div><a href="#calendar_1_22">Jump to date</a></div> -->
+        <ul>
+  <li><p>Please try to complete Lab 0 at home before Tuesday's lab.</p>
+
+  <ul>
+    <li>Come to <a href="https://cs61a.org/office-hours">office hours</a> 5pm-8pm Monday in <a href="https://dac.berkeley.edu/warren-hall-2195-hearst-ave">101B Warren Hall</a> for assistance.</li>
+  </ul></li>
+  <li><p>Lab 1 is on Tuesday Jan 23.</p>
+
+  <ul>
+    <li>You should have received an email about your lab time and location if you filled out the preference form before classes started.</li>
+    <li>You should receive a message from our course manager Jenna if you did not fill out the preference form.</li>
+    <li>The lab assignment is due Wednesday, but you will likely finish it during your lab period.</li>
+    <li>If you would like to be introduced as someone willing to help during lab, fill out <a href="https://forms.gle/aURvzcncPVJL2RA28">this form</a> before your lab period.</li>
+  </ul></li>
+  <li><p>Homework 1 is due 11:59pm Thursday 1/25.</p>
+
+  <ul>
+    <li>Come to <a href="https://cs61a.org/office-hours">office hours</a> for help!</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-26">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, January 19</h2>
+        <!-- <div><a href="#calendar_1_19">Jump to date</a></div> -->
+        <ul>
+  <li>Please try to complete Lab 0 at home before Tuesday.</li>
+  <li>Homework 1 is due 11:59pm Thursday 1/25.</li>
+  <li><p>Lab 1 is on Tuesday Jan 23.</p>
+
+  <ul>
+    <li>You should have received an email about your lab time and location if you filled out the preference form before classes started.</li>
+    <li>You should receive a message from our course manager Jenna if you did not fill out the preference form.</li>
+  </ul></li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-27">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Wednesday, January 17</h2>
+        <!-- <div><a href="#calendar_1_17">Jump to date</a></div> -->
+        <ul>
+  <li>Welcome to CS 61A!</li>
+  <li>Discussion begins this week.</li>
+  <li>If you are not in a discussion group and would like to be, email our course manager Jenna: jiyeonwoo@berkeley.edu</li>
+  <li>Lab begins Tuesday Jan 23.</li>
+  <li>The <a href="https://inst.eecs.berkeley.edu/~cs61a/fa23">Fall 2024 site</a> has been archived.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-28">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Friday, January 12</h2>
+        <!-- <div><a href="#calendar_1_12">Jump to date</a></div> -->
+        <ul>
+  <li>Welcome to CS 61A!</li>
+  <li>Complete the <a href="https://forms.gle/b79J3H82vpiQfe9E8">section preference form</a> by 11:59pm Monday Jan 15.</li>
+  <li>Lecture and Discussion begin Wednesday Jan 17.</li>
+  <li>Lab begins Tuesday Jan 23.</li>
+  <li>The <a href="https://inst.eecs.berkeley.edu/~cs61a/fa23">Fall 2024 site</a> has been archived.</li>
+</ul>
+        
+    </div>
+    
+
+    <div class="announcement" id="announcement-29">
+        <button class="btn prev" style="color: black"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> older</button>
+        <button class="btn next" style="color: black"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> newer</button>
+        <h2 class="frontpage-header">Announcements: Saturday, January 6</h2>
+        <!-- <div><a href="#calendar_1_06">Jump to date</a></div> -->
+        <ul>
+  <li>Welcome to CS 61A!</li>
+</ul>
+        
+    </div>
+    
+</section>
+
+<h2 class="frontpage-header">Current Assignments</h2>
+<section class="assignments" id="assignments">
+</section>
+
+<h2 class="frontpage-header">Calendar</h2>
+<section id="calendar" class="table-responsive">
+  <table id="calendar" class="table" cellpadding="5px">
+<tbody><tr>
+<th>Week</th>
+<th>Date</th>
+<th>Lecture</th>
+<th>Textbook</th>
+<th>Lab &amp; Discussion Links</th>
+<th>Homework &amp; Project</th>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="weeknum odd">1</td>
+<td><a id="calendar_1_17" class="calendar-date-anchor"></a>Wed<br>1/17</td>
+<td>
+<div class="assignment-text">
+  Welcome
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-1-welcome" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc00/" class="assignment-text">Disc 00: Getting Started</a>
+
+<ul class="list-inline">
+  
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_1_19" class="calendar-date-anchor"></a>Fri<br>1/19</td>
+<td>
+<div class="assignment-text">
+  Functions
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=zYC7tKfKPtM&amp;list=PL6BsET-8jgYULSxiV2garZ0FxbnXR08MP" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-2-functions" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/11-getting-started.html" class="label label-outline" target="_blank">Ch. 1.1</a></li>
+<li><a href="https://www.composingprograms.com/pages/12-elements-of-programming.html" class="label label-outline" target="_blank">Ch. 1.2</a></li>
+<li><a href="https://www.composingprograms.com/pages/13-defining-new-functions.html" class="label label-outline" target="_blank">Ch. 1.3</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab00/">Lab 00: Getting Started</a>
+<div class="badge due">
+  Due
+  Wed 1/24
+</div>
+
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw01/">HW 01: Functions, Control</a>
+<div class="badge due">
+  Due
+  Thu 1/25
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">2</td>
+<td><a id="calendar_1_22" class="calendar-date-anchor"></a>Mon<br>1/22</td>
+<td>
+<div class="assignment-text">
+  Control
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=IPec2A7j2bY&amp;list=PL6BsET-8jgYVCz97Y75GRXSWbb4sTpDIR" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-3-control" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/03-Control_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+<li><a href="https://code.cs61a.org/sp24/03.py" class="label label-outline" target="_blank">03.py</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/14-designing-functions.html" class="label label-outline" target="_blank">Ch. 1.4</a></li>
+<li><a href="https://www.composingprograms.com/pages/15-control.html" class="label label-outline" target="_blank">Ch. 1.5</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab01/">Lab 01: Functions, Control</a>
+<div class="badge due">
+  Due
+  Wed 1/24
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_1_24" class="calendar-date-anchor"></a>Wed<br>1/24</td>
+<td>
+<div class="assignment-text">
+  Higher-Order Functions
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=pveIuZT0GJE&amp;list=PL6BsET-8jgYXvcnnEX7x2_USaYug9xZFv" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-4-higher-order-functions" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/04-Higher-Order_Functions_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+<li><a href="https://code.cs61a.org/sp24/04.py" class="label label-outline" target="_blank">04.py</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html" class="label label-outline" target="_blank">Ch. 1.6</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc01/" class="assignment-text">Disc 01: Control, Environment Diagrams</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZd4523jj9IUW2XIIxzTfN1p" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/proj/hog/">Hog</a>
+<div class="badge due">
+  Checkpt
+  
+  Tue 1/30
+</div>
+
+<div class="badge due">
+  Due
+  Wed 2/7
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td><a id="calendar_1_26" class="calendar-date-anchor"></a>Fri<br>1/26</td>
+<td>
+<div class="assignment-text">
+  Environments
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=1P2UgdAWwYg&amp;list=PL6BsET-8jgYXTuSlJNYQS740YMCRHT79g" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-5-environments" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/05-Environments_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+<li><a href="https://code.cs61a.org/sp24/05.py" class="label label-outline" target="_blank">05.py</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/16-higher-order-functions.html" class="label label-outline" target="_blank">Ch. 1.6</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw02/">HW 02: Higher-Order Functions</a>
+<div class="badge due">
+  Due
+  Thu 2/1
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">3</td>
+<td><a id="calendar_1_29" class="calendar-date-anchor"></a>Mon<br>1/29</td>
+<td>
+<div class="assignment-text">
+  Functional Abstraction
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=PKlgS5eofNY&amp;list=PL6BsET-8jgYVSwKGjsM9y1j8RQsRwtDy3&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-6-functional-abstraction" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/06-Functional_Abstraction_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+<li><a href="https://code.cs61a.org/sp24/06.py" class="label label-outline" target="_blank">06.py</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab02/">Lab 02: Higher-Order Functions, Lambda Expressions</a>
+<div class="badge due">
+  Due
+  Wed 1/31
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_1_31" class="calendar-date-anchor"></a>Wed<br>1/31</td>
+<td>
+<div class="assignment-text">
+  Function Examples
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=guc-Q1x2vAY&amp;list=PL6BsET-8jgYX6yuG9s7zO8GA1xHwHARFX&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-7-function-examples" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/07-Function_Examples_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+<li><a href="https://code.cs61a.org/sp24/07.py" class="label label-outline" target="_blank">07.py</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc02/" class="assignment-text">Disc 02: Environment Diagrams, Higher-Order Functions</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZc2yxeQnrhuWXGCARRuYk-_" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_2_02" class="calendar-date-anchor"></a>Fri<br>2/2</td>
+<td>
+<div class="assignment-text">
+  Function Demos (Optional)
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-8-function-demos" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">4</td>
+<td><a id="calendar_2_05" class="calendar-date-anchor"></a>Mon<br>2/5</td>
+<td>Midterm 1 (8pm-10pm)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_2_07" class="calendar-date-anchor"></a>Wed<br>2/7</td>
+<td>
+<div class="assignment-text">
+  Recursion
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=31EDjrN1x5k&amp;list=PL6BsET-8jgYUUBHIgUAqjrMUoPCGQcYdl&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-9-recursion" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/09-Recursion_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/17-recursive-functions.html" class="label label-outline" target="_blank">Ch. 1.7</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc03/" class="assignment-text">Disc 03: Recursion</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZcGVWT4CSnNpeEXAlI9C2ZK" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_2_09" class="calendar-date-anchor"></a>Fri<br>2/9</td>
+<td>
+<div class="assignment-text">
+  Tree Recursion
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=VYYkJ1OLXBw&amp;list=PL6BsET-8jgYUUWPap4etQjZVWlWUeFxn0&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-10-tree-recursion" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/10-Tree_Recursion_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/17-recursive-functions.html" class="label label-outline" target="_blank">Ch. 1.7</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw03/">HW 03: Recursion, Tree Recursion</a>
+<div class="badge due">
+  Due
+  Thu 2/15
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">5</td>
+<td><a id="calendar_2_12" class="calendar-date-anchor"></a>Mon<br>2/12</td>
+<td>
+<div class="assignment-text">
+  Sequences
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=-Q45UcQ2XJk&amp;list=PL6BsET-8jgYVfI7chdrXciKy8CP10tOcl&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-11-sequences" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/11-Sequences_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/21-introduction.html" class="label label-outline" target="_blank">Ch. 2.1</a></li>
+<li><a href="https://www.composingprograms.com/pages/23-sequences.html" class="label label-outline" target="_blank">Ch. 2.3</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab03/">Lab 03: Recursion, Python Lists</a>
+<div class="badge due">
+  Due
+  Wed 2/14
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_2_14" class="calendar-date-anchor"></a>Wed<br>2/14</td>
+<td>
+<div class="assignment-text">
+  Containers
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=aSqOiUZg7kQ&amp;list=PL6BsET-8jgYW50w7isVJS3YumstvFX1LY&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-12-containers" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/12-Containers_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/23-sequences.html" class="label label-outline" target="_blank">Ch. 2.3</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc04/" class="assignment-text">Disc 04: Tree Recursion</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZfrpo8V6lbF3th_RKbWRL81" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/proj/cats/">Cats</a>
+<div class="badge due">
+  Checkpt
+  
+  Thu 2/22
+</div>
+
+<div class="badge due">
+  Due
+  Tue 2/27
+</div>
+
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZdGL_xs5FwpFDeAxfM7lBGw" class="label label-outline" target="_blank">Getting Started Videos</a></li>
+</ul>
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_2_16" class="calendar-date-anchor"></a>Fri<br>2/16</td>
+<td>
+<div class="assignment-text">
+  Data Abstraction
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=nzP3nJ2np8w&amp;list=PL6BsET-8jgYWCdzh9cSNcwAhXe9NOWwjH&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-13-data-abstraction" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/13-Data_Abstraction_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/22-data-abstraction.html" class="label label-outline" target="_blank">Ch. 2.2</a></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">6</td>
+<td><a id="calendar_2_19" class="calendar-date-anchor"></a>Mon<br>2/19</td>
+<td>No Lecture: Presidents' Day</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab04/">Lab 04: Tree Recursion, Data Abstraction</a>
+<div class="badge due">
+  Due
+  Wed 2/21
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_2_21" class="calendar-date-anchor"></a>Wed<br>2/21</td>
+<td>
+<div class="assignment-text">
+  Trees
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=qFCJANh5ht8&amp;list=PL6BsET-8jgYX7kDENvuBNGDg1lwHL2PKC&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-14-trees" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/14-Trees_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/23-sequences.html" class="label label-outline" target="_blank">Ch. 2.3</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc05/" class="assignment-text">Disc 05: Trees</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZfU4miG-W4iR070LSvQQpgv" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_2_23" class="calendar-date-anchor"></a>Fri<br>2/23</td>
+<td>
+<div class="assignment-text">
+  Mutability
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=Q-CewobDFZM&amp;list=PL6BsET-8jgYWfS7Jqp64nI7uQLXLPWObR&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-15-mutability" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/15-Mutability_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/24-mutable-data.html" class="label label-outline" target="_blank">Ch. 2.4</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw04/">HW 04: Sequences, Trees</a>
+<div class="badge due">
+  Due
+  Thu 2/29
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">7</td>
+<td><a id="calendar_2_26" class="calendar-date-anchor"></a>Mon<br>2/26</td>
+<td>
+<div class="assignment-text">
+  Iterators
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=On-kFyFp8HY&amp;list=PL6BsET-8jgYW7stiut93PHxGP6_QgBzVQ&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-16-iterators" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/16-Iterators_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html" class="label label-outline" target="_blank">Ch. 4.2</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab05/">Lab 05: Iterators, Mutability</a>
+<div class="badge due">
+  Due
+  Wed 2/28
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_2_28" class="calendar-date-anchor"></a>Wed<br>2/28</td>
+<td>
+<div class="assignment-text">
+  Generators
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=DyXPnQuaa0w&amp;list=PL6BsET-8jgYXnY-7vDJXIv2N5xW98rJTZ&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-17-generators" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/17-Generators_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/42-implicit-sequences.html" class="label label-outline" target="_blank">Ch. 4.2</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc06/" class="assignment-text">Disc 06: Iterators, Generators</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZeqks11xzJ3-8b7cehC5ikO" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_3_01" class="calendar-date-anchor"></a>Fri<br>3/1</td>
+<td>
+<div class="assignment-text">
+  Objects
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=XdRZkeCRXs4&amp;list=PL6BsET-8jgYVz2dLlWRsktOrtqO8wWRsy&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-18-objects" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/18-Objects_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html" class="label label-outline" target="_blank">Ch. 2.5</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw05/">HW 05: Generators</a>
+<div class="badge due">
+  Due
+  Thu 3/7
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">8</td>
+<td><a id="calendar_3_04" class="calendar-date-anchor"></a>Mon<br>3/4</td>
+<td>
+<div class="assignment-text">
+  Attributes
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=mimP7cNrSHA&amp;list=PL6BsET-8jgYVhCKr4EHUE9mw9kcH7Kg7Y&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-19-attributes" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/19-Attributes_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html" class="label label-outline" target="_blank">Ch. 2.5</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab06/">Lab 06: Object-Oriented Programming</a>
+<div class="badge due">
+  Due
+  Wed 3/6
+</div>
+
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/proj/ants/">Ants</a>
+<div class="badge due">
+  Checkpt
+  1
+  Thu 3/7
+</div>
+
+<div class="badge due">
+  Checkpt
+  2
+  Tue 3/12
+</div>
+
+<div class="badge due">
+  Due
+  Tue 3/19
+</div>
+
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZesYEQSFs0OpFiVC2kJcF_N" class="label label-outline" target="_blank">Getting Started Videos</a></li>
+</ul>
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td><a id="calendar_3_06" class="calendar-date-anchor"></a>Wed<br>3/6</td>
+<td>
+<div class="assignment-text">
+  Inheritance
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=Bqpe1iyq5vE&amp;list=PL6BsET-8jgYXUT9nA2gvweTlheGbvp6qv&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-20-inheritance" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/20-Inheritance_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html" class="label label-outline" target="_blank">Ch. 2.5</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc07/" class="assignment-text">Disc 07: OOP</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZdfBHvXo-gQmuufOANf-NHs" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_3_08" class="calendar-date-anchor"></a>Fri<br>3/8</td>
+<td>
+<div class="assignment-text">
+  Representation
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=DUSSKCjzAgA&amp;list=PL6BsET-8jgYW8tpgR0-wtQEA2VyOyNXFB&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-21-representation" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/21-Representation_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/27-object-abstraction.html" class="label label-outline" target="_blank">Ch. 2.7</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw06/">HW 06: Object-Oriented Programming, Linked Lists</a>
+<div class="badge due">
+  Due
+  Thu 3/14
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">9</td>
+<td><a id="calendar_3_11" class="calendar-date-anchor"></a>Mon<br>3/11</td>
+<td>
+<div class="assignment-text">
+  Composition
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=yC4WPw_6ehY&amp;list=PL6BsET-8jgYWnaras4ggDpnXGGD9G1jQS&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-22-composition" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/22-Composition_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab07/">Lab 07: Linked Lists, Inheritance</a>
+<div class="badge due">
+  Due
+  Wed 3/13
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_3_13" class="calendar-date-anchor"></a>Wed<br>3/13</td>
+<td>
+<div class="assignment-text">
+  Efficiency
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=DWhsOSHjY98&amp;list=PL6BsET-8jgYU9eOK2Ft8hQuzIWb4h-Tim&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-23-efficiency" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/23-Efficiency_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/28-efficiency.html" class="label label-outline" target="_blank">Ch. 2.8</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc08/" class="assignment-text">Disc 08: Linked Lists, Efficiency</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZf4RWj-O76Ab6iVaK3V407F" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_3_15" class="calendar-date-anchor"></a>Fri<br>3/15</td>
+<td>
+<div class="assignment-text">
+  Decomposition
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=i7GFWtHCuzo&amp;list=PL6BsET-8jgYXp_JnAEzO5gz2c5HY6bg3j&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-24-decomposition" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/24-Decomposition_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="4" class="weeknum even">10</td>
+<td><a id="calendar_3_18" class="calendar-date-anchor"></a>Mon<br>3/18</td>
+<td>
+<div class="assignment-text">
+  Data Examples
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=tpfpNR3u4zk&amp;list=PL6BsET-8jgYX2qPZDaMm1DsBZe1Zu045G&amp;ab_channel=JohnDeNero" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-25-data-examples" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/25-Data_Examples_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab08/">Lab 08: Mutable Trees</a>
+<div class="badge due">
+  Due
+  Wed 3/20
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_3_20" class="calendar-date-anchor"></a>Wed<br>3/20</td>
+<td>No Lecture: Midterm 2 on Thursday</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_3_21" class="calendar-date-anchor"></a>Thu<br>3/21</td>
+<td>Midterm 2 (8pm-10pm)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_3_22" class="calendar-date-anchor"></a>Fri<br>3/22</td>
+<td>
+<div class="assignment-text">
+  Large Language Models (Pamela Fox) (Optional)
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-26-large-language-models-by-pamela-fox" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">11</td>
+<td><a id="calendar_3_25" class="calendar-date-anchor"></a>Mon<br>3/25</td>
+<td>No Lecture: Spring Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_3_27" class="calendar-date-anchor"></a>Wed<br>3/27</td>
+<td>No Lecture: Spring Break</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_3_29" class="calendar-date-anchor"></a>Fri<br>3/29</td>
+<td>No Lecture: Cesar Chavez Day</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">12</td>
+<td><a id="calendar_4_01" class="calendar-date-anchor"></a>Mon<br>4/1</td>
+<td>
+<div class="assignment-text">
+  Scheme
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=esIvijecRFw&amp;list=PL6BsET-8jgYWGDX7c-OKSMCh4QCBZ7Bs4" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-27-scheme" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/27-Scheme_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/31-introduction.html" class="label label-outline" target="_blank">Ch. 3.1</a></li>
+<li><a href="https://www.composingprograms.com/pages/32-functional-programming.html" class="label label-outline" target="_blank">Ch. 3.2</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab09/">Lab 09: Scheme</a>
+<div class="badge due">
+  Due
+  Wed 4/3
+</div>
+
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw07/">HW 07: Scheme</a>
+<div class="badge due">
+  Due
+  Thu 4/4
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td><a id="calendar_4_03" class="calendar-date-anchor"></a>Wed<br>4/3</td>
+<td>
+<div class="assignment-text">
+  Scheme Lists
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=M8nvWOAHLso&amp;list=PL6BsET-8jgYW3h5HuWwcoTP4NTmLGB95p" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-28-scheme-lists" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/28-Scheme_Lists_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/32-functional-programming.html" class="label label-outline" target="_blank">Ch. 3.2</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc09/" class="assignment-text">Disc 09: Scheme, Scheme Lists</a>
+
+<ul class="list-inline">
+  
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_4_05" class="calendar-date-anchor"></a>Fri<br>4/5</td>
+<td>
+<div class="assignment-text">
+  Calculator
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=tJSqAtJqI7Y&amp;list=PL6BsET-8jgYXTtg_Yj3VT7507cY12IuFz" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-29-calculator" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/29-Calculator_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/33-exceptions.html" class="label label-outline" target="_blank">Ch. 3.3</a></li>
+<li><a href="https://www.composingprograms.com/pages/34-interpreters-for-languages-with-combination.html" class="label label-outline" target="_blank">Ch. 3.4</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw08/">HW 08: Scheme Lists</a>
+<div class="badge due">
+  Due
+  Thu 4/11
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">13</td>
+<td><a id="calendar_4_08" class="calendar-date-anchor"></a>Mon<br>4/8</td>
+<td>
+<div class="assignment-text">
+  Interpreters
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=gm2PUh07bMI&amp;list=PL6BsET-8jgYUC3YkTeRQ9fczBzTU84GC0" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-30-interpreters" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/30-Interpreters_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  <li><a href="https://www.composingprograms.com/pages/35-interpreters-for-languages-with-abstraction.html" class="label label-outline" target="_blank">Ch. 3.5</a></li>
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab10/">Lab 10: Interpreters</a>
+<div class="badge due">
+  Due
+  Wed 4/10
+</div>
+
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/proj/scheme/">Scheme</a>
+<div class="badge due">
+  Checkpt
+  1
+  Mon 4/15
+</div>
+
+<div class="badge due">
+  Checkpt
+  2
+  Thu 4/18
+</div>
+
+<div class="badge due">
+  Due
+  Tue 4/23
+</div>
+
+
+<ul class="list-inline">
+  <li><a href="https://youtu.be/playlist?list=PLx38hZJ5RLZez4iVyVRr52Eknxs4RF27w" class="label label-outline" target="_blank">Getting Started Videos</a></li>
+</ul>
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_4_10" class="calendar-date-anchor"></a>Wed<br>4/10</td>
+<td>
+<div class="assignment-text">
+  Programs as Data
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=hceri4MlZvk&amp;list=PL6BsET-8jgYVdPukP2j4MB2rwkkTCS4Fc" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-31-programs-as-data" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/31-Programs_as_Data_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc10/" class="assignment-text">Disc 10: Interpreters</a>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/playlist?list=PLx38hZJ5RLZdpocsW1gPvkH5nNT7RPi25" class="label label-outline" target="_blank">Video</a></li>
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_4_12" class="calendar-date-anchor"></a>Fri<br>4/12</td>
+<td>
+<div class="assignment-text">
+  Macros
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=VDtc1GWRBxI&amp;list=PL6BsET-8jgYXZBGvtOT3PnUhaWlvzN1FZ" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-32-macros-paul-hilfinger" class="label label-outline" target="_blank">Recording</a></li>
+<li><a href="https://cs61a.org/assets/slides/32-Macros_1pp.pdf" class="label label-outline">Slides (1pp)</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw09/">HW 09: Programs as Data, Macros</a>
+<div class="badge due">
+  Due
+  Thu 4/25
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">14</td>
+<td><a id="calendar_4_15" class="calendar-date-anchor"></a>Mon<br>4/15</td>
+<td>
+<div class="assignment-text">
+  SQL
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=tfObU4a2PT8&amp;list=PL6BsET-8jgYU8Q2eVF-6Idng9stLUx8-2" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-33-sql" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab11/">Lab 11: Programs as Data, Macros</a>
+<div class="badge due">
+  Due
+  Wed 4/17
+</div>
+
+
+</span>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/proj/scheme_contest/">(Optional) Scheme Contest</a>
+<div class="badge due">
+  Due
+  Wed 4/24
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td><a id="calendar_4_17" class="calendar-date-anchor"></a>Wed<br>4/17</td>
+<td>
+<div class="assignment-text">
+  Tables
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=SaG01Ddywkc&amp;list=PL6BsET-8jgYUYE7waSWnQpeIZwM7naLWk" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-34-tables" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc11/" class="assignment-text">Disc 11: SQL</a>
+
+<ul class="list-inline">
+  
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_4_19" class="calendar-date-anchor"></a>Fri<br>4/19</td>
+<td>
+<div class="assignment-text">
+  Aggregation
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=2ajhv_e_u5Q&amp;list=PL6BsET-8jgYUxr1l88aamM4FhtHG-dS6v" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-35-aggregation" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw10/">HW 10: SQL</a>
+<div class="badge due">
+  Due
+  Thu 4/25
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="odd">
+<td rowspan="3" class="weeknum odd">15</td>
+<td><a id="calendar_4_22" class="calendar-date-anchor"></a>Mon<br>4/22</td>
+<td>
+<div class="assignment-text">
+  Databases (Optional)
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=f-Q4rWimfVg&amp;list=PL6BsET-8jgYVQApYDUVHMAUXq_ZwN2UDc" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-36-databases-optional" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/lab/lab12/">Lab 12: SQL</a>
+<div class="badge due">
+  Due
+  Wed 4/24
+</div>
+
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_4_24" class="calendar-date-anchor"></a>Wed<br>4/24</td>
+<td>
+<div class="assignment-text">
+  Final Examples
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://www.youtube.com/watch?v=_wfbb189nJA&amp;list=PL6BsET-8jgYVlVyu77Ecd3HyXiyY-Z9Ty" class="label label-outline" target="_blank">Videos</a></li>
+<li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-37-final-examples" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td>
+<span class="">
+<a href="https://cs61a.org/disc/disc12/" class="assignment-text">Disc 12: Final Review</a>
+
+<ul class="list-inline">
+  
+</ul>
+
+</span>
+</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a id="calendar_4_26" class="calendar-date-anchor"></a>Fri<br>4/26</td>
+<td>
+<div class="assignment-text">
+  Conclusion
+</div>
+
+<ul class="list-inline">
+  <li><a href="https://bcourses.berkeley.edu/courses/1532492/pages/lecture-38-conclusion" class="label label-outline" target="_blank">Recording</a></li>
+</ul>
+</td>
+<td>
+<ul class="list-inline">
+  
+</ul>
+</td>
+<td></td>
+<td>
+<span class="">
+<a href="https://cs61a.org/hw/hw11/">HW 11: Finale</a>
+<div class="badge due">
+  Due
+  Sun 5/5
+</div>
+
+
+</span>
+<br>
+
+<span class="">
+<a href="https://cs61a.org/proj/scheme_gallery/">Scheme Gallery</a>
+<div class="badge due">
+  Due
+  Fri 5/3
+</div>
+
+
+</span>
+</td>
+</tr>
+<tr class="even">
+<td rowspan="3" class="weeknum even">16</td>
+<td><a id="calendar_4_29" class="calendar-date-anchor"></a>Mon<br>4/29</td>
+<td>No Lecture: RRR Week</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_5_01" class="calendar-date-anchor"></a>Wed<br>5/1</td>
+<td>No Lecture: RRR Week</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a id="calendar_5_03" class="calendar-date-anchor"></a>Fri<br>5/3</td>
+<td>No Lecture: RRR Week</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td rowspan="1" class="weeknum odd">17</td>
+<td><a id="calendar_5_07" class="calendar-date-anchor"></a>Tue<br>5/7</td>
+<td>Final (11:30am-2:30pm)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</section>
+
+
+    </main>
+
+    <footer class="container">
+      <div class="row text-center">
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/">CS 61A</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/weekly">Weekly Schedule</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li><a href="https://cs61a.org/staff">Staff</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/resources">Resources</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/studying">Studying Guide</a></li>
+            <li><a href="https://cs61a.org/articles/debugging">Debugging Guide</a></li>
+            <li><a href="https://cs61a.org/articles/composition">Composition Guide</a></li>
+            <li><a href="https://cs61a.org/articles/pair-programming">Pair Programming</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/articles/about">Policies</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/about#assignments">Assignments</a></li>
+            <li><a href="https://cs61a.org/articles/about#exams">Exams</a></li>
+            <li><a href="https://cs61a.org/articles/about#grading">Grading</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="./CS 61A Spring 2024_files/loader.min.js.下载"></script>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./CS 61A Spring 2024_files/editor.main.min.css">
+  <script>
+      require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
+      window.MonacoEnvironment = { getWorkerUrl: () => URL.createObjectURL(new Blob([`
+      self.MonacoEnvironment = {
+          baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], { type: 'text/javascript' }))
+  };
+  </script>
+    <script src="./CS 61A Spring 2024_files/jsplumb.min.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/network_storage.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/storable.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/editor.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/copy-button.js.下载"></script>
+    <script src="./CS 61A Spring 2024_files/env-diagram.js.下载"></script>
+    
+<script>
+$(document).ready(function() {
+  // Assignment quick list
+  var assignments = [];
+
+  $(document).ready(function() {
+    assignments.forEach(function(assignment) {
+      $('#assignments').append(
+          '<a href="' + assignment.link + '" class="btn btn-outline btn-lg assignment-btn">'
+          + assignment.name
+          + (assignment.due !== null ? ' <span class="badge">' + assignment.due + '</span></a>\n' : ''));
+    });
+  });
+
+  // Announcements
+  var announcementIndex = 0;
+
+  function setAnnouncements(offset) {
+    var newIndex = announcementIndex  + offset;
+    var announcementNumber = $('.announcement').length;
+
+    if (newIndex < 0 || newIndex >= announcementNumber) {
+      return;
+    }
+
+    $('#announcement-' + announcementIndex).hide(0, function() {
+      $('#announcement-' + newIndex).show(0);
+    });
+
+    announcementIndex = newIndex;
+
+    if (announcementIndex >= announcementNumber - 1) {
+      $('#announcement-' + announcementIndex + ' .prev')
+        .addClass('disabled');
+    }
+    if (announcementIndex === 0) {
+      $('#announcement-' + announcementIndex + ' .next')
+        .addClass('disabled');
+    }
+  }
+  setAnnouncements(0);
+
+  $('.next').click(function() {
+    setAnnouncements(-1);
+  });
+   $('.prev').click(function() {
+     setAnnouncements(1);
+   });
+
+ });
+
+ let build_time = new Date(1000 * 1717681286.232354);
+ </script>
+ <script>
+  $('.alwaystoggle').css('display', 'inline-block');
+    $('.alwaystoggle').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+ </script>
+ 
+  
+<i id="__PIKPAK_EXTENSION__" style="display: none;">1.6.3</i><div id="dom-inspector-1717741499349" class="dom-inspector dom-inspector-theme-default" style="z-index: 9999"><div class="content"></div><div class="padding padding-top"></div><div class="padding padding-right"></div><div class="padding padding-bottom"></div><div class="padding padding-left"></div><div class="border border-top"></div><div class="border border-right"></div><div class="border border-bottom"></div><div class="border border-left"></div><div class="margin margin-top"></div><div class="margin margin-right"></div><div class="margin margin-bottom"></div><div class="margin margin-left"></div><div class="tips"><div class="tag"></div><div class="id"></div><div class="class"></div><div class="line">&nbsp;|&nbsp;</div><div class="size"></div><div class="triangle"></div></div></div></body></html>

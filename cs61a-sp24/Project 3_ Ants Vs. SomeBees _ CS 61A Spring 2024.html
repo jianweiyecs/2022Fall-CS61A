@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://cs61a.org/proj/ants/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.inset-0{inset:0}.bottom-20{bottom:5rem}.bottom-36{bottom:9rem}.right-16{right:4rem}.right-3{right:.75rem}.z-\[99999\]{z-index:99999}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.hidden{display:none}.h-10{height:2.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.w-0{width:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-80{width:20rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:1s linear infinite spin}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.25rem*var(--tw-space-x-reverse));margin-left:calc(.25rem*calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-0{border-width:0}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.bg-\[\#2c3440\]{--tw-bg-opacity:1;background-color:rgb(44 52 64/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pr-3{padding-right:.75rem}.pt-3{padding-top:.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-25{opacity:.25}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-gray-300{--tw-ring-opacity:1;--tw-ring-color:rgb(209 213 219/var(--tw-ring-opacity))}.ring-opacity-5{--tw-ring-opacity:.05}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-100{transition-duration:.1s}.duration-300{transition-duration:.3s}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.placeholder\:text-gray-400::placeholder{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity))}.focus\:ring-indigo-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229/var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}@media (width>=640px){.sm\:flex{display:flex}.sm\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-x-2{--tw-translate-x:.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.sm\:items-start{align-items:flex-start}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*calc(1 - var(--tw-space-x-reverse)))}.sm\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.sm\:rounded-lg{border-radius:.5rem}.sm\:p-6{padding:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:leading-6{line-height:1.5rem}}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div class="fixed bottom-20 right-16 text-sm hidden z-[99999]"><div class="bg-[#2c3440] w-80 shadow sm:rounded-lg"><div class="flex justify-end pt-3 pr-3"><form action="https://codepen.io/pen/define" method="POST" target="_blank"><input type="hidden" name="data" value="{}"><button type="submit" class="font-semibold text-slate-200">preview</button></form><a class="font-semibold text-slate-200 ml-2" href="https://copycss.xyz/" target="_blank">help</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-slate-100"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path></svg></div><div class="px-6 pb-6"><div class="flex justify-center items-center space-x-1 absolute right-3 bottom-36"><button class="w-10 h-10 bg-indigo-600  text-white font-black rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">←</button><div class="flex flex-col space-y-2"><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↑</button><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">↓</button></div><button class="w-10 h-10 bg-indigo-600 font-black text-white rounded-full shadow-lg hover:bg-indigo-500 transition duration-300 ease-in-out flex justify-center items-center">→</button></div><div class="mt-1"><label class="text-base font-semibold text-slate-200">Component Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="HTML" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="HTML" class="ml-3 block text-sm font-medium leading-6 text-slate-300">HTML</label></div><div class="flex items-center"><input id="JSX" name="comSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="JSX" class="ml-3 block text-sm font-medium leading-6 text-slate-300">JSX</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">With Child</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Yes" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Yes" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Yes</label></div><div class="flex items-center"><input id="No" name="childSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="No" class="ml-3 block text-sm font-medium leading-6 text-slate-300">No</label></div></div></fieldset></div><div class="mt-3"><label class="text-base font-semibold text-slate-200">Style Format</label><fieldset class=""><legend class="sr-only">Notification method</legend><div class="space-y-4 sm:flex sm:items-center sm:space-x-6 sm:space-y-0"><div class="flex items-center"><input id="Tailwind" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Tailwind" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Tailwind</label></div><div class="flex items-center"><input id="Inline" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" checked=""><label for="Inline" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Inline</label></div><div class="flex items-center"><input id="Class" name="styleSelect" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"><label for="Class" class="ml-3 block text-sm font-medium leading-6 text-slate-300">Class</label></div></div></fieldset></div><div class="mt-5 flex justify-center"><button type="button" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Copy HTML</button></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="CS 61A: Structure and Interpretation of Computer Programs">
+    <meta name="keywords" content="CS 61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS">
+    <meta name="author" content="John DeNero">
+    
+    <meta name="viewport" content="width=device-width">
+
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/jquery.min.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/jquery.ba-throttle-debounce.min.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/bootstrap.min.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/hl.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/toggledarkmode.js.下载"></script>
+    <script>
+        // we aren't registering builtins since
+        //      (1) they don't render differently in the current CSS from other names
+        //      (2) it's a mess to list all of them. You can extract from the site but that takes effort
+        // if (1) ceases to be true, (2) might be worth the effort. For now, we're leaving as is
+        hljsRegister({
+            'keyword': "define if cond and or let begin lambda mu quote delay cons-stream set! quasiquote unquote unquote-splicing define-macro"
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/dark-mode.js.下载"></script>
+    <link rel="stylesheet" href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/css">
+    <link rel="stylesheet" href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/style.css">
+    <link rel="stylesheet" href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/mono-blue.css">
+    <link rel="icon" href="https://cs61a.org/assets/images/favicon.ico">
+
+    
+
+<link href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/project.css" rel="stylesheet" type="text/css">
+
+
+    <title>
+Project 3: Ants Vs. SomeBees | CS 61A Spring 2024
+</title>
+  <style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style><style id="pp_style">:root {
+  --color-primary: #306eff;
+  --color-primary-hover: #4a80ff;
+  --color-primary-active: #175cff;
+  --color-primary-disabled: rgba(48, 110, 255, 0.5);
+  --el-color-error: #ff663b;
+}
+#no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+a.pp-restore-icon {
+  --size: 24px;
+  height: var(--size) !important;
+  width: var(--size) !important;
+  display: inline-block;
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 9999999999 !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  position: relative;
+}
+a.pp-restore-icon::after,
+a.pp-restore-icon::before {
+  display: none;
+}
+a.pp-restore-icon div {
+  margin: 0 !important;
+}
+a.pp-restore-icon::before,
+a.pp-restore-icon::after {
+  display: none !important;
+}
+a.pp-restore-icon:hover .pp-tip {
+  display: block;
+}
+a.pp-restore-icon:hover .pp-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDRDMCAxLjc5MDg2IDEuNzkwODYgMCA0IDBIMjhWMjhINEMxLjc5MDg2IDI4IDAgMjYuMjA5MSAwIDI0VjRaIiBmaWxsPSIjMzA2RUZGIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNS43MjQyIDguNjIwMzhDMTUuNDg0OCA4LjU5MDA4IDE1LjI4MTIgOC40MzA3OSAxNS4xOTQzIDguMjA1NjJMMTQuNDc0MiA2LjM0MTE1QzE0LjQxNDYgNi4xODY4MyAxNC41NDEyIDYuMDI0NzQgMTQuNzA1NCA2LjA0NTE3TDIyLjI4MzQgNi45ODgzOEMyMi42NzI4IDcuMDM2ODUgMjMuMDA2NCA3LjI5MDE2IDIzLjE1NzcgNy42NTIyM0wyNCA5LjY2NzY4TDE1LjcyNDIgOC42MjAzOFoiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBvcGFjaXR5PSIwLjk4NTYwMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi4yOTE0IDguNjIwMzhDMTIuNTMwOSA4LjU5MDA4IDEyLjczNDQgOC40MzA3OSAxMi44MjE0IDguMjA1NjJMMTMuNTQxNCA2LjM0MTE1QzEzLjYwMSA2LjE4NjgzIDEzLjQ3NDQgNi4wMjQ3NCAxMy4zMTAzIDYuMDQ1MTdMNS43MzIyNiA2Ljk4ODM4QzUuMzQyODUgNy4wMzY4NSA1LjAwOTIyIDcuMjkwMTYgNC44NTc5MSA3LjY1MjIzTDQuMDE1NjIgOS42Njc2OEw3LjQ0MzQzIDkuMjMzODlMMTIuMjkxNCA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNCA5LjY2NzcySDI0VjIwLjY1MjFDMjQgMjEuODg3NSAyMi45OTg1IDIyLjg4ODkgMjEuNzYzMiAyMi44ODg5SDYuMjM2ODNDNS4wMDE0NiAyMi44ODg5IDQgMjEuODg3NSA0IDIwLjY1MjFWOS42Njc3MloiIGZpbGw9IndoaXRlIi8+DQo8cGF0aCBkPSJNMTEuNzc3MyAxOS41NTU1QzExLjc3NzMgMTkuNTU1NSAxMi44NzcxIDIwIDEzLjk4OTIgMjBDMTUuMTAxNCAyMCAxNi4yMjE4IDE5LjU1NTUgMTYuMjIxOCAxOS41NTU1IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS4xMTg0MiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8cGF0aCBkPSJNMTAuNDQ1NyAxMy45OTk5VjE1Ljc3NzciIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjc4OTQ3IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xNy41NTUxIDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=);
+}
+a.pp-restore-icon .pp-icon {
+  height: var(--size);
+  width: var(--size);
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHg9IjAuMjUiIHk9IjAuMjUiIHdpZHRoPSIyNy41IiBoZWlnaHQ9IjI3LjUiIHJ4PSIzLjc1IiBmaWxsPSJ3aGl0ZSIvPg0KPHJlY3QgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjI3LjUiIGhlaWdodD0iMjcuNSIgcng9IjMuNzUiIGZpbGw9IiMzMDZFRkYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+DQo8cmVjdCB4PSIwLjI1IiB5PSIwLjI1IiB3aWR0aD0iMjcuNSIgaGVpZ2h0PSIyNy41IiByeD0iMy43NSIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KPHBhdGggZD0iTTAgNEMwIDEuNzkwODYgMS43OTA4NiAwIDQgMEgyNEMyNi4yMDkxIDAgMjggMS43OTA4NiAyOCA0VjI0QzI4IDI2LjIwOTEgMjYuMjA5MSAyOCAyNCAyOEg0QzEuNzkwODYgMjggMCAyNi4yMDkxIDAgMjRWNFoiIGZpbGw9IiMzMDZFRkYiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1LjcyNDIgOC42MjAzOEMxNS40ODQ4IDguNTkwMDggMTUuMjgxMiA4LjQzMDc5IDE1LjE5NDMgOC4yMDU2MkwxNC40NzQyIDYuMzQxMTVDMTQuNDE0NiA2LjE4NjgzIDE0LjU0MTIgNi4wMjQ3NCAxNC43MDU0IDYuMDQ1MTdMMjIuMjgzNCA2Ljk4ODM4QzIyLjY3MjggNy4wMzY4NSAyMy4wMDY0IDcuMjkwMTYgMjMuMTU3NyA3LjY1MjIzTDI0IDkuNjY3NjhMMTUuNzI0MiA4LjYyMDM4WiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIG9wYWNpdHk9IjAuOTg1NjAxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI5MTQgOC42MjAzOEMxMi41MzA5IDguNTkwMDggMTIuNzM0NCA4LjQzMDc5IDEyLjgyMTQgOC4yMDU2MkwxMy41NDE0IDYuMzQxMTVDMTMuNjAxIDYuMTg2ODMgMTMuNDc0NCA2LjAyNDc0IDEzLjMxMDMgNi4wNDUxN0w1LjczMjI2IDYuOTg4MzhDNS4zNDI4NSA3LjAzNjg1IDUuMDA5MjIgNy4yOTAxNiA0Ljg1NzkxIDcuNjUyMjNMNC4wMTU2MiA5LjY2NzY4TDcuNDQzNDMgOS4yMzM4OUwxMi4yOTE0IDguNjIwMzhaIiBmaWxsPSJ3aGl0ZSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDkuNjY3NzJIMjRWMjAuNjUyMUMyNCAyMS44ODc1IDIyLjk5ODUgMjIuODg4OSAyMS43NjMyIDIyLjg4ODlINi4yMzY4M0M1LjAwMTQ2IDIyLjg4ODkgNCAyMS44ODc1IDQgMjAuNjUyMVY5LjY2NzcyWiIgZmlsbD0id2hpdGUiLz4NCjxwYXRoIGQ9Ik0xMS43NzczIDE5LjU1NTVDMTEuNzc3MyAxOS41NTU1IDEyLjg3NzEgMjAgMTMuOTg5MiAyMEMxNS4xMDE0IDIwIDE2LjIyMTggMTkuNTU1NSAxNi4yMjE4IDE5LjU1NTUiIHN0cm9rZT0iIzMwNkVGRiIgc3Ryb2tlLXdpZHRoPSIxLjExODQyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxwYXRoIGQ9Ik0xMC40NDU3IDEzLjk5OTlWMTUuNzc3NyIgc3Ryb2tlPSIjMzA2RUZGIiBzdHJva2Utd2lkdGg9IjEuNzg5NDciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPHBhdGggZD0iTTE3LjU1NTEgMTMuOTk5OVYxNS43Nzc3IiBzdHJva2U9IiMzMDZFRkYiIHN0cm9rZS13aWR0aD0iMS43ODk0NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==) no-repeat center / 100%;
+}
+a.pp-restore-icon .pp-tip {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  background: linear-gradient(0deg, rgba(48, 110, 255, 0.1), rgba(48, 110, 255, 0.1)), #FFFFFF;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  border-top-right-radius: 4px;
+  border: 1px solid #306eff;
+  box-sizing: border-box;
+  color: #306eff;
+  display: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  height: var(--size);
+  line-height: calc(var(--size) - 2px);
+  padding: 0 4px !important;
+  position: fixed;
+  z-index: 9999999999;
+  white-space: nowrap;
+}
+#pp_context_menu {
+  --transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: fixed;
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  transition: opacity var(--transition);
+  z-index: 9999999999;
+}
+#pp_context_menu li {
+  cursor: default;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  white-space: nowrap;
+}
+#pp_context_menu li:hover {
+  background: #F2F3F4;
+}
+#pp_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 16px;
+  right: 26px;
+  width: 380px;
+  height: 520px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+#pp_close_landing_page {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  top: 32px;
+  right: 42px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#pp_modal {
+  width: 640px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal !important;
+}
+#pp_modal_wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999999;
+}
+#pp_modal_wrap * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  font-feature-settings: 'tnum';
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#pp_modal_wrap a {
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+#pp_modal .pp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pp_modal_title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+#pp_modal_close {
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNDA4MyAxMi44OTgxTDE3LjI5MTEgMTYuNzc0MUMxNy42ODE2IDE3LjE2NDYgMTcuNjgxNiAxNy43OTc4IDE3LjI5MTEgMTguMTg4M0MxNi45MDA2IDE4LjU3ODggMTYuMjY3NCAxOC41Nzg4IDE1Ljg3NjkgMTguMTg4M0wxMS45OTU0IDE0LjMxMzZMOC4xMTk0MyAxOC4xOTYzQzcuNzI4OTEgMTguNTg2OCA3LjA5NTc0IDE4LjU4NjggNi43MDUyMiAxOC4xOTYzQzYuMzE0NjkgMTcuODA1NyA2LjMxNDY5IDE3LjE3MjYgNi43MDUyMiAxNi43ODIxTDEwLjU3OTkgMTIuOTAwNkw2LjY5NzI4IDkuMDI0NzRDNi4zMDY3NiA4LjYzNDIxIDYuMzA2NzYgOC4wMDEwNSA2LjY5NzI4IDcuNjEwNTNDNy4wODc4MSA3LjIyIDcuNzIwOTcgNy4yMiA4LjExMTUgNy42MTA1M0wxMS45OTI5IDExLjQ4NTFMMTUuODY4OCA3LjYwMjQ2QzE2LjI1OTMgNy4yMTE5NCAxNi44OTI1IDcuMjExOTQgMTcuMjgzIDcuNjAyNDZDMTcuNjczNSA3Ljk5Mjk5IDE3LjY3MzUgOC42MjYxNSAxNy4yODMgOS4wMTY2OEwxMy40MDgzIDEyLjg5ODFaIiBmaWxsPSIjNjY2NjY2Ii8+DQo8L3N2Zz4NCg==) no-repeat center / cover;
+}
+#pp_modal_body {
+  padding: 24px 0 32px;
+}
+#pp_modal_input {
+  width: 100%;
+  background: #F2F3F4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+#pp_modal_valid_message {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ff663b;
+  position: absolute;
+  line-height: 26px;
+  height: 26px;
+  max-width: 576px;
+}
+#pp_modal .pp_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#pp_modal_cancel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 0 16px;
+  line-height: 36px;
+  height: 36px;
+}
+#pp_modal_cancel:hover {
+  background: #f5f7fa;
+}
+#pp_modal_confirm {
+  min-width: 120px;
+  line-height: 36px;
+  height: 36px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  margin-left: 16px;
+  background: #306eff;
+}
+#pp_modal_confirm:hover {
+  background: #4a80ff;
+}
+#pp_modal_confirm:active {
+  background: #175cff;
+}
+#pp_modal_confirm.disabled,
+#pp_modal_confirm:disabled {
+  background: rgba(48, 110, 255, 0.5);
+  opacity: 0.5;
+}
+#pp_modal_confirm_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNSAxMVY1QzExLjUgNC40NDc3MiAxMS45NDc3IDQgMTIuNSA0QzEzLjA1MjMgNCAxMy41IDQuNDQ3NzIgMTMuNSA1VjExSDE5LjVDMjAuMDUyMyAxMSAyMC41IDExLjQ0NzcgMjAuNSAxMkMyMC41IDEyLjU1MjMgMjAuMDUyMyAxMyAxOS41IDEzSDEzLjVWMTlDMTMuNSAxOS41NTIzIDEzLjA1MjMgMjAgMTIuNSAyMEMxMS45NDc3IDIwIDExLjUgMTkuNTUyMyAxMS41IDE5VjEzSDUuNUM0Ljk0NzcyIDEzIDQuNSAxMi41NTIzIDQuNSAxMkM0LjUgMTEuNDQ3NyA0Ljk0NzcyIDExIDUuNSAxMUgxMS41WiIgZmlsbD0id2hpdGUiLz4NCjwvc3ZnPg0K) no-repeat center / cover;
+}
+</style></head>
+
+  <body id="index" class="home">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container noselect">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cs61a.org/">
+            <img style="max-width:60px; margin-top: -20px;" class="logo" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/logo.png">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-section">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://cs61a.org/">Home</a></li>
+            <li><a href="https://cs61a.org/articles/about">Syllabus</a></li>
+            <li><a href="https://edstem.org/us/courses/52971/discussion/" target="_blank">Ed</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/proj/ants/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Staff
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://cs61a.org/staff">TAs &amp; Tutors</a></li>
+                <li><a href="https://cs61a.org/academic-interns">Academic Interns</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="https://cs61a.org/proj/ants/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Links
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="https://sections.cs61a.org/">Section Selector</a></li>
+                <li><a href="https://oh.cs61a.org/">Office Hours Queue</a></li>
+                <li><a href="https://go.cs61a.org/extensions">Request an Extension</a></li>
+                <li><a href="https://go.cs61a.org/regrades">Request a Regrade</a></li>
+                <li><a href="https://cs61a.org/resources/">Past Exams &amp; Sites</a></li>
+                <li><a href="https://pythontutor.com/cp/composingprograms.html">Python Tutor</a></li>
+                <li><a href="https://code.cs61a.org/">Online Code Editor</a></li>
+                <li><a href="https://cs61a.org/articles/campus-res/">Department/Campus Resources</a></li>
+                <li><a href="https://cs61a.org/articles/advice/">Advice from Former Students</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cs61a.org/contact/">Contact</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" id="toggle-mode-cb">
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content" class="container">
+      
+<div class="row">
+  <div class="col-md-9">
+    <header>
+      <h1>
+        
+Project 3: Ants Vs. SomeBees
+
+        
+        
+        <ul class="inline-block list-inline">
+          <li><a href="https://cs61a.org/proj/ants/ants.zip" class="label label-outline">ants.zip</a></li>
+        </ul>
+        
+        
+      </h1>
+    </header>
+    
+<div class="haiku">
+  <p><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/splash.png" alt="Ants vs. Somebees" width="" height=""></p>
+
+<blockquote><cite>
+  The bees are coming!<br>
+  Create a better soldier<br>
+  With inherit-ants.
+</cite></blockquote>
+</div>
+
+    
+
+<h2 id="introduction">Introduction</h2>
+
+
+<blockquote><p><strong>For full credit:</strong></p>
+
+<ul>
+  <li>Submit with Phase 1 complete by <strong>Thursday, March 7</strong> (worth 1 pt).</li>
+  <li>Submit with Phase 2 complete by <strong>Tuesday, March 12</strong> (worth 1 pt).</li>
+  <li>Submit with all phases complete by <strong>Tuesday, March 19</strong>.</li>
+</ul>
+
+<p>Solve the problems in order, since some later problems depend on earlier
+problems.</p>
+
+<p>The entire project can be completed with a partner.</p>
+
+<p>You can get 1 bonus point by submitting the entire project by
+<strong>Monday, March 18</strong>.</p></blockquote>
+
+<p>In this project, you will create a <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Tower_defense">tower defense</a> game called Ants Vs.
+SomeBees. As the ant queen, you populate your colony with the bravest ants you
+can muster. Your ants must protect their queen from the evil bees that invade
+your territory. Irritate the bees enough by throwing leaves at them, and they
+will be vanquished. Fail to pester the airborne intruders adequately, and your
+queen will succumb to the bees' wrath. This game is inspired by PopCap Games'
+<a href="https://www.ea.com/studios/popcap/plants-vs-zombies">Plants Vs. Zombies</a>.</p>
+
+<p>This project uses an object-oriented programming paradigm,
+focusing on material from <a href="https://www.composingprograms.com/pages/25-object-oriented-programming.html">Chapter 2.5</a> of Composing Programs. The
+project also involves understanding, extending, and testing a large program.</p>
+
+
+<h2 id="download-starter-files">Download starter files</h2>
+
+
+<p>The <a href="https://cs61a.org/proj/ants/ants.zip">ants.zip</a> archive contains several files, but all of your
+changes will be made to <code>ants.py</code>.</p>
+
+<ul>
+  <li><code>ants.py</code>: The game logic of Ants Vs. SomeBees</li>
+  <li><code>ants_plans.py</code>: The details of each difficulty level</li>
+  <li><code>ucb.py</code>: Utility functions for CS 61A</li>
+  <li><code>gui.py:</code> A graphical user interface (GUI) for Ants Vs. SomeBees.</li>
+  <li><code>ok</code>: The autograder</li>
+  <li><code>proj3.ok</code>: The <code>ok</code> configuration file</li>
+  <li><code>tests</code>: A directory of tests used by <code>ok</code></li>
+  <li><code>libs</code>: A directory of libraries used by <code>gui.py</code></li>
+  <li><code>static</code>: A directory of images and files used by <code>gui.py</code></li>
+  <li><code>templates</code>: A directory of HTML templates used by <code>gui.py</code></li>
+</ul>
+
+
+
+
+<h2 id="logistics">Logistics</h2>
+
+
+
+<!-- <p>Remember that you can earn an additional bonus point by submitting the
+  project at least 24 hours before the deadline.</p> -->
+
+
+
+<p>The project is worth 25 points.
+23 points are for correctness,
+1 point is for submitting Phase 1 by the first checkpoint date and 1 point is for submitting Phase 2 by the second checkpoint date.</p>
+
+<p>You can get 1 EC point for submitting the entire project by
+<strong>Monday, March 18</strong>.</p>
+
+
+<p>You will turn in the following files:</p>
+
+<ul>
+  <li><code>ants.py</code></li>
+</ul>
+
+<p>You do not need to modify or turn in any other files to complete the
+project. To submit the project, <b> submit the required files to the appropriate Gradescope assignment.</b></p>
+
+<p>For the functions that we ask you to complete, there may be some
+initial code that we provide. If you would rather not use that code,
+feel free to delete it and start from scratch. You may also add new
+function definitions as you see fit.</p>
+
+<p><b>However, please do not modify any other functions or edit any files not
+listed above</b>. Doing so may result in your code failing our autograder tests.
+Also, please do not change any function signatures (names, argument order, or
+number of arguments).</p>
+
+
+
+<p>Throughout this project, you should be testing the correctness of your code.
+It is good practice to test often, so that it is easy to isolate any problems.
+However, you should not be testing <i>too</i> often, to allow yourself time to
+think through problems.</p>
+
+<p>We have provided an <b>autograder</b> called <code>ok</code> to help you
+with testing your code and tracking your progress. The first time you run the
+autograder, you will be asked to <b>log in with your Ok account using your web
+browser</b>. Please do so. Each time you run <code>ok</code>, it will back up
+your work and progress on our servers.</p>
+
+<p>The primary purpose of <code>ok</code> is to test your implementations.</p>
+
+<!-- <p>First, some of the test cases are <i>locked</i>. To unlock tests, run the
+following command from your terminal:</p>
+
+<pre><code>python3 ok -u</code></pre>
+
+<p>This command will start an interactive prompt that looks like:</p>
+
+<pre>
+=====================================================================
+Assignment: Ants Vs. SomeBees
+Ok, version ...
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unlocking tests
+
+At each "? ", type what you would expect the output to be.
+Type exit() to quit
+
+---------------------------------------------------------------------
+Question 0 &gt; Suite 1 &gt; Case 1
+(cases remaining: 1)
+
+&gt;&gt;&gt; Code here
+?
+</pre>
+
+<p>At the <code>?</code>, you can type what you expect the output to be. If you
+are correct, then this test case will be available the next time you run the
+autograder.</p>
+
+<p>The idea is to understand <i>conceptually</i> what your program should do
+first, before you start writing any code.</p>
+
+<p>Once you have unlocked some tests and written some code, you can check the
+correctness of your program using the tests that you have unlocked:</p>
+
+<pre>python3 ok</pre>
+
+<p>Most of the time, you will want to focus on a particular question. Use the
+<code>-q</code> option as directed in the problems below.</p>  -->
+
+<!-- <p>Second, there may be some test cases that are <i>hidden</i>. These test cases are
+<b>not</b> run by the command:</p> -->
+
+<!--<pre>python3 ok</pre>-->
+
+<!-- <p>They are only run when you submit:</p> -->
+
+<!-- <pre>python3 ok --submit</pre> -->
+
+<!-- <p> We keep test cases hidden to ensure that you write your code with the intention
+of solving the question at hand, not purely to pass the given tests. The hidden
+tests will be run when you submit your project. You will receive an email with part of
+the autograder results after submitting. However, the autograder has a 15 minute
+cooldown period. If you submit before 15 minutes have passed, the autograder will
+not run.</p> -->
+
+<!-- <p>We recommend that you submit <b>after you finish each
+problem</b>. Only your last submission will be graded. It is also useful for us
+to have more backups of your code in case you run into a submission issue. <b>If you forget to submit, your last backup will be automatically converted to a submission. </b></p>
+-->
+
+<!--<p>After you run this command, you will receive an email (to the address-->
+<!--that you used to sign up for Ok) that has the output from all <i>failed</i>-->
+<!--unlocked tests, including hidden tests, along with your score at the bottom. You-->
+<!--can continue submitting until you pass all the tests. However, you will receive-->
+<!--<b>at most one email every half hour</b>.</p>-->
+
+<!--<p>This buffer period is meant for you and your partner to try and understand-->
+<!--where your error comes from, and take some time to think through your code. We-->
+<!--encourage you to do this for all projects.</p>-->
+
+<!---
+<p>If you are trying to debug a test failure, you can launch an interactive session
+after the test is run with:</p>
+
+<pre><code>python3 ok &#x2d;q 05 &#x2d;i</code></pre>
+
+<p>This will run the tests and launch an interactive session if a test does not
+pass.</p>
+
+<pre><code>=====================================================================
+Assignment: Project 1: Hog
+Ok, version ....
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running tests
+
+&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;&#x2d;
+Question ... &gt; Suite ... &gt; Case ...
+
+&gt;&gt;&gt; the_test()
+"expected value"
+
+# Error: expected
+#     "expected value"
+# but got
+#     None
+
+# Interactive console. Type exit() to quit
+&gt;&gt;&gt;</code></pre>
+-->
+
+
+<!--- <p>The <code>tests</code> folder is used to store autograder tests, so
+<b>do not modify it</b>. You may lose all your unlocking progress if you
+do. If you need to get a fresh copy, you can download the
+<a href="ants.zip">zip archive</a> and copy it over, but you
+will need to start unlocking from scratch.</p> -->
+
+<!---
+<p>If you do not want us to record a backup of your work or information about
+your progress, you can run
+
+<pre>python3 ok --local</pre>
+
+
+With this option, no information will be sent to our course
+servers.
+
+-->
+
+<p>If you want to test your code interactively, you can run
+
+</p><pre> python3 ok -q [question number] -i </pre>
+
+with the appropriate question number (e.g. <code>01</code>) inserted.
+This will run the tests for that question until the first one you failed,
+then give you a chance to test the functions you wrote interactively.<p></p>
+
+<p>You can also use the debugging print feature in OK by writing
+
+</p><pre> print("DEBUG:", x) </pre>
+
+which will produce an output in your terminal without causing OK tests to fail
+with extra output.
+
+<h2 id="the-game">The Game</h2>
+
+
+<p>A game of Ants Vs. SomeBees consists of a series of turns. In each turn, new
+bees may enter the ant colony. Then, new ants are placed to defend their colony.
+Finally, all insects (ants, then bees) take individual actions. Bees either try
+to move toward the end of the tunnel or sting ants in their way. Ants perform a
+different action depending on their type, such as collecting more food or
+throwing leaves at the bees. The game ends either when a bee reaches the end of
+the tunnel (ants lose), the bees destroy a <code>QueenAnt</code> if it exists (ants lose),
+or the entire bee fleet has been vanquished (ants win).</p>
+
+<img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/screenshot.gif">
+
+
+<h3 id="core-concepts">Core concepts</h3>
+
+
+<p><strong>The Colony</strong>. This is where the game takes place. The colony consists of
+several <code>Place</code>s that are chained together to form tunnels through which the
+bees travel. The colony also has some quantity of food which can be expended in
+order to place an ant in a tunnel.</p>
+
+<p><strong>Places</strong>. A place links to another place to form a tunnel. The player can
+put a single ant into each place. However, there can be many bees in a single
+place.</p>
+
+<p><strong>The Hive</strong>. This is the place where bees originate. Bees exit the beehive to
+enter the ant colony.</p>
+
+<p><strong>Ants</strong>. The player places an ant into the colony by selecting from the
+available ant types at the top of the screen.
+Each type of ant takes a different action and requires a different
+amount of colony food to place. The two most basic ant types are the <code>HarvesterAnt</code>,
+which adds one food to the colony during each turn, and the <code>ThrowerAnt</code>, which
+throws a leaf at a bee each turn. You will be implementing many more!</p>
+
+<p><strong>Bees</strong>. Each turn, a bee either advances to the next place in the tunnel if no
+ant is in its way, or it stings the ant in its way. Bees win when at least one
+bee reaches the end of a tunnel. In addition to the orange bees, there are
+yellow wasps that do double damage and a green boss bee that is quite difficult
+to vanquish.</p>
+
+
+<h3 id="core-classes">Core classes</h3>
+
+
+<p>The concepts described above each have a corresponding class that encapsulates
+the logic for that concept. Here is a summary of the main classes involved in
+this game:</p>
+
+<ul>
+  <li><strong><code>GameState</code></strong>: Represents the colony and some state information about the game,
+  including how much food is available, how much time has elapsed, where the
+  <code>AntHomeBase</code> is, and all the <code>Place</code>s in the game.</li>
+  <li><strong><code>Place</code></strong>: Represents a single place that holds insects. At most one <code>Ant</code> can
+  be in a single place, but there can be many <code>Bee</code>s in a single place. <code>Place</code> objects have an
+  <code>exit</code> to the left and an <code>entrance</code> to the right, which are also places.
+  Bees travel through a tunnel by moving to a <code>Place</code>'s <code>exit</code>.</li>
+  <li><strong><code>Hive</code></strong>: Represents the place where <code>Bee</code>s start out (on the right of the tunnel).</li>
+  <li><strong><code>AntHomeBase</code></strong>: Represents the place <code>Ant</code>s are defending (on the left of the tunnel). If <code>Bee</code>s get here, they win :(</li>
+  <li><strong><code>Insect</code></strong>: A base class for <code>Ant</code> and <code>Bee</code>. Each insect has a <code>health</code>
+  attribute representing its remaining health and a <code>place</code> attribute representing the <code>Place</code> where
+  it is currently located. Each turn, every active <code>Insect</code> in the game
+  performs its <code>action</code>.</li>
+  <li><strong><code>Ant</code></strong>: Represents ants. Each <code>Ant</code> subclass has special attributes or a
+  special <code>action</code> that distinguish it from other <code>Ant</code> types. For example, a
+  <code>HarvesterAnt</code> gets food for the colony and a <code>ThrowerAnt</code> attacks <code>Bee</code>s.
+  Each ant type also has a <code>food_cost</code> attribute that indicates how much it
+  costs to deploy one unit of that type of ant.</li>
+  <li><strong><code>Bee</code></strong>: Represents bees. Each turn, a bee either moves to the <code>exit</code> of
+  its current <code>Place</code> if the <code>Place</code> is not <code>blocked</code> by an ant, or stings the
+  ant occupying its same <code>Place</code>.</li>
+</ul>
+
+
+<h3 id="game-layout">Game Layout</h3>
+
+
+<p>Below is a visualization of a GameState.</p>
+
+<img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/colony-drawing.png">
+
+<p>To help visualize how all the classes fit together,
+<a href="https://cs61a.org/proj/ants/diagram/ants_diagram.pdf">here</a> is a diagram of all of the classes and their
+inheritance relationships.</p>
+
+
+<h2 id="getting-started-videos">Getting Started Videos</h2>
+
+
+<p>These videos may provide some helpful direction for tackling the coding
+problems on the project.</p>
+
+<blockquote><p>To see these videos, you should be logged into your berkeley.edu email.</p></blockquote>
+
+
+            <iframe width="560" height="315" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/videoseries.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p><a href="https://youtu.be/playlist?list=PLx38hZJ5RLZesYEQSFs0OpFiVC2kJcF_N"> YouTube link </a></p>
+
+
+<h2 id="phase-1-basic-gameplay">Phase 1: Basic gameplay</h2>
+
+
+<blockquote><p><strong>For full credit:</strong>
+submit with Phase 1 complete by <strong>Thursday, March 7</strong> (worth 1 pt).</p></blockquote>
+
+<p>In the first phase you will complete the implementation that will allow for
+basic gameplay with the two basic <code>Ant</code>s: the <code>HarvesterAnt</code> and the
+<code>ThrowerAnt</code>.</p>
+
+
+<h3 id="problem-0-0-pt">Problem 0 (0 pt)</h3>
+
+
+<p>Answer a set of conceptual questions after you have read the
+<em>entire</em> <code>ants.py</code> file by running this <code>ok</code> command:</p>
+
+<pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 00 -u</code><button id="copy-code-python3ok-q00-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q00-u").onclick = () => copyCode('python3 ok -q 00 -u', "copy-code-python3ok-q00-u");
+        </script>
+        <br>
+
+<p>If you get stuck while answering these questions, you can try reading through
+<code>ants.py</code> again or asking questions on Ed.</p>
+
+<blockquote><p><strong>A note on unlocking tests</strong>:
+If you'd like to review the unlocking questions
+after you have completed the unlocking test,
+you can navigate to (within the <code>ants</code> folder),
+the <code>tests</code> folder.
+For example, after unlocking Problem 0,
+you can review the unlocking test at <code>tests/00.py</code>.</p></blockquote>
+
+
+<h3 id="problem-1-1-pt">Problem 1 (1 pt)</h3>
+
+
+<p><strong>Part A</strong>: Currently, there is no cost
+for placing any type of <code>Ant</code>, and so there is no challenge to the
+game. The base class <code>Ant</code> has a <code>food_cost</code> of
+zero. Override this class attribute for <code>HarvesterAnt</code> and <code>ThrowerAnt</code>
+according to the "Food Cost" column in the table below.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Harvester.gif"> <br> <code>HarvesterAnt</code></td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Thrower.gif"> <br> <code>ThrowerAnt</code></td>
+    <td>3</td>
+    <td>1</td>
+  
+</tr></tbody></table>
+
+<p><strong>Part B</strong>: Now that placing an <code>Ant</code> costs food, we need to be able to gather more food!
+To fix this issue, implement the <code>HarvesterAnt</code> class. A <code>HarvesterAnt</code> is a
+type of <code>Ant</code> that adds one food to the <code>gamestate.food</code> total as its <code>action</code>.</p>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 01 -u</code><button id="copy-code-python3ok-q01-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q01-u").onclick = () => copyCode('python3 ok -q 01 -u', "copy-code-python3ok-q01-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 01</code><button id="copy-code-python3ok-q01" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q01").onclick = () => copyCode('python3 ok -q 01', "copy-code-python3ok-q01");
+        </script>
+        <br>
+
+<!--
+
+        <button id='toggle-1' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-1">
+<br>
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/eypJ2SgZrhw"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/eypJ2SgZrhw'> YouTube link </a></p>
+</div>
+-->
+
+
+<h3 id="problem-2-1-pt">Problem 2 (1 pt)</h3>
+
+
+<p>In this problem, you'll complete <code>Place.__init__</code> by adding code that tracks entrances. Right
+now, a <code>Place</code> keeps track only of its <code>exit</code>. We would like a <code>Place</code> to keep
+track of its entrance as well. A <code>Place</code> needs to track only one <code>entrance</code>.
+Tracking entrances will be useful when an <code>Ant</code> needs to see what <code>Bee</code>s are in
+front of it in the tunnel.</p>
+
+<p>However, simply passing an entrance to a <code>Place</code> constructor will be
+problematic; we would need to have both the exit and the entrance before
+creating a <code>Place</code>! (It's a <a href="https://en.wikipedia.org/wiki/Chicken_or_the_egg">chicken or the
+egg</a>
+problem.) To get around this problem, we will keep track of entrances in the
+following way instead. <code>Place.__init__</code> should use this logic:</p>
+
+<ul>
+  <li>A newly created <code>Place</code> always starts with its <code>entrance</code> as <code>None</code>.</li>
+  <li>If the <code>Place</code> has an <code>exit</code>, then the <code>exit</code>'s <code>entrance</code> is set to
+  that <code>Place</code>.</li>
+</ul>
+
+<blockquote><p><em>Hint:</em> Remember that when the <code>__init__</code> method is called, the first parameter,
+<code>self</code>, is bound to the newly created object</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em> Try drawing out two <code>Place</code>s next to each other if things get confusing.
+In the GUI, a place's <code>entrance</code> is to its right while the <code>exit</code> is to its left.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em> Remember that <code>Place</code>s are not stored in a list, so you can't index into anything to access them. This means that you <strong>can't</strong> do something like <code>colony[index + 1]</code> to access an adjacent <code>Place</code>. How <em>can</em> you move from one place to another?</p></blockquote>
+
+<img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/colony-drawing.png">
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 02 -u</code><button id="copy-code-python3ok-q02-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q02-u").onclick = () => copyCode('python3 ok -q 02 -u', "copy-code-python3ok-q02-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 02</code><button id="copy-code-python3ok-q02" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q02").onclick = () => copyCode('python3 ok -q 02', "copy-code-python3ok-q02");
+        </script>
+        <br>
+
+<!--
+
+        <button id='toggle-2' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-2">
+<br>
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/VO_oTlLtJFk"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/VO_oTlLtJFk'> YouTube link </a></p>
+</div>
+-->
+
+
+<h3 id="problem-3-2-pt">Problem 3 (2 pt)</h3>
+
+
+<p>In order for a <code>ThrowerAnt</code> to throw a leaf, it must know which bee to hit.
+The provided implementation of the <code>nearest_bee</code> method in the <code>ThrowerAnt</code>
+class only allows them to hit bees in the same <code>Place</code>. Your job is to fix it
+so that a <code>ThrowerAnt</code> will <code>throw_at</code> the nearest bee in front of it <strong>that is not still in the <code>Hive</code>.</strong>
+This includes bees that are in the same <code>Place</code> as a <code>ThrowerAnt</code></p>
+
+<blockquote><p><em>Hint:</em> All <code>Place</code>s have an <code>is_hive</code> attribute which is <code>True</code> when that
+place is the <code>Hive</code>.</p></blockquote>
+
+<p>Change <code>nearest_bee</code> so that it returns a random <code>Bee</code> from the nearest place that
+contains bees. Your implementation should follow this logic:</p>
+
+<ul>
+  <li>Start from the current <code>Place</code> of the <code>ThrowerAnt</code>.</li>
+  <li>For each place, return a random bee if there is any, and if not,
+  inspect the place in front of it (stored as the current place's <code>entrance</code>).</li>
+  <li>If there is no bee to attack, return <code>None</code>.</li>
+</ul>
+
+<blockquote><p><em>Hint</em>: The <code>random_bee</code> function provided in <code>ants.py</code> returns a random
+bee from a list of bees or <code>None</code> if the list is empty.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint</em>: As a reminder, if there are no bees present at a <code>Place</code>,
+then the <code>bees</code> attribute of that <code>Place</code> instance will be an empty list.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint</em>: Having trouble visualizing the test cases?
+Try drawing them out on paper!
+The sample diagram provided in <a href="https://cs61a.org/proj/ants/#game-layout">Game Layout</a> shows the first test case for this problem.</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 03 -u</code><button id="copy-code-python3ok-q03-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q03-u").onclick = () => copyCode('python3 ok -q 03 -u', "copy-code-python3ok-q03-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 03</code><button id="copy-code-python3ok-q03" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q03").onclick = () => copyCode('python3 ok -q 03', "copy-code-python3ok-q03");
+        </script>
+        <br>
+
+<!--
+
+        <button id='toggle-3' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-3">
+<br>
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/8eRQC-devOQ"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/8eRQC-devOQ'> YouTube link </a></p>
+</div>
+-->
+
+
+<h3 id="playing-the-game">Playing the game</h3>
+
+
+<p>After implementing <code>nearest_bee</code>, a <code>ThrowerAnt</code> should be able to <code>throw_at</code> a
+<code>Bee</code> in front of it that is not still in the <code>Hive</code>.</p>
+
+<p>Now you're ready to try what you've built. To start a graphical game, run:</p>
+
+<pre><code class="hljs">python3 gui.py</code></pre>
+
+<p>After you start the graphical version, the game is (usually) available at
+http://127.0.0.1:31415/.</p>
+
+<p>The game has several options that you will use throughout the project,
+which you can view with <code>python3 gui.py --help</code>.</p>
+
+<pre><code class="hljs sql">usage: gui.py [-h] [-d DIFFICULTY] [-w] [<span class="hljs-comment">--food FOOD]</span>
+
+Play Ants vs. SomeBees
+
+optional arguments:
+  -h, <span class="hljs-comment">--help     show this help message and exit</span>
+  -d DIFFICULTY  sets difficulty of game (test/easy/normal/hard/extra-hard)
+  -w, <span class="hljs-comment">--water    loads a full layout with water</span>
+  <span class="hljs-comment">--food FOOD    number of food to start with when testing</span></code></pre>
+
+<p>You can refresh the webpage to restart the game, but if you changed your code,
+you need to terminate <code>gui.py</code> and run it again. To terminate <code>gui.py</code>, you can
+hit <code>Ctrl + C</code> on the terminal.</p>
+
+<p>You cannot have multiple tabs of this same Ants GUI open simultaneously or they
+will all error.</p>
+
+
+<h3 id="submit-your-phase-1-checkpoint">Submit your Phase 1 checkpoint</h3>
+
+
+<p>Check to make sure that you completed all the problems in Phase 1:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Then, submit <code>ants.py</code> to the <strong>Ants Checkpoint 1</strong> assignment on <strong>Gradescope</strong> before the checkpoint deadline.</p>
+
+<p>When you run <code>ok</code> commands, you'll still see that some tests are locked
+because you haven't completed the whole project yet. You'll get full credit for
+the checkpoint if you complete all the problems up to this point.</p>
+
+<p>Congratulations! You have finished Phase 1 of this project!</p>
+
+
+<h2 id="phase-2-more-ants">Phase 2: More Ants!</h2>
+
+
+<blockquote><p><strong>For full credit:</strong>
+submit with Phase 2 complete by <strong>Tuesday, March 12</strong> (worth 1 pt).</p></blockquote>
+
+<p>Now that you've implemented basic gameplay with two types of <code>Ant</code>s, let's
+add some flavor to the ways ants can attack bees. In this problem and on, you'll be
+implementing several different <code>Ant</code>s with different attack strategies.</p>
+
+<p><strong>After you implement each <code>Ant</code> subclass in these sections, you'll need to set its
+<code>implemented</code> class attribute to <code>True</code></strong> so that that type of ant will show up in the
+GUI. Feel free to try out the game with each new ant to test the functionality!</p>
+
+<p>With all following ants from now on, try <code>python3 gui.py</code> to play against a
+full swarm of bees in a multi-tunnel layout and try <code>-d hard</code> or
+<code>-d extra-hard</code> if you want a real challenge! If the bees are too numerous to
+vanquish, you might need to create some new ants.</p>
+
+<!-- ### Phase 2 Hint Videos
+
+        <button id='toggle-4' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-4">
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/Do5iMHk1avU"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/Do5iMHk1avU'> YouTube link </a></p>
+</div> -->
+
+
+<h3 id="problem-4-2-pt">Problem 4 (2 pt)</h3>
+
+
+<p>A <code>ThrowerAnt</code> is a powerful threat to the bees, but it has a high food cost.
+In this problem, you'll implement two subclasses of <code>ThrowerAnt</code> that are less
+costly but have constraints on the distance they can throw:</p>
+
+<ul>
+  <li>The <code>LongThrower</code> can only <code>throw_at</code> a <code>Bee</code> that is found after following
+  at least 5 <code>entrance</code> transitions. It cannot hit <code>Bee</code>s that are in the same
+  <code>Place</code> as it or the first 4 <code>Place</code>s in front of it. If there are two
+  <code>Bee</code>s, one too close to the <code>LongThrower</code> and the other within its range,
+  the <code>LongThrower</code> should only throw at the farther <code>Bee</code>, which is within its range, instead of trying to hit the closer <code>Bee</code>.</li>
+  <li>The <code>ShortThrower</code> can only <code>throw_at</code> a <code>Bee</code> that is found after following
+  at most 3 <code>entrance</code> transitions. It cannot throw at any bees further than 3
+  <code>Place</code>s in front of it.</li>
+</ul>
+
+<p>Neither of these specialized throwers can <code>throw_at</code> a <code>Bee</code> that is exactly 4
+<code>Place</code>s away.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Short.gif"> <br>
+      <code>ShortThrower</code></td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Long.gif"> <br> <code>LongThrower</code></td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+</tbody></table>
+
+<p>To implement these new throwing ants, your <code>ShortThrower</code> and <code>LongThrower</code> classes
+should inherit the <code>nearest_bee</code> method from the base <code>ThrowerAnt</code> class.
+The logic of choosing which bee a thrower ant will attack is
+the same, except the <code>ShortThrower</code> and <code>LongThrower</code> ants where their range is
+limited by a lower and upper bound, respectively.</p>
+
+<p>To do this, modify the <code>nearest_bee</code> method to reference <code>lower_bound</code> and <code>upper_bound</code> attributes,
+and only return a bee if it is within range.</p>
+
+<p>Make sure to give these <code>lower_bound</code> and <code>upper_bound</code> attributes appropriate
+values in the <code>ThrowerAnt</code> class so that the behavior of <code>ThrowerAnt</code> is
+unchanged. Then, implement the subclasses <code>LongThrower</code> and <code>ShortThrower</code>
+with appropriately constrained ranges.</p>
+
+<p>You should <strong>not</strong> need to repeat any code between <code>ThrowerAnt</code>,
+<code>ShortThrower</code>, and <code>LongThrower</code>.</p>
+
+<blockquote><p><em>Hint:</em> <code>float('inf')</code> returns an infinite positive value represented as a
+float that can be compared with other numbers.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em> <code>lower_bound</code> and <code>upper_bound</code> should mark an inclusive range.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><strong>Important:</strong>
+Make sure your class attributes are called <code>upper_bound</code> and <code>lower_bound</code>
+The tests directly reference these attribute names, and will error
+if you use another name for these attributes.</p></blockquote>
+
+<p>Don't forget to set the <code>implemented</code> class attribute of <code>LongThrower</code> and
+<code>ShortThrower</code> to <code>True</code>.</p>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 04 -u</code><button id="copy-code-python3ok-q04-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q04-u").onclick = () => copyCode('python3 ok -q 04 -u', "copy-code-python3ok-q04-u");
+        </script>
+        <br>
+
+<p>After writing code, test your implementation (rerun the tests for 03 to make sure they still work):</p>
+
+<pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 03</code><button id="copy-code-python3ok-q03" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q03").onclick = () => copyCode('python3 ok -q 03', "copy-code-python3ok-q03");
+        </script>
+        <br>
+<pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 04</code><button id="copy-code-python3ok-q04" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q04").onclick = () => copyCode('python3 ok -q 04', "copy-code-python3ok-q04");
+        </script>
+        <br>
+
+<!--
+
+        <button id='toggle-5' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-5">
+<br>
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/MmnodaJn8wQ"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/MmnodaJn8wQ'> YouTube link </a></p>
+</div>
+-->
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+Remember to alternate between driver and navigator roles.
+The driver controls the keyboard;
+the navigator watches, asks questions, and suggests ideas.</p>
+
+
+<h3 id="problem-5-3-pt">Problem 5 (3 pt)</h3>
+
+
+<p>Implement the <code>FireAnt</code>, which does damage when it receives damage. Specifically,
+if it is damaged by <code>amount</code> health units, it does a damage of
+<code>amount</code> to all bees in its place (this is called <em>reflected damage</em>).
+If it dies, it does an additional amount of damage, as specified by its <code>damage</code> attribute,
+which has a default value of <code>3</code> as defined in the <code>FireAnt</code> class.</p>
+
+<p>To implement this, override <code>Insect</code>'s <code>reduce_health</code> method.
+Your overriden method should call the <code>reduce_health</code> method inherited from
+the superclass (<code>Ant</code>) <em>which inherits from it's superclass Insect</em> to reduce the current <code>FireAnt</code> instance's health.
+Calling the <em>inherited</em> <code>reduce_health</code> method on a <code>FireAnt</code> instance reduces
+the insect's <code>health</code> by the given <code>amount</code> and removes the insect from its
+place if its <code>health</code> reaches zero or lower.</p>
+
+<blockquote><p><em>Hint:</em>
+Do <em>not</em> call <code>self.reduce_health</code>,
+or you'll end up stuck in a recursive loop. (Can you see why?)</p></blockquote>
+
+<p>However, your method needs to also include the reflective damage logic:</p>
+
+<ul>
+  <li>Determine the reflective damage amount:
+  start with the <code>amount</code> inflicted on the ant,
+  and then add <code>damage</code> if the ant's health has dropped to or below 0.</li>
+  <li>For each bee in the place, damage them with the total amount by
+  calling the appropriate <code>reduce_health</code> method for each bee.</li>
+</ul>
+
+<blockquote><p><strong>Important:</strong>
+Remember that when any <code>Ant</code> loses all its health, it is removed from its <code>place</code>,
+so pay careful attention to the order of your logic in <code>reduce_health</code>.</p></blockquote>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Fire.gif"> <br> <code>FireAnt</code></td>
+    <td>5</td>
+    <td>3</td>
+  
+</tr></tbody></table>
+
+<blockquote><p><em>Hint:</em> Damaging a bee may cause it to be removed from its place. If you
+iterate over a list, but change the contents of that list at the same time,
+you <a href="https://docs.python.org/3/tutorial/controlflow.html#for-statements">may not visit all the elements</a>.
+This can be prevented by making a copy of the list.
+You can either use a list slice, or use the built-in <code>list</code> function to make sure
+we do not affect the original list.</p></blockquote>
+
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>s = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>s[:]
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>list(s)
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>(s[:] <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> s) <span class="hljs-keyword">and</span> (list(s) <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> s)
+<span class="hljs-literal">True</span></code></pre>
+
+<p>Once you've finished implementing the <code>FireAnt</code>, give it a class attribute
+<code>implemented</code> with the value <code>True</code>.</p>
+
+<blockquote><p><em>Note:</em>
+Even though you are overriding the superclass's <code>reduce_health</code> function
+(<code>Ant.reduce_health</code>),
+you can still use this method in your implementation by calling it.</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 05 -u</code><button id="copy-code-python3ok-q05-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q05-u").onclick = () => copyCode('python3 ok -q 05 -u', "copy-code-python3ok-q05-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 05</code><button id="copy-code-python3ok-q05" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q05").onclick = () => copyCode('python3 ok -q 05', "copy-code-python3ok-q05");
+        </script>
+        <br>
+
+<!--
+
+        <button id='toggle-6' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-6">
+<br>
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/JgnWW7m-TW4"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/JgnWW7m-TW4'> YouTube link </a></p>
+</div>
+-->
+
+<p>You can also test your program by playing a game or two! A <code>FireAnt</code> should
+destroy all co-located <code>Bee</code>s when it is stung. To start a game with ten food
+(for easy testing):</p>
+
+<pre><code class="hljs sql">python3 gui.py <span class="hljs-comment">--food 10</span></code></pre>
+
+
+<h3 id="problem-6-1-pt">Problem 6 (1 pt)</h3>
+
+
+<p>We are going to add some protection to our glorious home base by implementing
+the <code>WallAnt</code>, an ant that does nothing each turn. A <code>WallAnt</code> is
+useful because it has a large <code>health</code> value.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Wall.gif"> <br> <code>WallAnt</code></td>
+    <td>4</td>
+    <td>4</td>
+  
+</tr></tbody></table>
+
+<p>Unlike with previous ants, we have not provided you with a class statement.
+Implement the <code>WallAnt</code> class from scratch. Give it a class attribute <code>name</code>
+with the value <code>'Wall'</code> (so that the graphics work) and a class attribute
+<code>implemented</code> with the value <code>True</code> (so that you can use it in a game).</p>
+
+<blockquote><p><em>Hint</em>: Make sure you implement the <code>__init__</code> method too
+so the <code>WallAnt</code> starts off with the appropriate amount of <code>health</code>!</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 06 -u</code><button id="copy-code-python3ok-q06-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q06-u").onclick = () => copyCode('python3 ok -q 06 -u', "copy-code-python3ok-q06-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 06</code><button id="copy-code-python3ok-q06" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q06").onclick = () => copyCode('python3 ok -q 06', "copy-code-python3ok-q06");
+        </script>
+        <br>
+
+
+<h3 id="problem-7-3-pt">Problem 7 (3 pt)</h3>
+
+
+<p>Implement the <code>HungryAnt</code>, which will select a random <code>Bee</code> from its <code>place</code> and
+deal damage to the <code>Bee</code> equal to the <code>Bee</code>'s health, eating it whole. After
+eating a <code>Bee</code>, a <code>HungryAnt</code> must spend 3 turns chewing before being able to
+eat again. While the <code>HungryAnt</code> is chewing, it is not able to eat (deal damage
+to) any <code>Bee</code>s. If there is no bee in its place available to eat, the
+<code>HungryAnt</code> will do nothing.</p>
+
+<p>We have not provided you with a class header.
+Implement the <code>HungryAnt</code> class from scratch. Give it a class attribute <code>name</code>
+with the value <code>'Hungry'</code> (so that the graphics work) and a class attribute
+<code>implemented</code> with the value <code>True</code> (so that you can use it in a game).</p>
+
+<blockquote><p><em>Hint:</em>
+When a <code>Bee</code> is eaten, its health should be reduced by its health.</p></blockquote>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Hungry.gif"> <br> <code>HungryAnt</code></td>
+    <td>4</td>
+    <td>1</td>
+  
+</tr></tbody></table>
+
+<p>Give <code>HungryAnt</code> a <code>chewing_turns</code> <strong>class</strong> attribute that stores the number of
+turns that it will take a <code>HungryAnt</code> to chew (set to 3). Also, give each
+<code>HungryAnt</code> an <strong>instance</strong> attribute <code>turns_to_chew</code> that counts the number of turns
+it has left to chew, initialized to 0, since it hasn't eaten anything at the
+beginning. You can also think of <code>turns_to_chew</code> as the number of turns until a
+<code>HungryAnt</code> can eat another <code>Bee</code>.</p>
+
+<p>Implement the <code>action</code> method of the <code>HungryAnt</code>: First, check if it is chewing; if
+so, decrement its <code>turns_to_chew</code>. Otherwise, eat a random <code>Bee</code> in its
+<code>place</code> by reducing the <code>Bee</code>'s health to 0. Make sure to set the <code>turns_to_chew</code>
+when a <code>Bee</code> is eaten!</p>
+
+<blockquote><p><em>Hint</em>: Other than the <code>action</code> method, make sure you implement the <code>__init__</code>
+method too in order to define any instance variables and make sure that
+<code>HungryAnt</code> starts off with the appropriate amount of <code>health</code>!</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 07 -u</code><button id="copy-code-python3ok-q07-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q07-u").onclick = () => copyCode('python3 ok -q 07 -u', "copy-code-python3ok-q07-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 07</code><button id="copy-code-python3ok-q07" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q07").onclick = () => copyCode('python3 ok -q 07', "copy-code-python3ok-q07");
+        </script>
+        <br>
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+This would be a good time to switch roles.
+Switching roles makes sure
+that you both benefit from the learning experience of being in each role.</p>
+
+
+<h3 id="problem-8-3-pt">Problem 8 (3 pt)</h3>
+
+
+<p>Right now, our ants are quite frail. We'd like to provide a way to help them
+last longer against the onslaught of the bees. Enter the <code>BodyguardAnt</code>.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Bodyguard.gif"> <br> <code>BodyguardAnt</code></td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+</tbody></table>
+
+<p>To implement the <code>BodyguardAnt</code>, we will break up this problem into 3 subparts.
+In each part, we will making changes in either the <code>ContainerAnt</code> class, <code>Ant</code>
+class, or <code>BodyguardAnt</code> class.</p>
+
+<blockquote><p><em>Note:</em>
+We have separated out Question 8 into three different subparts. We recommend going through the unlocking test for each subpart before writing any code for it.
+You will be tested through each subpart and each subpart is worth one point (for a total of three for the whole question).</p></blockquote>
+
+
+<h4 id="problem-8a">Problem 8a</h4>
+
+
+<p>A <code>BodyguardAnt</code> differs from a normal ant because it is a <code>ContainerAnt</code>; it can
+contain another ant and protect it, all in one <code>Place</code>. When a <code>Bee</code> stings the
+ant in a <code>Place</code> where one ant contains another, only the container is
+damaged. The ant inside the container can still perform its original action.
+If the container perishes, the contained ant still remains in the place (and
+can then be damaged).</p>
+
+<p>Each <code>ContainerAnt</code> has an instance attribute <code>ant_contained</code> that stores the ant it
+contains. This ant, <code>ant_contained</code>, initially starts off as <code>None</code> to indicate that there is no ant being
+stored yet. Implement the <code>store_ant</code> method so that it sets the <code>ContainerAnt</code>'s
+<code>ant_contained</code> instance attribute to the passed in <code>ant</code> argument. Also implement the
+<code>ContainerAnt</code>'s <code>action</code> method to perform its <code>ant_contained</code>'s action if it is currently
+containing an ant.</p>
+
+<p>In addition, to ensure that a container and its contained ant can both occupy a place at
+the same time (a maximum of two ants per place), but only if exactly one is a
+container, we can create an <code>can_contain</code> method.</p>
+
+<p>There is already an <code>Ant.can_contain</code> method, but it always returns <code>False</code>.
+Override the method <code>ContainerAnt.can_contain</code> so that it takes an ant <code>other</code> as an
+argument and returns <code>True</code> if:</p>
+
+<ul>
+  <li>This <code>ContainerAnt</code> does not already contain another ant.</li>
+  <li>The other ant is not a container.</li>
+</ul>
+
+<blockquote><p><em>Hint:</em>
+You may find the <code>is_container</code> attribute that each <code>Ant</code> has useful for
+checking if a specific <code>Ant</code> is a container.</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08a -u</code><button id="copy-code-python3ok-q08a-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08a-u").onclick = () => copyCode('python3 ok -q 08a -u', "copy-code-python3ok-q08a-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08a</code><button id="copy-code-python3ok-q08a" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08a").onclick = () => copyCode('python3 ok -q 08a', "copy-code-python3ok-q08a");
+        </script>
+        <br>
+
+
+<h4 id="problem-8b">Problem 8b</h4>
+
+
+<p>Modify <code>Ant.add_to</code> to allow a container and a non-container ant
+to occupy the same place according to the following rules:</p>
+
+<ul>
+  <li>If the ant originally occupying a place can contain the ant being added,
+  then both ants occupy the place and original ant contains the ant being added.</li>
+  <li>If the ant being added can contain the ant originally in the space, then both ants occupy the place and the
+  (container) ant being added contains the original ant.</li>
+  <li>If neither <code>Ant</code> can contain the other, raise the same
+  <code>AssertionError</code> as before (the one already present in the starter
+  code).</li>
+  <li><strong>Important:</strong> If there are two ants in a specific <code>Place</code>,
+  the <code>ant</code> attribute of the <code>Place</code> instance should refer to the container
+  ant, and the container ant should contain the non-container ant.</li>
+</ul>
+
+<blockquote><p><em>Hint</em>:
+You should also take advantage of the <code>can_contain</code> method you wrote
+and avoid repeating code.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><strong>Note:</strong>
+If you're getting an "unreachable code" warning for <code>Ant.add_to</code>
+via the VSCode Pylance extension,
+it's fine to ignore this specific warning,
+as the code is actually run
+(the warning <em>in this case</em> is inaccurate).</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08b -u</code><button id="copy-code-python3ok-q08b-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08b-u").onclick = () => copyCode('python3 ok -q 08b -u', "copy-code-python3ok-q08b-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08b</code><button id="copy-code-python3ok-q08b" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08b").onclick = () => copyCode('python3 ok -q 08b', "copy-code-python3ok-q08b");
+        </script>
+        <br>
+
+
+<h4 id="problem-8c">Problem 8c</h4>
+
+
+<p>Add a <code>BodyguardAnt.__init__</code> that sets the initial amount of health for the ant.
+We do not need to create an <code>action</code> method here since the <code>BodyguardAnt</code> class inherits it from the <code>ContainerAnt</code> class.
+Also note that the <code>BodyguardAnt</code> does not do any damage.</p>
+
+<p>Once you've finished implementing the <code>BodyguardAnt</code>,
+give it a class attribute <code>implemented</code> with the value <code>True</code>.</p>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08c -u</code><button id="copy-code-python3ok-q08c-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08c-u").onclick = () => copyCode('python3 ok -q 08c -u', "copy-code-python3ok-q08c-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 08c</code><button id="copy-code-python3ok-q08c" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q08c").onclick = () => copyCode('python3 ok -q 08c', "copy-code-python3ok-q08c");
+        </script>
+        <br>
+
+
+<h3 id="problem-9-2-pt">Problem 9 (2 pt)</h3>
+
+
+<p>The <code>BodyguardAnt</code> provides great defense, but they say the best defense is a
+good offense. The <code>TankAnt</code> is a <code>ContainerAnt</code> that protects an ant in its place
+and also deals 1 damage to all bees in its place each turn. Like any <code>ContainerAnt</code>, a <code>TankAnt</code> allows the ant
+that it contains to perform its action each turn.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Tank.gif"> <br> <code>TankAnt</code></td>
+    <td>6</td>
+    <td>2</td>
+  </tr>
+</tbody></table>
+
+<p>We have not provided you with a class header.
+Implement the <code>TankAnt</code> class from scratch. Give it a class attribute <code>name</code>
+with the value <code>'Tank'</code> (so that the graphics work) and a class attribute
+<code>implemented</code> with the value <code>True</code> (so that you can use it in a game).</p>
+
+<p>You should not need to modify any code outside of the <code>TankAnt</code> class. If you
+find yourself needing to make changes elsewhere, look for a way to write your
+code for the previous question such that it applies not just to <code>BodyguardAnt</code>
+and <code>TankAnt</code> objects, but to container ants in general.</p>
+
+<blockquote><p><em>Hint</em>: The only methods you need to override from <code>TankAnt</code>'s parent class are <code>__init__</code> and <code>action</code>.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint</em>: Like with <code>FireAnt</code>, it is possible that damaging a bee will cause it to be removed from its place.</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 09 -u</code><button id="copy-code-python3ok-q09-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q09-u").onclick = () => copyCode('python3 ok -q 09 -u', "copy-code-python3ok-q09-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 09</code><button id="copy-code-python3ok-q09" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q09").onclick = () => copyCode('python3 ok -q 09', "copy-code-python3ok-q09");
+        </script>
+        <br>
+
+<p><strong>Submit your Phase 2 checkpoint</strong></p>
+
+<p>Check to make sure that you completed all the problems in Phase 2:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Then, submit <code>ants.py</code> to the <strong>Ants Checkpoint 2</strong> assignment on <strong>Gradescope</strong> before the checkpoint deadline.</p>
+
+<p>When you run <code>ok</code> commands, you'll still see that some tests are locked
+because you haven't completed the whole project yet. You'll get full credit for
+the checkpoint if you complete all the problems up to this point.</p>
+
+<p>Congratulations! You have finished Phase 2 of this project!</p>
+
+
+<h2 id="phase-3-water-and-might">Phase 3: Water and Might</h2>
+
+
+<p>In the final phase, you're going to add one last kick to the game by
+introducing a new type of place and new ants that are able to occupy this
+place. One of these ants is the most important ant of them all: the queen of
+the colony!</p>
+
+<!-- ### Phase 4 Hint Videos
+
+        <button id='toggle-7' class='btn btn-outline btn-lg alwaystoggle toggle'>
+        Hint Video<noscript> (enable JavaScript)</noscript>
+        </button>
+        <div class="solution toggle-7">
+
+            <iframe width="560" height="315" src="https://youtube.com/embed/YGIOrgD8I9c"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><p><a href='https://youtu.be/YGIOrgD8I9c'> YouTube link </a></p>
+</div> -->
+
+
+<h3 id="problem-10-1-pt">Problem 10 (1 pt)</h3>
+
+
+<p>Let's add water to the colony! Currently there are only two types of places, the
+<code>Hive</code> and a basic <code>Place</code>. To make things more interesting, we're going to
+create a new type of <code>Place</code> called <code>Water</code>.</p>
+
+<p>Only an insect that is waterproof can be placed in <code>Water</code>. In order
+to determine whether an <code>Insect</code> is waterproof, add a new class attribute to the
+<code>Insect</code> class named <code>is_waterproof</code> that is set to <code>False</code>. Since bees can fly,
+their <code>is_waterproof</code> attribute is <code>True</code>, overriding the inherited value.</p>
+
+<p>Now, implement the <code>add_insect</code> method for <code>Water</code>. First, add the insect to
+the place regardless of whether it is waterproof. Then, if the insect is not
+waterproof, reduce the insect's health to 0. <em>Do not repeat code from elsewhere
+in the program.</em> Instead, use methods that have already been defined.</p>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 10 -u</code><button id="copy-code-python3ok-q10-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q10-u").onclick = () => copyCode('python3 ok -q 10 -u', "copy-code-python3ok-q10-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 10</code><button id="copy-code-python3ok-q10" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q10").onclick = () => copyCode('python3 ok -q 10', "copy-code-python3ok-q10");
+        </script>
+        <br>
+
+<p>Once you've finished this problem, play a game that includes water. To access
+the <code>wet_layout</code>, which includes water, add the <code>--water</code> option (or <code>-w</code> for
+short) when you start the game.</p>
+
+<pre><code class="hljs sql">python3 gui.py <span class="hljs-comment">--water</span></code></pre>
+
+<p>👩🏽‍💻👨🏿‍💻 <a href="https://cs61a.org/articles/pair-programming">Pair programming?</a>
+Remember to alternate between driver and navigator roles.
+The driver controls the keyboard;
+the navigator watches, asks questions, and suggests ideas.</p>
+
+
+<h3 id="problem-11-2-pt">Problem 11 (2 pt)</h3>
+
+
+<p>Currently there are no ants that can be placed on <code>Water</code>. Implement the
+<code>ScubaThrower</code>, which is a subclass of <code>ThrowerAnt</code> that is more costly and
+waterproof, <em>but otherwise identical to its base class</em>. A <code>ScubaThrower</code> should
+not lose its health when placed in <code>Water</code>.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Scuba.gif"> <br> <code>ScubaThrower</code></td>
+    <td>6</td>
+    <td>1</td>
+  </tr>
+</tbody></table>
+
+<p>We have not provided you with a class header. Implement the <code>ScubaThrower</code>
+class from scratch. Give it a class attribute <code>name</code> with the value <code>'Scuba'</code>
+(so that the graphics work) and remember to set the class attribute
+<code>implemented</code> with the value <code>True</code> (so that you can use it in a game).</p>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 11 -u</code><button id="copy-code-python3ok-q11-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q11-u").onclick = () => copyCode('python3 ok -q 11 -u', "copy-code-python3ok-q11-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 11</code><button id="copy-code-python3ok-q11" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q11").onclick = () => copyCode('python3 ok -q 11', "copy-code-python3ok-q11");
+        </script>
+        <br>
+
+
+<h3 id="problem-12-2-pt">Problem 12 (2 pt)</h3>
+
+
+<p>Finally, implement the <code>QueenAnt</code>. A queen is a <code>ThrowerAnt</code> that inspires her
+fellow ants through her bravery. In addition to the standard <code>ThrowerAnt</code>
+action, a <code>QueenAnt</code> doubles the damage of all the ants behind her each time she
+performs an action. Once an ant's damage has been doubled, it <em>cannot</em> be
+doubled again.</p>
+
+<blockquote><p>Note: The reflected damage of a <code>FireAnt</code> should not be doubled, only the
+extra damage it deals when its health is reduced to 0.</p></blockquote>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Queen.gif"> <br> <code>QueenAnt</code></td>
+    <td>7</td>
+    <td>1</td>
+  </tr>
+</tbody></table>
+
+<p>However, with great power comes great responsibility.  If a queen ever has its
+health reduced to 0, the ants lose. You will need to override
+<code>Insect.reduce_health</code> in <code>QueenAnt</code> and call <code>ants_lose()</code> in that case in
+order to signal to the simulator that the game is over. (The ants also still
+lose if any bee reaches the end of a tunnel.)</p>
+
+<blockquote><p><em>Hint:</em> For doubling the damage of all ants behind her, you may fill out the
+<code>double</code> method defined in the <code>Ant</code> class, then call it from the <code>QueenAnt</code>
+class. To avoid doubling an ant's damage twice, mark the ants that have been
+double damaged in a way that persists across calls to <code>QueenAnt.action</code>.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em>
+When doubling the ants' damage,
+keep in mind that there can be more than one ant in a <code>Place</code>,
+such as if one ant is guarding another.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em>
+Remember that QueenAnt's <code>reduce_health</code> method adds the additional task
+of calling <code>ants_lose</code> to the superclass's <code>reduce_health</code> method.
+How can we make sure we still do everything from the superclass's method
+without repeating code?</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<blockquote><p><em>Hint:</em>
+You can find each <code>Place</code> in a tunnel behind a <code>QueenAnt</code> by starting at
+the ant's <code>place.exit</code> and then repeatedly following its <code>exit</code>.
+The <code>exit</code> of a <code>Place</code> at the end of a tunnel is <code>None</code>.</p></blockquote>
+
+<!-- hack for separate blockquotes -->
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 12 -u</code><button id="copy-code-python3ok-q12-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q12-u").onclick = () => copyCode('python3 ok -q 12 -u', "copy-code-python3ok-q12-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q 12</code><button id="copy-code-python3ok-q12" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-q12").onclick = () => copyCode('python3 ok -q 12', "copy-code-python3ok-q12");
+        </script>
+        <br>
+
+
+<h2 id="optional-problems">Optional Problems</h2>
+
+
+
+<h3 id="optional-problem-1">Optional Problem 1</h3>
+
+
+<blockquote><p>During Office Hours and Project Parties, the staff will prioritize helping
+students with required questions. We will not be offering help with this
+question unless the <a href="https://oh.cs61a.org/">queue</a> is empty.</p></blockquote>
+
+<p>Implement the <code>NinjaAnt</code>, which damages all <code>Bee</code>s that pass by, but can never
+be stung.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Ninja.gif"> <br> <code>NinjaAnt</code></td>
+    <td>5</td>
+    <td>1</td>
+  
+</tr></tbody></table>
+
+<p>A <code>NinjaAnt</code> does not block the path of a <code>Bee</code> that flies by. To implement
+this behavior, first modify the <code>Ant</code> class to include a new class attribute
+<code>blocks_path</code> that is set to <code>True</code>, then override the value of <code>blocks_path</code> to
+<code>False</code> in the <code>NinjaAnt</code> class.</p>
+
+<p>Second, modify the <code>Bee</code>'s method <code>blocked</code> to return <code>False</code> if either
+there is no <code>Ant</code> in the <code>Bee</code>'s <code>place</code> or if there is an <code>Ant</code>, but
+its <code>blocks_path</code> attribute is <code>False</code>. Now <code>Bee</code>s will just fly past
+<code>NinjaAnt</code>s.</p>
+
+<p>Finally, we want to make the <code>NinjaAnt</code> damage all <code>Bee</code>s that fly past.
+Implement the <code>action</code> method in <code>NinjaAnt</code> to reduce the health of all <code>Bee</code>s
+in the same <code>place</code> as the <code>NinjaAnt</code> by its <code>damage</code> attribute. Similar to
+the <code>FireAnt</code>, you must iterate over a potentially changing list of bees.</p>
+
+<blockquote><p><em>Hint</em>: Having trouble visualizing the test cases? Try drawing them out on paper! See the example in <a href="https://cs61a.org/proj/ants/#game-layout">Game Layout</a> for help.</p></blockquote>
+
+<p>Before writing any code, unlock the tests to verify your understanding of the question:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q optional1 -u</code><button id="copy-code-python3ok-qoptional1-u" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qoptional1-u").onclick = () => copyCode('python3 ok -q optional1 -u', "copy-code-python3ok-qoptional1-u");
+        </script>
+        <br>
+<p>Once you are done unlocking, begin implementing your solution. You can check your correctness with:</p><pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q optional1</code><button id="copy-code-python3ok-qoptional1" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qoptional1").onclick = () => copyCode('python3 ok -q optional1', "copy-code-python3ok-qoptional1");
+        </script>
+        <br>
+
+<p>For a challenge, try to win a game using only <code>HarvesterAnt</code>
+and <code>NinjaAnt</code>.</p>
+
+
+<h3 id="optional-problem-2">Optional Problem 2</h3>
+
+
+<blockquote><p>During Office Hours and Project Parties, the staff will prioritize helping
+students with required questions. We will not be offering help with this
+question unless the <a href="https://oh.cs61a.org/">queue</a> is empty.</p></blockquote>
+
+<p>We've been developing this ant for a long time in secret. It's so dangerous
+that we had to lock it in the super hidden CS61A underground vault, but we
+finally think it is ready to go out on the field. In this problem, you'll be
+implementing the final ant -- <code>LaserAnt</code>, a <code>ThrowerAnt</code> with a twist.</p>
+
+<table class="ant">
+  <tbody><tr>
+    <td><b>Class</b></td>
+    <td><b>Food Cost</b></td>
+    <td><b>Initial Health</b></td>
+  </tr>
+  <tr>
+    <td><img class="img-responsive center-block" src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/Laser.gif"> <br> <code>LaserAnt</code></td>
+    <td>10</td>
+    <td>1</td>
+  </tr>
+</tbody></table>
+
+<p>The <code>LaserAnt</code> shoots out a powerful laser, damaging all that dare
+to stand in its path. Both <code>Bee</code>s and <code>Ant</code>s, of all types, are at
+risk of being damaged by <code>LaserAnt</code>. When a <code>LaserAnt</code> takes its action,
+it will damage all <code>Insect</code>s in its place (excluding itself, but including its
+container if it has one) and the <code>Place</code>s in front of it, excluding the <code>Hive</code>.</p>
+
+<p>If that were it, <code>LaserAnt</code> would be too powerful for us to contain.
+The <code>LaserAnt</code> has a base damage of <code>2</code>. But, <code>LaserAnt</code>'s laser comes with
+some quirks. The laser is weakened by <code>0.25</code> each place it travels away from
+<code>LaserAnt</code>'s place. Additionally, <code>LaserAnt</code> has limited battery.
+Each time <code>LaserAnt</code> actually damages an <code>Insect</code> its
+laser's total damage goes down by <code>0.0625</code> (1/16).
+If <code>LaserAnt</code>'s damage becomes negative due to these restrictions,
+it simply does 0 damage instead.</p>
+
+<blockquote><p>The exact order in which things are damaged within a turn is unspecified.</p></blockquote>
+
+<p>In order to complete the implementation of this ultimate ant, read
+through the <code>LaserAnt</code> class, set the class attributes appropriately,
+and implement the following two functions:</p>
+
+<ol>
+  <li><code>insects_in_front</code> is an instance method, called by the <code>action</code> method,
+  that returns a dictionary where each key is an <code>Insect</code> and each
+  corresponding value is the distance (in places) that that <code>Insect</code> is away
+  from <code>LaserAnt</code>. The dictionary should include all <code>Insects</code> on the same
+  place or in front of the <code>LaserAnt</code>, excluding <code>LaserAnt</code> itself.</li>
+  <li><code>calculate_damage</code> is an instance method that takes in <code>distance</code>, the
+  distance that an insect is away from the <code>LaserAnt</code> instance. It
+  returns the damage that the <code>LaserAnt</code> instance should afflict based on:</li>
+  <li>The <code>distance</code> away from the <code>LaserAnt</code> instance that an <code>Insect</code> is.</li>
+  <li>The number of <code>Insects</code> that this <code>LaserAnt</code> has damaged, stored in
+  the <code>insects_shot</code> instance attribute.</li>
+</ol>
+
+<p>In addition to implementing the methods above, you may need to modify, add,
+or use class or instance attributes in the <code>LaserAnt</code> class as needed.</p>
+
+<blockquote><p><em>Note:</em>
+There are no unlocking tests for this question.</p></blockquote>
+
+<p>You can run the provided test, but it is not exhaustive:</p>
+
+<pre style="margin-bottom:0;"><code class="nohighlight">python3 ok -q optional2</code><button id="copy-code-python3ok-qoptional2" class="inline-copy-button"><code class="nohighlight"><div class="copy-tooltip"><span>Copy</span></div>✂️</code></button></pre>
+        <script>
+        document.getElementById("copy-code-python3ok-qoptional2").onclick = () => copyCode('python3 ok -q optional2', "copy-code-python3ok-qoptional2");
+        </script>
+        <br>
+
+<p>Make sure to test your code!</p>
+
+
+<h2 id="project-submission">Project submission</h2>
+
+
+<p>Run <code>ok</code> on all problems to make sure all tests are unlocked and pass:</p>
+
+<pre><code class="hljs">python3 ok</code></pre>
+
+<p>You can also check your score on each part of the project:</p>
+
+<pre><code class="hljs sql">python3 ok <span class="hljs-comment">--score</span></code></pre>
+
+<p>Once you are satisfied, submit this assignment by uploading <code>ants.py</code> to the <strong>Ants</strong> assignment on <strong>Gradescope.</strong> For a refresher on how to do this, refer to <a href="https://cs61a.org/lab/lab00/#task-c-submitting-the-assignment">Lab 00</a>.</p>
+
+<p>You can add a partner to your Gradescope submission by clicking on <strong>+ Add Group Member</strong> under your name on the right hand side of your submission. Only one partner needs to submit to Gradescope.</p>
+
+<p><strong>You are now done with the project!</strong> If you haven't yet, you should try
+playing the game!</p>
+
+<pre><code class="hljs sql">python3 gui.py [-h] [-d DIFFICULTY] [-w] [<span class="hljs-comment">--food FOOD]</span></code></pre>
+
+<p><strong>Acknowledgments:</strong> Tom Magrino and Eric Tzeng developed this project
+with John DeNero. Jessica Wan contributed the original artwork. Joy Jeng and
+Mark Miyashita invented the queen ant. Many others have contributed to
+the project as well!</p>
+
+<p>The new concept artwork was drawn by Alana Tran, Andrew Huang, Emilee Chen,
+Jessie Salas, Jingyi Li, Katherine Xu, Meena Vempaty, Michelle Chang, and Ryan
+Davis.</p>
+
+<script>
+/*
+This code is duplicated in lab-check-in.html. Doesn't work if we move it to a separate
+file because of JQuery document ready concurrency issues.
+*/
+$(function() {
+    $('.alwaystoggle').css('display', 'inline-block');
+    $('.alwaystoggle').click(function() {
+      var solution_id = $(this).attr('id');
+      $('div.' + solution_id).slideToggle(600);
+    });
+});
+</script>
+
+<script>
+$("#cats_typing").hover(
+  function() {
+    $("#cats_typing").attr("src", "images/cats_typing.gif");
+  },
+  function() {
+    $("#cats_typing").attr("src", "images/cats_typing_still.gif");
+  }
+);
+</script>
+
+
+
+  </div>
+
+  <div class="col-md-3 sticky">
+    <nav class="hidden-print hidden-sm hidden-xs sidebar">
+      <ul class="nav nav-stacked noselect">
+  <li class=""><a href="https://cs61a.org/proj/ants/#introduction">Introduction</a></li>
+  <li class=""><a href="https://cs61a.org/proj/ants/#download-starter-files">Download starter files</a></li>
+  <li class=""><a href="https://cs61a.org/proj/ants/#logistics">Logistics</a></li>
+  <li class=""><a href="https://cs61a.org/proj/ants/#the-game">The Game</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li class=""><a href="https://cs61a.org/proj/ants/#core-concepts">Core concepts</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#core-classes">Core classes</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#game-layout">Game Layout</a></li>
+  </ul>
+  <li class=""><a href="https://cs61a.org/proj/ants/#getting-started-videos">Getting Started Videos</a></li>
+  <li class=""><a href="https://cs61a.org/proj/ants/#phase-1-basic-gameplay">Phase 1: Basic gameplay</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-0-0-pt">Problem 0 (0 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-1-1-pt">Problem 1 (1 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-2-1-pt">Problem 2 (1 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-3-2-pt">Problem 3 (2 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#playing-the-game">Playing the game</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#submit-your-phase-1-checkpoint">Submit your Phase 1 checkpoint</a></li>
+  </ul>
+  <li class=""><a href="https://cs61a.org/proj/ants/#phase-2-more-ants">Phase 2: More Ants!</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-4-2-pt">Problem 4 (2 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-5-3-pt">Problem 5 (3 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-6-1-pt">Problem 6 (1 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-7-3-pt">Problem 7 (3 pt)</a></li>
+    <li class=""><a href="https://cs61a.org/proj/ants/#problem-8-3-pt">Problem 8 (3 pt)</a></li>
+    <ul class="nav nav-stacked noselect">
+      <li><a href="https://cs61a.org/proj/ants/#problem-8a">Problem 8a</a></li>
+      <li><a href="https://cs61a.org/proj/ants/#problem-8b">Problem 8b</a></li>
+      <li><a href="https://cs61a.org/proj/ants/#problem-8c">Problem 8c</a></li>
+    </ul>
+    <li><a href="https://cs61a.org/proj/ants/#problem-9-2-pt">Problem 9 (2 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/ants/#phase-3-water-and-might">Phase 3: Water and Might</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/ants/#problem-10-1-pt">Problem 10 (1 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/ants/#problem-11-2-pt">Problem 11 (2 pt)</a></li>
+    <li><a href="https://cs61a.org/proj/ants/#problem-12-2-pt">Problem 12 (2 pt)</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/ants/#optional-problems">Optional Problems</a></li>
+  <ul class="nav nav-stacked noselect">
+    <li><a href="https://cs61a.org/proj/ants/#optional-problem-1">Optional Problem 1</a></li>
+    <li><a href="https://cs61a.org/proj/ants/#optional-problem-2">Optional Problem 2</a></li>
+  </ul>
+  <li><a href="https://cs61a.org/proj/ants/#project-submission">Project submission</a></li>
+</ul>
+    </nav>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="container">
+      <div class="row text-center">
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/">CS 61A</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/weekly">Weekly Schedule</a></li>
+            <li><a href="https://cs61a.org/office-hours">Office Hours</a></li>
+            <li><a href="https://cs61a.org/staff">Staff</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/resources">Resources</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/studying">Studying Guide</a></li>
+            <li><a href="https://cs61a.org/articles/debugging">Debugging Guide</a></li>
+            <li><a href="https://cs61a.org/articles/composition">Composition Guide</a></li>
+            <li><a href="https://cs61a.org/articles/pair-programming">Pair Programming</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm-4">
+          <h3><a href="https://cs61a.org/articles/about">Policies</a></h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="https://cs61a.org/articles/about#assignments">Assignments</a></li>
+            <li><a href="https://cs61a.org/articles/about#exams">Exams</a></li>
+            <li><a href="https://cs61a.org/articles/about#grading">Grading</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/loader.min.js.下载"></script>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/editor.main.min.css">
+  <script>
+      require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs' }});
+      window.MonacoEnvironment = { getWorkerUrl: () => URL.createObjectURL(new Blob([`
+      self.MonacoEnvironment = {
+          baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/base/worker/workerMain.min.js');
+  `], { type: 'text/javascript' }))
+  };
+  </script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/jsplumb.min.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/network_storage.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/storable.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/editor.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/copy-button.js.下载"></script>
+    <script src="./Project 3_ Ants Vs. SomeBees _ CS 61A Spring 2024_files/env-diagram.js.下载"></script>
+    
+<!-- <script src="/assets/js/sketchy.js"></script> -->
+<script>
+  $('.sidebar ul').addClass('nav nav-stacked noselect');
+  $('body').scrollspy({
+    target: '.sidebar',
+    offset: 40
+  });
+
+  function goToId(id) {
+    var target = $(id);
+    target.parent().show();
+    $('html,body').animate({
+      scrollTop: target.offset().top,
+    }, 100);
+    $("body").scrollspy('refresh');
+  }
+
+  if (location.hash) {
+    setTimeout(function() {
+      if (location.hash) {
+        goToId(location.hash);
+      }
+    }, 1);
+  }
+
+  $("a").click(function(event) {
+    var urlBeforeHashRegEx = new RegExp("^"+window.location.href.split("#")[0]);
+    if (/^#/.test(this.hash) && urlBeforeHashRegEx.test(this.href)) {
+      event.preventDefault();
+      goToId(this.hash);
+      document.location.hash = this.hash;
+    }
+  });
+</script>
+
+  
+<i id="__PIKPAK_EXTENSION__" style="display: none;">1.6.3</i><div id="dom-inspector-1717741971452" class="dom-inspector dom-inspector-theme-default" style="z-index: 9999"><div class="content"></div><div class="padding padding-top"></div><div class="padding padding-right"></div><div class="padding padding-bottom"></div><div class="padding padding-left"></div><div class="border border-top"></div><div class="border border-right"></div><div class="border border-bottom"></div><div class="border border-left"></div><div class="margin margin-top"></div><div class="margin margin-right"></div><div class="margin margin-bottom"></div><div class="margin margin-left"></div><div class="tips"><div class="tag"></div><div class="id"></div><div class="class"></div><div class="line">&nbsp;|&nbsp;</div><div class="size"></div><div class="triangle"></div></div></div></body></html>
