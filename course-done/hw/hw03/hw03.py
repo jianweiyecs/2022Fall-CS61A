@@ -22,14 +22,24 @@ def num_eights(n):
     >>> num_eights(8782089)
     3
     >>> from construct_check import check
-    >>> # ban all assignment statements
+    >>>  #ban all assignment statements
     >>> check(HW_SOURCE_FILE, 'num_eights',
     ...       ['Assign', 'AnnAssign', 'AugAssign', 'NamedExpr', 'For', 'While'])
     True
     """
     "*** YOUR CODE HERE ***"
-
-
+    # if n % 10 == 8:
+    #     return 1 + num_eights(n//10)
+    # elif n < 10:
+    #     return 0
+    # else:
+    #     return num_eights(n//10)
+    if n % 10 == 8:
+        return 1 + num_eights(n//10)
+    elif n < 10:
+        return 0
+    else:
+        return num_eights(n//10)
 def digit_distance(n):
     """Determines the digit distance of n.
 
@@ -50,6 +60,13 @@ def digit_distance(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    if n < 10:
+        return 0
+    else:
+        num1 = n % 10
+        n = n//10
+        num2 = n % 10
+        return abs(num1-num2) + digit_distance(n)
 
 
 def interleaved_sum(n, odd_func, even_func):
@@ -72,8 +89,20 @@ def interleaved_sum(n, odd_func, even_func):
     True
     """
     "*** YOUR CODE HERE ***"
-
-
+    # if n == 0:
+    #     return 0
+    # elif n & 0x1 == 0:
+    #     return even_func(n) + interleaved_sum(n - 1,odd_func,even_func)
+    # else:
+    #     return odd_func(n) + interleaved_sum(n - 1, odd_func, even_func)
+    def sum_from(k):
+        if k > n:
+            return 0
+        elif k == n:
+            return odd_func(k)
+        else:
+            return odd_func(k) + even_func(k + 1) + sum_from(k + 2)
+    return sum_from(1)
 def next_larger_coin(coin):
     """Returns the next larger coin in order.
     >>> next_larger_coin(1)
@@ -126,7 +155,17 @@ def count_coins(total):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    def func(total,smallest):
+        if total == 0:
+            return 1
+        elif total < 0:
+            return 0
+        elif smallest == None:
+            return 0
+        without_coin = func(total,next_larger_coin(smallest))
+        whth_coin = func(total-smallest,smallest)
+        return without_coin + whth_coin
+    return func(total,1)
 
 def print_move(origin, destination):
     """Print instructions to move a disk."""
