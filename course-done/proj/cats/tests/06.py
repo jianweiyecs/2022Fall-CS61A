@@ -8,35 +8,26 @@ test = {
           'code': r"""
           >>> big_limit = 10
           >>> feline_fixes("car", "cad", big_limit)
-          52f1b72ba99dddc798bb5cebce0be695
-          # locked
+          1
           >>> feline_fixes("this", "that", big_limit)
-          45c27a29bbaeb163dec9a0eaed9c7c9c
-          # locked
+          2
           >>> feline_fixes("one", "two", big_limit)
-          91711de69bc1d16e478231c51fac5db8
-          # locked
+          3
           >>> feline_fixes("from", "form", big_limit)
-          45c27a29bbaeb163dec9a0eaed9c7c9c
-          # locked
+          2
           >>> feline_fixes("awe", "awesome", big_limit)
-          bfdc03a3c261c5dc71255ec79dd5977e
-          # locked
+          4
           >>> feline_fixes("awful", "awesome", big_limit)
-          f29bb7189bc0116caaaf05635899b49b
-          # locked
+          5
           >>> feline_fixes("awful", "awesome", 3) > 3
-          f0a7036a7438d73054555da0482ad042
-          # locked
+          True
           >>> feline_fixes("awful", "awesome", 4) > 4
-          f0a7036a7438d73054555da0482ad042
-          # locked
+          True
           >>> feline_fixes("awful", "awesome", 5) > 5
-          81e16d9126cb46b28abbb0a979cb030a
-          # locked
+          False
           """,
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'multiline': False
         },
         {
