@@ -9,7 +9,13 @@ def hailstone(n):
     1
     """
     "*** YOUR CODE HERE ***"
-
+    yield n
+    if n == 1:
+      yield from hailstone(n)
+    elif n % 2 == 0:
+      yield from hailstone(n // 2)
+    else:
+      yield from hailstone(n * 3 + 1)
 
 def merge(a, b):
     """Q2:
@@ -24,6 +30,20 @@ def merge(a, b):
     [2, 3, 5, 7, 8, 9, 11, 13, 14, 15]
     """
     "*** YOUR CODE HERE ***"
+    v1 = next(a)
+    v2 = next(b)
+
+    while True:
+      if v1 == v2:
+        yield v1
+        v1 = next(a)
+        v2 = next(b)
+      elif v1 < v2:
+        yield v1
+        v1 = next(a)
+      elif v1 > v2:
+        yield v2
+        v2 = next(b)
 
 
 def yield_paths(t, value):
@@ -61,10 +81,10 @@ def yield_paths(t, value):
     [[0, 2], [0, 2, 1, 2]]
     """
     if label(t) == value:
-        yield ____
+        yield [value]
     for b in branches(t):
-        for ____ in ____:
-            yield ____
+        for path in yield_paths(b, value):
+            yield [label(t)] + path
 
 
 
