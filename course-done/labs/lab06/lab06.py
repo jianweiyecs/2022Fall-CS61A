@@ -7,6 +7,7 @@ class Transaction:
     def changed(self):
         """Return whether the transaction resulted in a changed balance."""
         "*** YOUR CODE HERE ***"
+        return self.after != self.before
 
     def report(self):
         """Return a string describing the transaction.
@@ -21,6 +22,10 @@ class Transaction:
         msg = 'no change'
         if self.changed():
             "*** YOUR CODE HERE ***"
+            if self.after > self.before:
+                msg = "increased "+ str(self.before) + "->" + str(self.after)
+            if self.after < self.before:
+                msg = "decreased "+ str(self.before) + "->" + str(self.after)
         return str(self.id) + ': ' + msg
 
 class Account:
@@ -67,11 +72,17 @@ class Account:
     def __init__(self, account_holder):
         self.balance = 0
         self.holder = account_holder
-
+        self.transactions = []
+    
+    def next_id(self):
+        return len(self.transactions)
+    
     def deposit(self, amount):
         """Increase the account balance by amount, add the deposit
         to the transaction history, and return the new balance.
         """
+        self.transactions.append(Transaction(self.next_id(), self.balance, self.balance + amount))
+
         self.balance = self.balance + amount
         return self.balance
 
@@ -79,8 +90,11 @@ class Account:
         """Decrease the account balance by amount, add the withdraw
         to the transaction history, and return the new balance.
         """
+
         if amount > self.balance:
+            self.transactions.append(Transaction(self.next_id(), self.balance, self.balance))
             return 'Insufficient funds'
+        self.transactions.append(Transaction(self.next_id(), self.balance, self.balance - amount))
         self.balance = self.balance - amount
         return self.balance
 
@@ -108,11 +122,11 @@ class Server:
 
     def send(self, email):
         """Append the email to the inbox of the client it is addressed to."""
-        ____.inbox.append(email)
+        self.clients[email.recipient_name].inbox.append(email)
 
     def register_client(self, client):
         """Add a client to the dictionary of clients."""
-        ____[____] = ____
+        self.clients[client.name] = client
 
 class Client:
     """A client has a server, a name (str), and an inbox (list).
@@ -135,11 +149,11 @@ class Client:
         self.inbox = []
         self.server = server
         self.name = name
-        server.register_client(____)
+        server.register_client(self)
 
     def compose(self, message, recipient_name):
         """Send an email with the given message to the recipient."""
-        email = Email(message, ____, ____)
+        email = Email(message, self, recipient_name)
         self.server.send(email)
 
 
@@ -177,6 +191,14 @@ def make_change(amount, coins):
     if amount < smallest:
         return None
     "*** YOUR CODE HERE ***"
+    if amount == smallest:
+        return [smallest]
+    else:
+        result = make_change(amount-smallest, rest)
+        if result:
+            return [smallest] + result
+        else:
+            return make_change(amount, rest)
 
 def remove_one(coins, coin):
     """Remove one coin from a dictionary of coins. Return a new dictionary,
@@ -272,4 +294,9 @@ class ChangeMachine:
     def change(self, coin):
         """Return change for coin, removing the result from self.coins."""
         "*** YOUR CODE HERE ***"
+        self.coins[coin] = 1 + self.coins.get(coin, 0)  # Put the coin in the machine
+        result = make_change(coin, self.coins)
+        for c in result:
+            self.coins = remove_one(self.coins, c)
+        return result
 
